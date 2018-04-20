@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :selcat
   get '/practice', to: 'practice#index'
   
+  resources :selquiz
+  get '/quiz', to: 'practice#index'
+  
   resources :admin
   
   resources :practice
