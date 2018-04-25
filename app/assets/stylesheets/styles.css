@@ -73,6 +73,10 @@ table.dataTable thead th{
 /*reseting classes*/
 .jumbotron{
     padding:2rem 3rem;
+     min-height: 400px;
+}
+.container {
+    min-height: 600px;
 }
 .questionItem{
     min-height:300px;

@@ -4,7 +4,7 @@ class QuestionBank < ActiveRecord::Base
     end
     
     def self.quizLimit
-    return ['03','04', 'All']
+    return ['20','40','60' 'All']
     end
     
 end
