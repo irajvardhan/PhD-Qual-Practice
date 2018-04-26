@@ -10,6 +10,7 @@ var quizSummaryGenerated = false;
 
 $(function () {
     //positionFooter();
+    setActiveNav();
     initializeIndex();
     if(getPageName().indexOf("questions")> -1){
     $("#students").DataTable();
@@ -33,7 +34,6 @@ function bindEvents() {
             //calculcate score
             totalQuizScore = perQuesWeight * rightQs.length;
             generateSumamryView();
-
         }
     });
 }
@@ -86,8 +86,8 @@ function showQuestion(index) {
     questions.removeClass("show");
     questions.addClass("hide");
     questions.eq(index).removeClass("hide");
-    initializeIndex();
     showAnswer();
+    initializeIndex();
 }
 function checkForCorrectAnswer(elem) {
     var correctAnswer = parseInt(elem.attr("data-answer")) - 1;
@@ -140,8 +140,6 @@ function showAnswer() {
     var correctAnswer = elem.attr("data-answer");
     //highlight right answer
     elem.find(".choices").children().eq(correctAnswer - 1).addClass("correct");
-    //alert(correctAnswer);
-
 }
 
 function getNext() {
@@ -160,6 +158,26 @@ function getNext() {
         $(".questionItem").eq(currentIndex).removeClass("hide");
 
         initializeIndex();
+    }
+}
+
+function setActiveNav(){
+    var pageName=getPageName().toLocaleLowerCase();
+    //reset
+    var navs=$(".navbar-nav li");
+    navs.removeClass("active");
+    if(pageName=='selquiz'||pageName=='quiz'){
+        navs.eq(2).addClass("active");
+    }
+    if(pageName=='selcat'||pageName=='practice'){
+        navs.eq(1).addClass("active");
+    }
+     if(pageName=='home'){
+       navs.eq(0).addClass("active");
+    }
+    
+     if(pageName=='login'){
+        $('.order-3 .navbar-nav li').addClass("active");
     }
 }
 
