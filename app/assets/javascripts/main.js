@@ -38,7 +38,7 @@ function createImage(elem, data) {
         $.cloudinary.image(data.result.public_id,
             {
                 format: data.result.format, version: data.result.version,
-                crop: 'fill', width: 500, height: 100, class: 'img-thumbnail img-fluid'
+                crop: 'fill', width: 350, height: 70, class: 'img-thumbnail img-fluid'
             })
     );
 }
