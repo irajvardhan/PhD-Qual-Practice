@@ -9,6 +9,10 @@ var quizSummaryGenerated = false;
 var isQuizComplete=false;
 // this will called when document is ready
 
+//Cloudinary CDN Info
+//Email: phdqualtool2018@gmail.com
+//Pwd:@Information2018@
+
 $(document).ready(function () {
     setActiveNav();
     initializeIndex();
