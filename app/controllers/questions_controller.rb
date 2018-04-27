@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
     before_action :logged_in_user, only: [:create, :new, :index]
     
     def question_params
-        params.require(:question).permit(:category, :question, :option1, :option2, :option3, :option4, :option5, :answer)
+        params.require(:question).permit(:category, :question, :option1, :option2, :option3, :option4, :option5, :answer,:image1,:image2,:image3,:image4,:image5)
     end
     
     def show
@@ -20,8 +20,29 @@ class QuestionsController < ApplicationController
     end
     
     def create
-        @question = QuestionBank.create!(question_params)
-        flash[:success] = "Question was successfully added."
+         @question = QuestionBank.create!(question_params)
+        if params[:image1].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image1])
+            @question.update(option1: preloaded.identifier)
+        end
+        if params[:image2].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image2])
+            @question.update(option2: preloaded.identifier)
+        end
+        if params[:image3].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image3])
+            @question.update(option3: preloaded.identifier)
+        end
+        if params[:image4].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image4])
+            @question.update(option4: preloaded.identifier)
+        end
+        if params[:image5].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image5])
+            @question.update(option5: preloaded.identifier)
+        end
+       
+        flash[:success] = "Question was successfully added"
         redirect_to questions_path
     end
     
@@ -33,6 +54,26 @@ class QuestionsController < ApplicationController
     def update
         @question = QuestionBank.find(params[:id])
         @question.update_attributes!(question_params)
+        if params[:image1].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image1])
+            @question.update(option1: preloaded.identifier)
+        end
+        if params[:image2].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image2])
+            @question.update(option2: preloaded.identifier)
+        end
+        if params[:image3].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image3])
+            @question.update(option3: preloaded.identifier)
+        end
+        if params[:image4].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image4])
+            @question.update(option4: preloaded.identifier)
+        end
+        if params[:image5].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image5])
+            @question.update(option5: preloaded.identifier)
+        end
         flash[:success] = "Question-#{@question.id} was successfully updated."
         redirect_to questions_path(@question)
     end

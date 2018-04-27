@@ -54,6 +54,10 @@ a {
 .show{
     display: block;
 }
+.success{color:green;}
+.preview1,.preview2,.preview3,.preview4,.preview5{
+    margin-top:8px;
+}
 /*Create question*/
 .createquestion input:not([type=submit]), .createrecipe input:not([type=submit]) {
     margin-top: 8px;

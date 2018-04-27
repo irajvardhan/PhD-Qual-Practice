@@ -1,3 +1,4 @@
+= cloudinary_js_config
 .container.createquestion
   %h2 Edit Question
   %hr/
@@ -10,21 +11,66 @@
         .form-group
           = label :question, :question, 'Question',class: "control-label"
           = text_field :question, 'question', class:"form-control"
-        .form-group
+        - if /.(jpeg|jpg|gif|png)$/.match(@question.option1)
+          .form-group
+            = label :question, :option1, 'Option1',class: "control-label"
+            = cl_image_upload_tag(:image1,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 200, :height => 100 }],:html => { :class=>"form-control fu1",:style => "margin-top: 30px" }  )
+            .preview1
+              = cl_image_tag(@question.option1, :crop => :fill, :width => 500, :height => 100,:class=>"img-thumbnail img-fluid")
+            .update1
+        - else
+          .form-group
           = label :question, :option1, 'Option1',class: "control-label"
           = text_field :question, 'option1', class:"form-control"
-        .form-group
-        = label :question, :option2, 'Option2',class: "control-label"
-        = text_field :question, 'option2', class:"form-control"
-        .form-group
+          
+        - if /.(jpeg|jpg|gif|png)$/.match(@question.option2)
+          .form-group
+            = label :question, :option2, 'Option2',class: "control-label"
+            = cl_image_upload_tag(:image2,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 200, :height => 100 }],:html => { :class=>"form-control fu2",:style => "margin-top: 30px" }  )
+            .preview2
+              = cl_image_tag(@question.option2, :crop => :fill, :width => 500, :height => 100,:class=>"img-thumbnail img-fluid")
+            .update2
+        - else
+          .form-group
+          = label :question, :option2, 'Option2',class: "control-label"
+          = text_field :question, 'option2', class:"form-control"
+        
+        - if /.(jpeg|jpg|gif|png)$/.match(@question.option3)
+          .form-group
+            = label :question, :option3, 'Option3',class: "control-label"
+            = cl_image_upload_tag(:image3,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 200, :height => 100 }],:html => { :class=>"form-control fu3",:style => "margin-top: 30px" }  )
+            .preview3
+              = cl_image_tag(@question.option3, :crop => :fill, :width => 500, :height => 100,:class=>"img-thumbnail img-fluid")
+            .update3
+        - else
+          .form-group
           = label :question, :option3, 'Option3',class: "control-label"
           = text_field :question, 'option3', class:"form-control"
-        .form-group
-          = label :question, :option4, 'Option4',class: "control-label"
-          = text_field :question, 'option4', class:"form-control"
-        .form-group 
-          = label :question, :option5, 'Option5',class: "control-label"
-          = text_field :question, 'option5', class:"form-control"
+        
+        - if /.(jpeg|jpg|gif|png)$/.match(@question.option4)
+          .form-group
+            = label :question, :option4, 'Option4',class: "control-label"
+            = cl_image_upload_tag(:image4,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 200, :height => 100 }],:html => { :class=>"form-control fu4",:style => "margin-top: 30px" }  )
+            .preview4
+              = cl_image_tag(@question.option4, :crop => :fill, :width => 500, :height => 100,:class=>"img-thumbnail img-fluid")
+            .update4
+        - else
+          .form-group
+            = label :question, :option4, 'Option4',class: "control-label"
+            = text_field :question, 'option4', class:"form-control"
+          
+        - if /.(jpeg|jpg|gif|png)$/.match(@question.option5)
+          .form-group
+            = label :question, :option5, 'Option5',class: "control-label"
+            = cl_image_upload_tag(:image5,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 200, :height => 100 }],:html => { :class=>"form-control fu5",:style => "margin-top: 30px" }  )
+            .preview5
+              = cl_image_tag(@question.option5, :crop => :fill, :width => 500, :height => 100,:class=>"img-thumbnail img-fluid")
+            .update5
+        - else
+          .form-group 
+            = label :question, :option5, 'Option5',class: "control-label"
+            = text_field :question, 'option5', class:"form-control"
+      
         .form-group
           = label :question, :answer, 'Correct Answer',class: "control-label"
           = text_field :question, 'answer', class:"form-control"

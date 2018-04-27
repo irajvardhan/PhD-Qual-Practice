@@ -6,21 +6,76 @@ var wrongQs = [];
 var totalQuizScore = 0;
 var perQuesWeight = 1;
 var quizSummaryGenerated = false;
+var isQuizComplete=false;
 // this will called when document is ready
 
-$(function () {
-    //positionFooter();
+$(document).ready(function () {
     setActiveNav();
     initializeIndex();
-    if(getPageName().indexOf("questions")> -1){
-    $("#students").DataTable();
-    }
-    if(getPageName()=="new" || getPageName()=="edit"){
-        initializeCloudinary();
-    }
     bindEvents();
+if(getPageName()=='quiz'){
+    $(window).bind("beforeunload",function(event) {
+    if(!isQuizComplete) return "You have unsaved changes";
+});
+}
+    if (getPageName().indexOf("questions") > -1) {
+        $("#students").dataTable( {
+  "pageLength": 100
+} );
+    }
+    if (getPageName() == "new" || getPageName() == "edit") {
+        initializeCloudinary();
+        bindCloudinaryEvents();
+    }
 });
 
+function createImage(elem, data) {
+    elem.html(
+        $.cloudinary.image(data.result.public_id,
+            {
+                format: data.result.format, version: data.result.version,
+                crop: 'fill', width: 500, height: 100, class: 'img-thumbnail img-fluid'
+            })
+    );
+}
+
+function bindCloudinaryEvents() {
+    $('.fu1').bind('cloudinarydone', function (e, data) {
+        $(".update1").text("Image Uploaded!");
+        $(".update1").addClass("success");
+        if ($(".preview1").length > 0) {
+            createImage($(".preview1"), data);
+        }
+    });
+    $('.fu2').bind('cloudinarydone', function (e, data) {
+        $(".update2").text("Image Uploaded!");
+        $(".update2").addClass("success");
+        if ($(".preview2").length > 0) {
+            createImage($(".preview2"), data);
+        }
+    });
+    $('.fu3').bind('cloudinarydone', function (e, data) {
+        $(".update3").text("Image Uploaded!");
+        $(".update3").addClass("success");
+        if ($(".preview3").length > 0) {
+            createImage($(".preview3"), data);
+        }
+    });
+    $('.fu4').bind('cloudinarydone', function (e, data) {
+        $(".update4").text("Image Uploaded!");
+        $(".update4").addClass("success");
+        if ($(".preview4").length > 0) {
+            createImage($(".preview4"), data);
+        }
+    });
+    $('.fu5').bind('cloudinarydone', function (e, data) {
+        $(".update5").text("Image Uploaded!");
+        $(".update5").addClass("success");
+        if ($(".preview5").length > 0) {
+            createImage($(".preview5"), data);
+        }
+    });
+}
 function bindEvents() {
     $("#submitQuiz").on("click", function () {
         if (confirm("This will submit the quiz. You won't be able to modify your answer choice. Click Ok to continue.")) {
@@ -34,6 +89,7 @@ function bindEvents() {
             //calculcate score
             totalQuizScore = perQuesWeight * rightQs.length;
             generateSumamryView();
+            isQuizComplete=true;
         }
     });
 }
@@ -108,14 +164,14 @@ function checkForCorrectAnswer(elem) {
     }
 
 }
-function getPageName () {
-     return location.pathname.split('/').slice(-1)[0].toLowerCase();
-        }
-        
-function initializeCloudinary(){
-    if($.fn.cloudinary_fileupload !== undefined) {
-    $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload();
-  }
+function getPageName() {
+    return location.pathname.split('/').slice(-1)[0].toLowerCase();
+}
+
+function initializeCloudinary() {
+    if ($.fn.cloudinary_fileupload !== undefined) {
+        $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload();
+    }
 }
 function initializeIndex() {
     currentIndex = $(".questionItem:not(.hide)").index();
@@ -161,22 +217,22 @@ function getNext() {
     }
 }
 
-function setActiveNav(){
-    var pageName=getPageName().toLocaleLowerCase();
+function setActiveNav() {
+    var pageName = getPageName().toLocaleLowerCase();
     //reset
-    var navs=$(".navbar-nav li");
+    var navs = $(".navbar-nav li");
     navs.removeClass("active");
-    if(pageName=='selquiz'||pageName=='quiz'){
+    if (pageName == 'selquiz' || pageName == 'quiz') {
         navs.eq(2).addClass("active");
     }
-    if(pageName=='selcat'||pageName=='practice'){
+    if (pageName == 'selcat' || pageName == 'practice') {
         navs.eq(1).addClass("active");
     }
-     if(pageName=='home'){
-       navs.eq(0).addClass("active");
+    if (pageName == 'home') {
+        navs.eq(0).addClass("active");
     }
-    
-     if(pageName=='login'){
+
+    if (pageName == 'login') {
         $('.order-3 .navbar-nav li').addClass("active");
     }
 }
