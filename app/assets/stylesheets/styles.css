@@ -43,7 +43,8 @@ a {
 }
 
 .correct{
-    border: 1px solid green;
+    border: 2px solid green;
+    border-radius: 4px;
 }
 .wrong{
     border: 1px solid red;
