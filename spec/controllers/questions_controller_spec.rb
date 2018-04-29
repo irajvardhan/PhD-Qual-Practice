@@ -7,10 +7,21 @@ end
 
 RSpec.describe QuestionsController, type: :controller do
 
+    #For index
+    describe 'get all questions' do
+        let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question1', category: 'cat1', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
+        let!(:user1) { FactoryBot.create(:user, name: 'Vineet', email: 'admin@cs.tamu.edu', password: 'foobar')}
+        it 'should retrieve all questions' do
+           log_in user1
+           get :index
+           expect(assigns(:questions)).to include(question1)
+        end
+    end
+    
     #For create
     describe 'Create Question' do
         it 'should fail to add and redirect to login' do
-            post :create, question: {question: 'Test',category: 'RSpec Test', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2'}
+            post :create, question: {question: 'Test', category: 'RSpec Test', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2'}
             expect(flash[:danger]).to match(/Please log in/)
             expect(response).to redirect_to(login_url)
         end
@@ -38,7 +49,7 @@ RSpec.describe QuestionsController, type: :controller do
     #end
     
     
-    #For Destroy
+    #For destroy
     describe 'Destory Question' do
         let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question',category: 'RSpec Test',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
         it 'should delete the question' do
@@ -48,16 +59,16 @@ RSpec.describe QuestionsController, type: :controller do
         end
     end
     
-    #For Show
-    describe 'Show Question' do
-        let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question',category: 'RSpec Test',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
-        it 'should display the questions' do
-            get :show, {id: question1.id}
-            expect(response).to redirect_to(questions_path)
-        end
-    end
+    #For show
+    #describe 'Show Question' do
+    #    let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question',category: 'RSpec Test',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
+    #    it 'should display the questions' do
+    #        get :show, {id: question1.id}
+    #        expect(response).to redirect_to(questions_path)
+    #    end
+    #end
     
-    #For Edit
+    #For edit
     describe 'Edit Question' do
         let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question',category: 'RSpec Test',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
         it 'should display the questions' do

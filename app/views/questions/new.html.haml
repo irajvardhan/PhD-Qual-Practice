@@ -11,6 +11,8 @@
         .form-group
           = label :question, :question, 'Question',class: "control-label"
           = text_field :question, 'question', class:"form-control"
+          = cl_image_upload_tag(:imagequestion,:tags => "directly_uploaded_question",:crop => :limit, :width => 900, :height => 900,:eager => [{ :crop => :fill, :width => 750, :height => 240 }],:html => { :class=>"form-control fuquestion",:style => "margin-top: 8px" }  )
+          .updatequestion
         .form-group
           = label :question, :option1, 'Option1',class: "control-label"
           = text_field :question, 'option1', class:"form-control"

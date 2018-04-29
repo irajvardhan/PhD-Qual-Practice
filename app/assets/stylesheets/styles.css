@@ -56,7 +56,7 @@ a {
     display: block;
 }
 .success{color:green;}
-.preview1,.preview2,.preview3,.preview4,.preview5{
+.preview1,.preview2,.preview3,.preview4,.preview5,.previewquestion{
     margin-top:8px;
 }
 /*Create question*/
