@@ -16,7 +16,6 @@ RSpec.describe PracticeController, type: :controller do
     let(:params) { {categories: {'cat1' => "1"}} }
     it 'get questions of a given category' do
       get :index, categories: {'cat1'=>"1"}
-      #@questions = QuestionBank.where(category: params[:categories].keys)
       expect(assigns(:questions)).not_to include(question2)
     end
   end
