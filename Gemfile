@@ -7,7 +7,7 @@ gem 'rails', '4.2.6'
 # gem 'rails',          '5.1.4'
 gem 'bcrypt',         '3.1.11'
 
-gem 'pg', '~> 0.20'
+#gem 'pg', '~> 0.21'
 
 # Use haml
 gem 'haml'
@@ -81,7 +81,7 @@ group :production do
   
   gem 'rails_12factor'
 end
-group :test, :production do
-    gem 'pg','~> 0.20'
+group :production do
+    gem 'pg','~> 0.21'
 
 end

@@ -1,31 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/application_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/practice_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/practice_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/questions_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/questions_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/quiz_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/quiz_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/selcat_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/selcat_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/sessions_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/sessions_helper.rb": [
         1,
         1,
         0,
@@ -49,11 +49,15 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/users_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/users_helper.rb": [
         1,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/practice_controller.rb": [
+=======
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/home_controller.rb": [
+>>>>>>> rspec for iteration#4 - initial
         1,
         null,
         1,
@@ -74,7 +78,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/application_controller.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -82,14 +86,24 @@
         1,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/models/question_bank.rb": [
+=======
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/practice_controller.rb": [
+>>>>>>> rspec for iteration#4 - initial
         1,
         1,
         0,
         null,
         null,
         1,
+<<<<<<< HEAD
         0,
+=======
+        null,
+        1,
+        1,
+>>>>>>> rspec for iteration#4 - initial
         null,
         null,
         null
@@ -106,10 +120,14 @@
         0,
         0,
         null,
+<<<<<<< HEAD
         0
       ],
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/quiz_controller.rb": [
         0,
+=======
+        null,
+>>>>>>> rspec for iteration#4 - initial
         null,
         0,
         0,
@@ -121,27 +139,77 @@
         0,
         0
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/questions_controller.rb": [
+=======
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/questions_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+>>>>>>> rspec for iteration#4 - initial
+        0,
+        null,
+        0,
+        null,
+<<<<<<< HEAD
+        0,
+        0,
+        0,
+=======
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+>>>>>>> rspec for iteration#4 - initial
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
         0,
         null,
         0,
         null,
         0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
         null,
         0,
         0,
@@ -163,6 +231,26 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
         0,
         0,
         null,
@@ -220,8 +308,20 @@
         0,
         0
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/selcat_controller.rb": [
         0,
+=======
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/quiz_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        1,
+        null,
+        null,
+        1,
+>>>>>>> rspec for iteration#4 - initial
         null,
         0,
         0,
@@ -229,8 +329,16 @@
         null,
         0
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/selquiz_controller.rb": [
         0,
+=======
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/selcat_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+>>>>>>> rspec for iteration#4 - initial
         null,
         0,
         0,
@@ -238,10 +346,37 @@
         null,
         0
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/sessions_controller.rb": [
         0,
         0,
         0,
+=======
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/selquiz_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+>>>>>>> rspec for iteration#4 - initial
         null,
         0,
         0,
@@ -263,10 +398,17 @@
         null,
         0
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/users_controller.rb": [
         0,
         0,
         0,
+=======
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+>>>>>>> rspec for iteration#4 - initial
         null,
         0,
         null,
@@ -338,15 +480,41 @@
         0,
         0,
         null,
+<<<<<<< HEAD
+=======
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/models/user.rb": [
+        1,
+>>>>>>> rspec for iteration#4 - initial
         null,
         null,
         null,
         null,
+<<<<<<< HEAD
         null,
         0
       ]
     },
     "timestamp": 1524977017
+=======
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/models/question_bank.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1524985495
+>>>>>>> rspec for iteration#4 - initial
   },
   "Cucumber Features": {
     "coverage": {

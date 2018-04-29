@@ -10,4 +10,5 @@ class PracticeController < ApplicationController
             @questions = QuestionBank.where(category: params[:categories].keys)
         end
     end
+
 end
