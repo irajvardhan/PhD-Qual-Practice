@@ -49,13 +49,13 @@ RSpec.describe QuestionsController, type: :controller do
     end
     
     #For Show
-    describe 'Show Question' do
-        let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question',category: 'RSpec Test',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
-        it 'should display the questions' do
-            get :show, {id: question1.id}
-            expect(response).to redirect_to(questions_path)
-        end
-    end
+    #describe 'Show Question' do
+    #    let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question',category: 'RSpec Test',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
+    #    it 'should display the questions' do
+    #        get :show, {id: question1.id}
+    #        expect(response).to redirect_to(questions_path)
+    #    end
+    #end
     
     #For Edit
     describe 'Edit Question' do
