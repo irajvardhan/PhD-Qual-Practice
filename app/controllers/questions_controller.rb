@@ -3,24 +3,19 @@ class QuestionsController < ApplicationController
     before_action :logged_in_user, only: [:create, :new, :index]
     
     def question_params
-        params.require(:question).permit(:category, :question, :option1, :option2, :option3, :option4, :option5, :answer,:image1,:image2,:image3,:image4,:image5)
-    end
-    
-    def show
-        @questions = QuestionBank.all
-        redirect_to questions_path
+        params.require(:question).permit(:category, :question, :option1, :option2, :option3, :option4, :option5, :answer,:image1,:image2,:image3,:image4,:image5,:imagequestion)
     end
     
     def index
         @questions = QuestionBank.all
     end
     
-    def new
-        # @question = QuestionBank.new
-    end
-    
     def create
          @question = QuestionBank.create!(question_params)
+        if params[:imagequestion].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:imagequestion])
+            @question.update(question: preloaded.identifier)
+        end
         if params[:image1].present?
             preloaded = Cloudinary::PreloadedFile.new(params[:image1])
             @question.update(option1: preloaded.identifier)
@@ -54,6 +49,10 @@ class QuestionsController < ApplicationController
     def update
         @question = QuestionBank.find(params[:id])
         @question.update_attributes!(question_params)
+        if params[:imagequestion].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:imagequestion])
+            @question.update(question: preloaded.identifier)
+        end
         if params[:image1].present?
             preloaded = Cloudinary::PreloadedFile.new(params[:image1])
             @question.update(option1: preloaded.identifier)

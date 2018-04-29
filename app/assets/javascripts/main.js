@@ -6,7 +6,7 @@ var wrongQs = [];
 var totalQuizScore = 0;
 var perQuesWeight = 1;
 var quizSummaryGenerated = false;
-var isQuizComplete=false;
+var isQuizComplete = false;
 // this will called when document is ready
 
 //Cloudinary CDN Info
@@ -17,15 +17,15 @@ $(document).ready(function () {
     setActiveNav();
     initializeIndex();
     bindEvents();
-if(getPageName()=='quiz'){
-    $(window).bind("beforeunload",function(event) {
-    if(!isQuizComplete) return "You have unsaved changes";
-});
-}
+    if (getPageName() == 'quiz') {
+        $(window).bind("beforeunload", function (event) {
+            if (!isQuizComplete) return "You have unsaved changes";
+        });
+    }
     if (getPageName().indexOf("questions") > -1) {
-        $("#students").dataTable( {
-  "pageLength": 100
-} );
+        $("#students").dataTable({
+            "pageLength": 100
+        });
     }
     if (getPageName() == "new" || getPageName() == "edit") {
         initializeCloudinary();
@@ -33,14 +33,13 @@ if(getPageName()=='quiz'){
     }
 });
 
-function createImage(elem, data) {
+function createImage(elem, data, type) {
     elem.html(
         $.cloudinary.image(data.result.public_id,
             {
                 format: data.result.format, version: data.result.version,
-                crop: 'fill', width: 350, height: 70, class: 'img-thumbnail img-fluid'
-            })
-    );
+                class: 'img-thumbnail img-fluid'
+            }));
 }
 
 function bindCloudinaryEvents() {
@@ -79,6 +78,13 @@ function bindCloudinaryEvents() {
             createImage($(".preview5"), data);
         }
     });
+    $('.fuquestion').bind('cloudinarydone', function (e, data) {
+        $(".updatequestion").text("Image Uploaded!");
+        $(".updatequestion").addClass("success");
+        if ($(".previewquestion").length > 0) {
+            createImage($(".previewquestion"), data);
+        }
+    });
 }
 function bindEvents() {
     $("#submitQuiz").on("click", function () {
@@ -93,7 +99,7 @@ function bindEvents() {
             //calculcate score
             totalQuizScore = perQuesWeight * rightQs.length;
             generateSumamryView();
-            isQuizComplete=true;
+            isQuizComplete = true;
         }
     });
 }

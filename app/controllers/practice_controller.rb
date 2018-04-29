@@ -10,10 +10,4 @@ class PracticeController < ApplicationController
             @questions = QuestionBank.where(category: params[:categories].keys)
         end
     end
-
-    def show
-        # @questions = QuestionBank.all
-        @questions = QuestionBank.where(category: params[:categories].keys)
-    end
-    
 end
