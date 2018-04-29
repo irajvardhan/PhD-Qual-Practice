@@ -9,7 +9,7 @@ RSpec.describe PracticeController, type: :controller do
   #  end
   #end
   
-  #index
+  #index#
   describe 'questions for practice' do
     let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question1', category: 'cat1', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
     let!(:question2) { FactoryBot.create(:question_bank, question: 'Test Question2', category: 'cat2', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '3')}
