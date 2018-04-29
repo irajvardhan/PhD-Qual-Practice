@@ -13,7 +13,7 @@ class PracticeController < ApplicationController
 
     def show
         # @questions = QuestionBank.all
-        @questions = QuestionBank.where(category: params[:categories].keys)
+        #@questions = QuestionBank.where(category: params[:categories].keys)
     end
     
 end
