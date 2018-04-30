@@ -226,7 +226,7 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
     end
   end
 end
- 
+
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
@@ -240,8 +240,8 @@ Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   query = URI.parse(current_url).query
   actual_params = query ? CGI.parse(query) : {}
   expected_params = {}
-  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')} 
-  
+  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')}
+
   if actual_params.respond_to? :should
     actual_params.should == expected_params
   else
@@ -251,4 +251,38 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+
+
+###########################################################################################################
+#                                            Self Defined                                                 #
+###########################################################################################################
+
+Given /^the following questions exist:$/ do |questions_table|
+  questions_table.hashes.each do |question|
+    QuestionBank.create! question
+  end
+end
+
+Given /^the admin exists:$/ do |users_table|
+  users_table.hashes.each do |user|
+    User.create! user
+  end
+end
+
+When(/^I check the checkbox "(.*?)"$/) do |cb|
+  #find('label[for="categories_Networks"]').click
+  var="#categories_"+"#{cb}"
+  find(:css, var).set(true)
+  #find("categories_Networks", :visible => false).click
+end
+
+When("I Submit quiz") do
+  find("Submit", :visible => false).click
+end
+
+When /^(?:|I )choose radio button "([^"]*)"$/ do |field|
+  field="#quizlimit_"+"#{field}"
+  find(:css, field).set(true)
 end
