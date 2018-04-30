@@ -48,17 +48,9 @@ class QuestionsController < ApplicationController
     end
     
     def update
-         puts "-------START1----------"
-         puts question_params
-         puts "-------END1------------"  
-         
+
         @question = QuestionBank.find(params[:id])
         @question.update_attributes!(question_params)
-        
-         puts "-------START2----------"
-         puts question_params
-         puts "-------END2------------"       
-        
         if params[:imagequestion].present?
             preloaded = Cloudinary::PreloadedFile.new(params[:imagequestion])
             @question.update(question: preloaded.identifier)
