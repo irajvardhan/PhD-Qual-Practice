@@ -35,6 +35,7 @@ RSpec.describe QuestionsController, type: :controller do
             #expect(flash[:notice]).to match(/Question was successfully added/)
             expect(response).to redirect_to(questions_path)
         end
+        
     end
 
     #For update (Pending)
