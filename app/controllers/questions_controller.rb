@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
     
     def create
          @question = QuestionBank.create!(question_params)
+
         if params[:imagequestion].present?
             preloaded = Cloudinary::PreloadedFile.new(params[:imagequestion])
             @question.update(question: preloaded.identifier)
@@ -47,6 +48,7 @@ class QuestionsController < ApplicationController
     end
     
     def update
+
         @question = QuestionBank.find(params[:id])
         @question.update_attributes!(question_params)
         if params[:imagequestion].present?

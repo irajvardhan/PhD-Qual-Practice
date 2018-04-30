@@ -39,6 +39,15 @@ RSpec.describe UsersController, type: :controller do
     
   end
   
+  describe 'Index function' do
+    let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question1', category: 'cat1', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
+    let!(:question2) { FactoryBot.create(:question_bank, question: 'Test Question2', category: 'cat2', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '3')}
+    #let(:params) { {} }
+    it 'should list all the questions' do
+      #get :index
+      #expect(assigns(:questions)).to include(question1,question2)
+    end
+  end
   describe 'Edit function' do
     let!(:user1) { FactoryBot.create(:user, name: 'test1', email: 'test@testing.com', password: 'testing')}
     it 'allows modification to the user profile' do
