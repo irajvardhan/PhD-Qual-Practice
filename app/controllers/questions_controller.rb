@@ -11,7 +11,15 @@ class QuestionsController < ApplicationController
     end
     
     def create
+         
+         puts "-------START1----------"
+         puts question_params
+         puts "-------END1------------"         
+         
          @question = QuestionBank.create!(question_params)
+         puts "-------START2----------"
+         puts question_params
+         puts "-------END2------------"
         if params[:imagequestion].present?
             preloaded = Cloudinary::PreloadedFile.new(params[:imagequestion])
             @question.update(question: preloaded.identifier)
