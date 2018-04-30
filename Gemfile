@@ -7,7 +7,7 @@ gem 'rails', '4.2.6'
 # gem 'rails',          '5.1.4'
 gem 'bcrypt',         '3.1.11'
 
-gem 'pg', '~> 0.20'
+#gem 'pg', '~> 0.20'
 
 # Use haml
 gem 'haml'
@@ -43,7 +43,7 @@ gem 'cloudinary'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Use sqlite3 as the database for Active Record
-  
+
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -78,10 +78,9 @@ group :test do
 end
 
 group :production do
-  
+
   gem 'rails_12factor'
 end
-group :test, :production do
+group :production do
     gem 'pg','~> 0.20'
-
 end

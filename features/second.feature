@@ -10,18 +10,23 @@ Given the admin exists:
 |  satish  |   admin@cs.tamu.edu   |  foobar  |         foobar        |
 
 Given the following questions exist:
-  | question   | option1 | option2 | option3 | option4 | option5 | answer | category |
-  | Question1  |   AA    |   BB    |    CC   |   DD    |   EE    |   BB   |     1    |
-  | Question2  |   AA    |   BB    |    CC   |   DD    |   EE    |   DD   |     2    |
-  | Question3  |   AA    |   BB    |    CC   |   DD    |   EE    |   CC   |     3    |
-  | Question4  |   AA    |   BB    |    CC   |   DD    |   EE    |   EE   |     1    |
-
-Given I am on the home page
+  | question  | option1 | option2 | option3 | option4 | option5 | answer |     category     |
+  |  QueCat1  |   AA    |   BB    |    CC   |   DD    |   EE    |   BB   |     Networks     |
+  |  QueCat2  |   AA    |   BB    |    CC   |   DD    |   EE    |   DD   |    Algorithms    |
+  |  QueCat3  |   AA    |   BB    |    CC   |   DD    |   EE    |   CC   |     Software     |
+  |  QueCat4  |   AA    |   BB    |    CC   |   DD    |   EE    |   EE   | Operating System |
+And I am on the home page
 And I follow "Login"
 
+Scenario: I should not be able to login with the wrong credentials
+When I fill in "Email" with "fakeadmin@cs.tamu.edu"
+And I fill in "Password" with "fakebar"
+Then I should be on the login page
+
 Scenario: I should be able to add or delete question after I am logged in
-Then I should see "Email"
-Then I should see "Password"
+Given I am on the home page
+And I follow "Login"
+Then I should be on the login page
 When I fill in "Email" with "admin@cs.tamu.edu"
 And I fill in "Password" with "foobar"
 And I press "Log in"
@@ -34,7 +39,7 @@ Then I should see "Create New Question"
 When I select "Networks" from "Question Category"
 And I fill in "Question" with "Random Question"
 And I press "Save Changes"
-Then I should see "Question was successfully added."
+Then I should see "Question was successfully added"
 
 # Delete Flash Card(s)
 #When I fill in "Search:" with “1”
@@ -43,3 +48,6 @@ Then I should see "Question was successfully added."
 #And I press "Delete"
 #Then I should be on the homepage
 #And I should see the message “Flash Card successfully deleted”
+
+When I follow "Log out"
+Then I should be on the home page
