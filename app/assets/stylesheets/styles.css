@@ -36,11 +36,6 @@ a {
 ::placeholder {
     opacity: 0.6 !important;
 }
-::selection {
-    color: #302e21;
-    background: rgba(57,191,0,0.25);
-    text-shadow: none;
-}
 
 .correct{
     border: 2px solid green;
@@ -54,6 +49,9 @@ a {
 }
 .show{
     display: block;
+}
+.error{
+    color:red;
 }
 .success{color:green;}
 .preview1,.preview2,.preview3,.preview4,.preview5,.previewquestion{

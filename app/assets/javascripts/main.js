@@ -30,6 +30,7 @@ $(document).ready(function () {
     if (getPageName() == "new" || getPageName() == "edit") {
         initializeCloudinary();
         bindCloudinaryEvents();
+        bindFormEvents();
     }
 });
 
@@ -46,6 +47,8 @@ function bindCloudinaryEvents() {
     $('.fu1').bind('cloudinarydone', function (e, data) {
         $(".update1").text("Image Uploaded!");
         $(".update1").addClass("success");
+        $("#question_option1").val(data.result.secure_url);
+        $("#question_option1").trigger("focusout");
         if ($(".preview1").length > 0) {
             createImage($(".preview1"), data);
         }
@@ -53,6 +56,8 @@ function bindCloudinaryEvents() {
     $('.fu2').bind('cloudinarydone', function (e, data) {
         $(".update2").text("Image Uploaded!");
         $(".update2").addClass("success");
+        $("#question_option2").val(data.result.secure_url);
+        $("#question_option2").trigger("focusout");
         if ($(".preview2").length > 0) {
             createImage($(".preview2"), data);
         }
@@ -60,6 +65,8 @@ function bindCloudinaryEvents() {
     $('.fu3').bind('cloudinarydone', function (e, data) {
         $(".update3").text("Image Uploaded!");
         $(".update3").addClass("success");
+        $("#question_option3").val(data.result.secure_url);
+        $("#question_option3").trigger("focusout");
         if ($(".preview3").length > 0) {
             createImage($(".preview3"), data);
         }
@@ -67,6 +74,8 @@ function bindCloudinaryEvents() {
     $('.fu4').bind('cloudinarydone', function (e, data) {
         $(".update4").text("Image Uploaded!");
         $(".update4").addClass("success");
+        $("#question_option4").val(data.result.secure_url);
+        $("#question_option4").trigger("focusout");
         if ($(".preview4").length > 0) {
             createImage($(".preview4"), data);
         }
@@ -74,6 +83,8 @@ function bindCloudinaryEvents() {
     $('.fu5').bind('cloudinarydone', function (e, data) {
         $(".update5").text("Image Uploaded!");
         $(".update5").addClass("success");
+        $("#question_option5").val(data.result.secure_url);
+        $("#question_option5").trigger("focusout");
         if ($(".preview5").length > 0) {
             createImage($(".preview5"), data);
         }
@@ -81,8 +92,26 @@ function bindCloudinaryEvents() {
     $('.fuquestion').bind('cloudinarydone', function (e, data) {
         $(".updatequestion").text("Image Uploaded!");
         $(".updatequestion").addClass("success");
+        $("#question_question").val(data.result.secure_url);
+        $("#question_question").trigger("focusout");
         if ($(".previewquestion").length > 0) {
             createImage($(".previewquestion"), data);
+        }
+    });
+}
+function bindFormEvents() {
+    $("#createQuestionForm").validate({
+        rules: {
+            "question[question]": "required",
+            "question[option1]": "required",
+            "question[option2]": "required",
+            "question[option3]": "required",
+            "question[option4]": "required",
+            "question[option5]": "required",
+            "question[answer]": "required"
+        },
+        submitHandler: function (form) {
+            form.submit();
         }
     });
 }
