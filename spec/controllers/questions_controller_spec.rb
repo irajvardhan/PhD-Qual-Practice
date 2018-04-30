@@ -51,9 +51,9 @@ RSpec.describe QuestionsController, type: :controller do
     describe 'Update Question' do
         let!(:user1) { FactoryBot.create(:user, name: 'Vineet', email: 'admin@cs.tamu.edu', password: 'foobar')}
         
-        let!(:question) { FactoryBot.create(:question_bank, question: 'Test Question',category: 'Networks',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
-        let!(:params) { {question: {question: 'Test Question', category: 'Networks', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2'}} }
-        # let!(:params){{imagequestion: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
+        let!(:question1) { FactoryBot.create(:question_bank, question: 'Test', category: 'Networks', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
+        # let!(:params) { {question: {question: 'Test', category: 'Networks', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2'}} }
+        # let!(:params) {{imagequestion: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
         #     image1: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
         #     image2: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
         #     image3: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
@@ -61,10 +61,15 @@ RSpec.describe QuestionsController, type: :controller do
         #     image5: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f'}}
         it 'should update the attributes' do
             #put :update, {id: question1.id, question_bank: { 'option2' => '22'}}
-            log_in user1
+            # log_in user1
             #question: {question: 'Test', category: 'Networks', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2'}
-            puts question
-            put :update, {id: question.id}
+            put :update, id: question1.id, question: {question: 'Test', category: 'Networks', option1: 'one', option2: 'two', option3: 'three', option4: 'four', option5: 'five', answer: 'two'},\
+            imagequestion: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
+            image1: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
+            image2: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
+            image3: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
+            image4: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
+            image5: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f'
             expect(flash[:success]).to match(/was successfully updated/)
             expect(response).to redirect_to(questions_path(question1.id))
         end
