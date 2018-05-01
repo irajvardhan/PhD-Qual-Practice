@@ -72,6 +72,9 @@ table.dataTable thead th{
     max-width: 250px;
     text-align: left !important;
   }
+  #studentsTB{
+      margin-bottom: 24px;
+  }
   
 /*reseting classes*/
 .jumbotron{
