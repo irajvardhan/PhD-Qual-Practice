@@ -159,7 +159,11 @@ users = [
 	{	:name => 'Administrator', 
 		:email => 'admin@cs.tamu.edu',
 		:password => 'foobar',
-		:password_confirmation => 'foobar'}
+		:password_confirmation => 'foobar'},
+		{:name => 'Administrator1', 
+		:email => 'admin1@cs.tamu.edu',
+		:password => 'foobar1',
+		:password_confirmation => 'foobar1'}
 ]
 
 users.each do |user|
