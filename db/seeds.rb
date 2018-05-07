@@ -156,10 +156,10 @@ question_banks.each do |question|
 end
 
 users = [
-	{	:name => 'Satish', 
-		:email => 'admin1@cs.tamu.edu',
-		:password => 'foobar1',
-		:password_confirmation => 'foobar1'}
+	{	:name => 'Administrator', 
+		:email => 'admin@cs.tamu.edu',
+		:password => 'foobar',
+		:password_confirmation => 'foobar'}
 ]
 
 users.each do |user|
