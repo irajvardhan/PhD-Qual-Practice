@@ -158,12 +158,12 @@ end
 users = [
 	{	:name => 'Administrator', 
 		:email => 'admin@cs.tamu.edu',
-		:password => 'foobar',
-		:password_confirmation => 'foobar'},
+		:password => 'Admin@PhdQual2018',
+		:password_confirmation => 'Admin@PhdQual2018'},
 		{:name => 'Administrator1', 
 		:email => 'admin1@cs.tamu.edu',
-		:password => 'foobar1',
-		:password_confirmation => 'foobar1'}
+		:password => 'Admin1@PhdQual2018',
+		:password_confirmation => 'Admin1@PhdQual2018'}
 ]
 
 users.each do |user|
