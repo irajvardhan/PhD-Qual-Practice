@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
-
+ruby "2.4.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
 
-# gem 'rails',          '5.1.4'
+gem 'rails', '4.2.6'
 gem 'bcrypt',         '3.1.11'
 
 
