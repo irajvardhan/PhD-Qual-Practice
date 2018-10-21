@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20180402234523) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "question_banks", force: :cascade do |t|
     t.string   "category"
     t.text     "question"
@@ -34,6 +37,6 @@ ActiveRecord::Schema.define(version: 20180402234523) do
     t.string   "password_digest"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
