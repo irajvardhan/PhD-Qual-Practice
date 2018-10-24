@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
     
-    before_action :logged_in_user, only: [:create, :new, :index]
+    before_action :logged_in_user, only: [:create, :new]
+    before_action :logged_in_admin, only: [:index]
     
     def question_params
         params.require(:question).permit(:category, :question, :option1, :option2, :option3, :option4, :option5, :answer,:image1,:image2,:image3,:image4,:image5,:imagequestion)
@@ -93,6 +94,13 @@ class QuestionsController < ApplicationController
           unless logged_in?
             flash[:danger] = "Please log in."
             redirect_to login_url
+          end
+        end
+        
+        def logged_in_admin
+          unless logged_in? && is_admin?
+            flash[:session] = "Only Admins are allowed to see this page."
+            redirect_to root_url
           end
         end
 end
