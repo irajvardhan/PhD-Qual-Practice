@@ -1,6 +1,6 @@
 class CreateQuestionBanks < ActiveRecord::Migration
   def change
-    change_table :question_banks do |t|
+    create_table  :question_banks do |t|
       t.string :category
       t.text :question
       t.string :option1
