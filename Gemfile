@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
-
+ruby "2.4.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
 
-# gem 'rails',          '5.1.4'
+gem 'rails', '4.2.8'
 gem 'bcrypt',         '3.1.11'
 
-#gem 'pg', '~> 0.20'
 
+gem 'pg','~> 0.21'
 # Use haml
 gem 'haml'
 gem 'haml-rails'
@@ -53,7 +52,7 @@ group :development, :test do
 end
 
 group :development do
-   gem 'sqlite3'
+   #gem 'sqlite3'
 end
 
 
@@ -82,5 +81,4 @@ group :production do
   gem 'rails_12factor'
 end
 group :production do
-    gem 'pg','~> 0.21'
 end

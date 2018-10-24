@@ -1,2 +1,41 @@
-%h1 Users#new
-%p Find me in app/views/users/new.html.haml
+%p#flash= params[:flash]
+%p#notice= params[:notice]
+%p#sessionflash= session[:flash] 
+- session[:flash] = nil
+
+.container
+  - provide(:title, "Register")
+  %h1 Register
+  .row
+    .col-md-6.col-md-offset-3
+
+        
+
+      = form_for @user do |f|
+        - if @user.errors.any?
+          #error_explanation
+            %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+            %ul
+              - @user.errors.full_messages.each do |message|
+                %li= message
+        .field
+          = f.label :name
+          = f.text_field :name, class: 'form-control'
+        .field
+          = f.label :email
+          = f.text_field :email, class: 'form-control'
+        .field
+          = f.label :password
+          = f.password_field :password, class: 'form-control'
+        .field
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation, class: 'form-control --marginbottom16'
+        .actions
+          = f.submit "Register", class: "btn btn-primary"
+  %p
+    %br  
+    "Already a user?"
+    =link_to 'Login', login_path
+    
+    
+

@@ -1,3 +1,7 @@
+%p#flash= params[:flash]
+%p#notice= params[:notice]
+%p#sessionflash= session[:flash]
+- session[:flash] = nil
 .container
   - provide(:title, "Log in")
   %h1 Log in
@@ -9,3 +13,9 @@
         = f.label :password
         = f.password_field :password, class: 'form-control --marginbottom16'
         = f.submit "Log in", class: "btn btn-primary"
+        
+
+  %p
+    %br  
+    "Not a user?"
+    =link_to 'Register', register_path

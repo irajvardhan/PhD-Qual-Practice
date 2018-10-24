@@ -1,23 +1,35 @@
 class SessionsController < ApplicationController
   def new
   end
-  
+
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
-      # Log the user in and redirect to the user's show page.
-      log_in user
-      redirect_to user
+    @user = User.find_by(email: params[:session][:email])
+
+    # @user = User.where(email: params[:session][:email]).first
+    
+    if @user.nil?
+      session[:flash] = ("Please consider signing up: " + params[:session][:email] + " : " + params[:session][:password])
+      session[:user_id] = nil
+      redirect_to register_url
+      return
+    end
+
+    if @user && @user.authenticate(params[:session][:password])
+      session[:user_id] = @user.id
+      session[:flash] = ("Welcome: " + @user.name)
+      redirect_to root_url
+      return
     else
-      # Create an error message.
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      session[:flash] = ("Invalid Username or Password")
+      redirect_to login_url
+      return
     end
   end
 
   def destroy
-    log_out
-    redirect_to root_url
+    session[:user_id] = nil
+    session[:flash] = ("Succesfully logged out")
+    redirect_to login_url
+    return
   end
-
 end
