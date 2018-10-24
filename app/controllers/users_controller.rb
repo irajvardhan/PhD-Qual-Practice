@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @user.current_place = 0
+    #@user.current_place = 0
     
     if @user.email == "admin@tamu.edu"
       @user.is_admin = true
