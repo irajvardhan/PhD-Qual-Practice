@@ -26,7 +26,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.current_place = 0
-    @user.is_admin = false
+    
+    if @user.email == "admin@tamu.edu"
+      @user.is_admin = true
+    else
+      @user.is_admin = false
+    end
     
     respond_to do |format|
       if @user.save
