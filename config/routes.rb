@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+  get 'admin' => 'admin#index'
 
-  # get 'sessions/new'
+  resources :users
+  get '/register', to: 'users#new'
+  get '/users', to: 'users#show'
 
   resources :home
   root :to => redirect('/home')
@@ -27,8 +29,6 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   
-  resources :users
-  get '/index', to: 'users#show'
   
   resources :questions
 
