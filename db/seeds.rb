@@ -60,7 +60,8 @@ question_banks = [
 },
 {	
 	:category => 'Operating Systems',
-		:question => 'One approach to handling fuzzy logic data might be to design a computer using ternary (base-3) logic so that data could be stored as “true,” “false,” and “unknown.” If each ternary logic element is called a flit, how many flits are required to represent at least 256 different values? ',
+		:question => 'One approach to handling fuzzy logic data might be to design a computer using ternary (base-3) logic so that data could be 
+		stored as “true,” “false,” and “unknown.” If each ternary logic element is called a flit, how many flits are required to represent at least 256 different values? ',
 		:option1 => '4',
 		:option2 => '5',
 		:option3 => '6',
@@ -90,7 +91,8 @@ question_banks = [
 },
 {	
 	:category => 'Algorithms',
-		:question => 'Consider the collection of all undirected graphs with 10 nodes and 6 edges. Let M and m, respectively, be the maximum and minimum number of connected components in any graph in the collection. If a graph has no selfloops and there is at most one edge between any pair of nodes, which of the following is true? ',
+		:question => 'Consider the collection of all undirected graphs with 10 nodes and 6 edges. Let M and m, respectively, be the maximum and minimum 
+		number of connected components in any graph in the collection. If a graph has no selfloops and there is at most one edge between any pair of nodes, which of the following is true? ',
 		:option1 => 'M = 10, m = 10',
 		:option2 => 'M = 10, m = 1',
 		:option3 => 'M = 7, m = 4',
@@ -170,7 +172,8 @@ question_banks = [
 {	
 	:category => 'Operating Systems',
 		:question => 'Which of the following best describes the difference between paging and segmentation? ',
-		:option1 => 'Paging breaks a process’ virtual memory into physical units of the same size, whereas segmentation breaks a process’ virtual memory into logical units that are typically of different sizes. ',
+		:option1 => 'Paging breaks a process’ virtual memory into physical units of the same size, whereas segmentation breaks a process’ virtual memory into
+		logical units that are typically of different sizes. ',
 		:option2 => 'Paging suffers from external fragmentation, whereas segmentation suffers from int',
 		:option3 => 'Paging requires page tables for address translation, whereas segmentation does not require segment tables for address translation. ',
 		:option4 => 'Paging requires one page table per process, whereas segmentation requires only one global segment table for the entire system. ',
@@ -179,7 +182,8 @@ question_banks = [
 },
 {	
 	:category => 'Algorithms',
-		:question => 'A hash function h maps 16-bit inputs to 8-bit hash values. What is the largest k such that in any set of 1,000 inputs, there are at least k inputs that h maps to the same hash value? ',
+		:question => 'A hash function h maps 16-bit inputs to 8-bit hash values. What is the largest k such that in any set of 1,000 inputs,
+		there are at least k inputs that h maps to the same hash value? ',
 		:option1 => '3',
 		:option2 => '4',
 		:option3 => '10',
@@ -189,7 +193,8 @@ question_banks = [
 },
 {	
 	:category => 'Algorithms',
-		:question => 'An algorithm’s real-time readiness (RTR) ratio is defined as the ratio of its average-case running time to its worst-case running time.  Which of the following algorithms has an RTR ratio closest to 0 ?',
+		:question => 'An algorithm’s real-time readiness (RTR) ratio is defined as the ratio of its average-case running time to its worst-case running time.  
+		Which of the following algorithms has an RTR ratio closest to 0 ?',
 		:option1 => 'Bubblesort ',
 		:option2 => 'Heapsort ',
 		:option3 => 'Insertion sort ',
@@ -208,16 +213,68 @@ question_banks = [
 		:answer => 3
 },
 {
-	:category => 'Test', 
+	:category => 'Algorithms', 
 		:question => 'Suppose that a certain software product has a mean time between failures of 10,000 hours and has a mean time
-to repair of 20 hours. If the product is used by 100 customers, what is its availability?',
+		to repair of 20 hours. If the product is used by 100 customers, what is its availability?',
 		:option1 => '80%',
 		:option2 => '90%', 
 		:option3 => '98%', 
 		:option4 => '99.8%', 
 		:option5 => '100%', 
+		:answer => 4
+},
+
+
+
+
+{
+	:category => 'Software' , 
+		:question => 'The object-oriented paradigm includes which of the following properties?' + "\n" + 'I. Encapsulation' + "\n" + 'II. Inheritance' + "\n" + 'III. Recursion',
+		:option1 => 'I only',
+		:option2 => 'II only', 
+		:option3 => 'I and II only', 
+		:option4 => 'II and III only', 
+		:option5 => 'I, II, and II', 
 		:answer => 3
-}
+},
+
+
+
+{
+	:category => 'Algorithms', 
+		:question => 'Which of the following algorithms has running time O(n)^2 in the worst case but O(n log n) on average? ',
+		:option1 => 'Bubblesort',
+		:option2 => 'Mergesort', 
+		:option3 => 'Heapsort', 
+		:option4 => 'Quicksort', 
+		:option5 => 'Tournament sort', 
+		:answer => 3
+},
+{
+	:category => 'Algorithms', 
+		:question => 'Which of the following is the name of the data structure in a compiler that is responsible for managing
+information about variables and their attributes? ',
+		:option1 => 'Abstract Syntax Tree (AST)',
+		:option2 => 'Attribute Grammar', 
+		:option3 => 'Symbol Table', 
+		:option4 => 'Semantic Stack', 
+		:option5 => 'Parse Table', 
+		:answer => 3
+},
+
+{
+	:category => 'Algorithms', 
+		:question => 'Which',
+		:option1 => 'Bubblesort',
+		:option2 => 'Mergesort', 
+		:option3 => 'Heapsort', 
+		:option4 => 'Quicksort', 
+		:option5 => 'Tournament sort', 
+		:answer => 3
+},
+
+
+
 ]
 
 question_banks.each do |question|
