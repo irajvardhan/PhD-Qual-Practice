@@ -7,6 +7,12 @@ class SessionsController < ApplicationController
 
     # @user = User.where(email: params[:session][:email]).first
     
+    if @user.nil?
+      session[:flash] = ("Please consider signing up: " + params[:session][:email] + " : " + params[:session][:password])
+      session[:user_id] = nil
+      redirect_to register_url
+      return
+    end
 
     if @user
       session[:user_id] = @user.id
