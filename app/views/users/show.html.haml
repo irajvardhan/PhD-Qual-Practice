@@ -1,10 +1,26 @@
-.container
-  - provide(:title, @user.name)
-  %title
-    = yield(:title)
-    | Ruby on Rails Tutorial Sample App
-  %p
-    %li= link_to "Add a Question", new_question_path, :class=>'btn btn-primary'
-    %li= link_to "Modify a Question",'#',:class=>'btn btn-warning'
-    %li= link_to "Delete a Question",'#',:class=>'btn btn-danger'
-   
+%p#flash= params[:flash]
+%p#notice= params[:notice]
+%p#sessionflash= session[:flash]
+
+-session[:flash] = nil
+%p "Hello"
+
+%p
+  %b Name:
+  = @user.name
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Password:
+  = @user.password
+%p
+  %b Current place:
+  = @user.current_place
+%p
+  %b Is admin:
+  = @user.is_admin
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path
