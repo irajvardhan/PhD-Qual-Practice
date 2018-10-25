@@ -16,7 +16,7 @@ question_banks = [
 		:option4 => 'To determine the hardware address of a given IP address',
 		:option5 => 'To determine the appropriate route for a datagram', :answer => 2},
 	{	:category => 'Networks', 
-		:question => 'testImage.png',
+		:question => 'testImage.png', 
 		:option1 => 'Test Answer',
 		:option2 => 'Test Answer',
 		:option3 => 'Test Answer',
