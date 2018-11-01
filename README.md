@@ -34,7 +34,5 @@ heroku open
 ```
 ## Updating Heroku DB
 ```
-heroku pg:reset DATABASE
-heroku rake db:migrate
-heroku rake db:seed
+heroku run rake db:reset
 ```
