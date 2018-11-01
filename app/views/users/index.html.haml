@@ -6,7 +6,7 @@
       %th Name
       %th Email
       %th Password
-      %th Current place
+      //%th Current place
       %th Is admin
       %th
       %th
@@ -18,7 +18,7 @@
         %td= user.name
         %td= user.email
         %td= user.password
-        %td= user.current_place
+        //%td= user.current_place
         %td= user.is_admin
         %td= link_to 'Show', user
         %td= link_to 'Edit', edit_user_path(user)
