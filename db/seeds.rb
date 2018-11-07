@@ -10,12 +10,12 @@ question_banks = [
 		:answer => 2
 	},
 	{	:category => 'Networks', 
-		:question => 'testImage.png', 
-		:option1 => 'Test Answer',
-		:option2 => 'Test Answer',
-		:option3 => 'Test Answer',
-		:option4 => 'Test Answer',
-		:option5 => 'Test Answer', 
+		:question => '1.5.png', 
+		:option1 => '4',
+		:option2 => '5',
+		:option3 => '6',
+		:option4 => '7',
+		:option5 => '8', 
 		:answer => 2
 	},
 	{	
