@@ -9,7 +9,8 @@ question_banks = [
 		:option5 => 'To determine the appropriate route for a datagram',
 		:answer => 2
 	},
-	{	:category => 'Networks', 
+	{	
+		:category => 'Algorithms', 
 		:question => '1.5.png', 
 		:option1 => '4',
 		:option2 => '5',
@@ -594,6 +595,116 @@ question_banks = [
 		:option3 => 'I and III only', 
 		:option4 => 'II and III only', 
 		:option5 => 'I,II, and III', 
+		:answer => 4
+},
+{
+	:category => 'Algorithms', 
+		:question => '1.7.png',
+		:option1 => 'P Q U W X V Y Z',
+		:option2 => 'U Q X W P V Z Y', 
+		:option3 => 'U X W Q Z Y V P', 
+		:option4 => 'U X Z Q W Y V P', 
+		:option5 => 'X Z U W Y Q V P', 
+		:answer => 3
+},
+{
+	:category => 'Software', 
+		:question => '1.15.png',
+		:option1 => 'x = b^n',
+		:option2 => 'z = b^n', 
+		:option3 => 'b = x^n', 
+		:option4 => 'b = z^n', 
+		:option5 => 'k != 0', 
+		:answer => 2
+},
+{
+	:category => 'Software', 
+		:question => '1.6.png',
+		:option1 => 'v is a brother of w.',
+		:option2 => 'v is a nephew of w', 
+		:option3 => 'v is an uncle of w', 
+		:option4 => 'v is a grandfather of w', 
+		:option5 => 'v is a male cousin of w.', 
+		:answer => 3
+},
+{
+	:category => 'Software', 
+		:question => '1.17.png',
+		:option1 => '5',
+		:option2 => '6', 
+		:option3 => '7', 
+		:option4 => '8', 
+		:option5 => '9.', 
+		:answer => 2
+},
+{
+	:category => 'Algorithms', 
+		:question => '1.18.png',
+		:option1 => '25%',
+		:option2 => '33.333%', 
+		:option3 => '50%', 
+		:option4 => '100%', 
+		:option5 => '125%', 
+		:answer => 3
+},
+{
+	:category => 'Algorithms', 
+		:question => '1.19.png',
+		:option1 => 'I only',
+		:option2 => 'II only', 
+		:option3 => 'III only', 
+		:option4 => 'I and II only', 
+		:option5 => 'I, II, and III', 
+		:answer => 4
+},
+{
+	:category => 'Software', 
+		:question => '1.20.png',
+		:option1 => '0',
+		:option2 => '256', 
+		:option3 => '1,024', 
+		:option4 => '2,048', 
+		:option5 => '4,096', 
+		:answer => 3
+},
+{
+	:category => 'Software', 
+		:question => '1.21.png',
+		:option1 => '0',
+		:option2 => '256', 
+		:option3 => '1,024', 
+		:option4 => '2,000', 
+		:option5 => '4,000', 
+		:answer => 1
+},
+{
+	:category => 'Software', 
+		:question => '1.22.png',
+		:option1 => '26',
+		:option2 => '-15', 
+		:option3 => '-26', 
+		:option4 => '-28', 
+		:option5 => '-59', 
+		:answer => 3
+},
+{
+	:category => 'Software', 
+		:question => '1.23.png',
+		:option1 => 'I only',
+		:option2 => 'III only', 
+		:option3 => 'I and II only', 
+		:option4 => 'I and III only', 
+		:option5 => 'II, and III', 
+		:answer => 4
+},
+{
+	:category => 'Software', 
+		:question => 'image.png',
+		:option1 => 'None',
+		:option2 => 'thisisatempword', 
+		:option3 => 'thisisatempword', 
+		:option4 => 'thisisatempword', 
+		:option5 => 'thisisatempword', 
 		:answer => 4
 }
 ]
