@@ -1,6 +1,6 @@
 question_banks = [
 	{	
-	:category => 'Networks',
+		:category => 'Networks',
 		:question => 'In the Internet Protocol (IP) suite of protocols, which of the following best describes the purpose of the Address Resolution Protocol?',
 		:option1 => 'To translate Web addresses to host names',
 		:option2 => 'To determine the IP address of a given host name',
