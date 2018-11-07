@@ -699,13 +699,93 @@ question_banks = [
 },
 {
 	:category => 'Software', 
-		:question => 'image.png',
-		:option1 => 'None',
-		:option2 => 'thisisatempword', 
-		:option3 => 'thisisatempword', 
-		:option4 => 'thisisatempword', 
-		:option5 => 'thisisatempword', 
+		:question => '1.41.png',
+		:option1 => 'I only',
+		:option2 => 'II only', 
+		:option3 => 'III only', 
+		:option4 => 'I and II only', 
+		:option5 => 'II, and III',  
 		:answer => 4
+},
+{
+	:category => 'Algorithms', 
+		:question => '1.26.png',
+		:option1 => 'I only',
+		:option2 => 'II only', 
+		:option3 => 'III only', 
+		:option4 => 'I and II only', 
+		:option5 => 'I, II, and III', 
+		:answer => 1
+},
+{
+	:category => 'Software', 
+		:question => '1.30.png',
+		:option1 => '12',
+		:option2 => '9', 
+		:option3 => '8', 
+		:option4 => '6', 
+		:option5 => '5', 
+		:answer => 4
+},
+{
+	:category => 'Software', 
+		:question => '1.34.png',
+		:option1 => '0.5',
+		:option2 => '1', 
+		:option3 => '1.5',
+		:option4 => '2',
+		:option5 => 'More than 10',
+		:answer => 4
+},
+{
+	:category => 'Software', 
+		:question => '1.42.png',
+		:option1 => 'I only',
+		:option2 => 'II only', 
+		:option3 => 'III only', 
+		:option4 => 'I and III', 
+		:option5 => 'II and III', 
+		:answer => 1
+},
+{
+	:category => 'Software', 
+		:question => '1.55.png',
+		:option1 => 'I only',
+		:option2 => 'II only', 
+		:option3 => 'III only', 
+		:option4 => 'I and II', 
+		:option5 => 'I and III', 
+		:answer => 4
+},
+{
+	:category => 'Software', 
+		:question => '1.52.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'III only', 
+		:option4 => 'I and II',
+		:option5 => 'II and III',
+		:answer => 2
+},
+{
+	:category => 'Software', 
+		:question => '1.62.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'III only', 
+		:option4 => 'I and II',
+		:option5 => 'II and III',
+		:answer => 5
+},
+{
+	:category => 'Software', 
+		:question => '1.62.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'III only', 
+		:option4 => 'I and II',
+		:option5 => 'II and III',
+		:answer => 5
 }
 ]
 
