@@ -18,7 +18,8 @@ question_banks = [
 		:option3 => '6',
 		:option4 => '7',
 		:option5 => '8', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 	},
 	{	
 		:category => 'Operating Systems',
