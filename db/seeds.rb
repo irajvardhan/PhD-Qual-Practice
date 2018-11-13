@@ -7,8 +7,8 @@ question_banks = [
 		:option3 => 'To determine the hardware address of a given host name',
 		:option4 => 'To determine the hardware address of a given IP address',
 		:option5 => 'To determine the appropriate route for a datagram',
-		:answer => 2
-		#:reviewStatus => 'Approved'
+		:answer => 2,
+		:reviewStatus => 'Approved'
 	},
 	{	
 		:category => 'Algorithms', 
@@ -18,8 +18,8 @@ question_banks = [
 		:option3 => '6',
 		:option4 => '7',
 		:option5 => '8', 
-		:answer => 2
-		#:reviewStatus => 'Approved'
+		:answer => 2,
+		:reviewStatus => 'Approved'
 	},
 	{	
 		:category => 'Operating Systems',
@@ -29,7 +29,8 @@ question_banks = [
 		:option3 => 'It is not reliable',
 		:option4 => 'All of the mentioned',
 		:option5 => 'None of the mentioned', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -39,7 +40,8 @@ question_banks = [
 		:option3 => 'Merge Sort',
 		:option4 => 'Insertion Sort',
 		:option5 => 'Binary tree sort', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -49,7 +51,8 @@ question_banks = [
 		:option3 => 'Symbol Table',
 		:option4 => 'Semantic Stack',
 		:option5 => 'Parse Table ', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Networks',
@@ -59,7 +62,8 @@ question_banks = [
 		:option3 => 'Ethernet protocols use a collision-detection method to ensure that messages are transmitted properly. ',
 		:option4 => 'Networks connected by Ethernets are limited in length to a few hundred meters. ',
 		:option5 => 'Packets sent on Ethernets are limited in size. ', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Operating Systems',
@@ -70,7 +74,8 @@ question_banks = [
 		:option3 => '6',
 		:option4 => '7',
 		:option5 => '8', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -80,7 +85,8 @@ question_banks = [
 		:option3 => 'Range search: Given values a and b, find all the records whose key value is in the range [a b], .',
 		:option4 => 'Symbol table lookup: Given a program identifier, find its type and address. ',
 		:option5 => 'Finding intersections: Given two sets of keys, find all key values in common to both sets. ', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -90,7 +96,8 @@ question_banks = [
 		:option3 => 'Finding ALL spanning trees of G',
 		:option4 => 'Finding a largest clique in G',
 		:option5 => 'Finding a node coloring of G (where adjacent nodes receive distinct colors) with the minimum number of colors ', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -101,7 +108,8 @@ question_banks = [
 		:option3 => 'M = 7, m = 4',
 		:option4 => 'M = 6, m = 4',
 		:option5 => 'M = 6, m = 3', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Operating Systems',
@@ -111,7 +119,8 @@ question_banks = [
 		:option3 => 'TIt cannot pass parameters by reference. ',
 		:option4 => 'It cannot call procedures implemented in a different language. ',
 		:option5 => 'It is used to call procedures at an outer nesting level. ', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Software',
@@ -121,7 +130,8 @@ question_banks = [
 		:option3 => 'All line segments can be displayed as straight.',
 		:option4 => 'Polygons can be filled with solid colors and textures. ',
 		:option5 => 'The complexity of the image representation is independent of the image. ',
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {	:category => 'Operating Systems',
 		:question => 'Which of the following is NOT a reasonable justification for choosing to busy-wait on an asynchronous event? ',
@@ -130,7 +140,8 @@ question_banks = [
 		:option3 => 'There is no other work for the processor to do. ',
 		:option4 => 'The task must meet some hard real-time deadlines. ',
 		:option5 => 'The program executes on a time-sharing system. ', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Software',
@@ -140,7 +151,8 @@ question_banks = [
 		:option3 => 'Operator precedence ',
 		:option4 => 'Type compatibility ',
 		:option5 => 'Type conversion',
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Operating Systems',
@@ -150,7 +162,8 @@ question_banks = [
 		:option3 => 'An instruction that modifies a memory management register ',
 		:option4 => 'An instruction that halts the CPU ',
 		:option5 => 'An instruction that resets the computer’s time-of-day clock ',
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms',
@@ -160,7 +173,8 @@ question_banks = [
 		:option3 => 'Priority queue',
 		:option4 => 'Queue',
 		:option5 => 'Set', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -170,7 +184,8 @@ question_banks = [
 		:option3 => '500',
 		:option4 => '501',
 		:option5 => '1000', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Operating Systems',
@@ -181,7 +196,8 @@ question_banks = [
 		:option3 => 'Paging requires page tables for address translation, whereas segmentation does not require segment tables for address translation. ',
 		:option4 => 'Paging requires one page table per process, whereas segmentation requires only one global segment table for the entire system. ',
 		:option5 => 'Page tables are typically very small, whereas segment tables are always very large. ',
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -192,7 +208,8 @@ question_banks = [
 		:option3 => '10',
 		:option4 => '64',
 		:option5 => '256', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {	
 	:category => 'Algorithms',
@@ -203,7 +220,8 @@ question_banks = [
 		:option3 => 'Insertion sort ',
 		:option4 => 'Mergesort ',
 		:option5 => 'Quicksort',
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -213,7 +231,8 @@ question_banks = [
 		:option3 => 'If X is NP-hard, then it is NP-complete', 
 		:option4 => 'X may be undecidable', 
 		:option5 => 'None of the above', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -224,7 +243,8 @@ question_banks = [
 		:option3 => '98%', 
 		:option4 => '99.8%', 
 		:option5 => '100%', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software' , 
@@ -237,7 +257,8 @@ question_banks = [
 		:option3 => 'I and II only', 
 		:option4 => 'II and III only', 
 		:option5 => 'I, II, and II', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -247,7 +268,8 @@ question_banks = [
 		:option3 => 'Heapsort', 
 		:option4 => 'Quicksort', 
 		:option5 => 'Tournament sort', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -258,7 +280,8 @@ question_banks = [
 		:option3 => 'Symbol Table', 
 		:option4 => 'Semantic Stack', 
 		:option5 => 'Parse Table', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -268,7 +291,8 @@ question_banks = [
 		:option3 => 'Heapsort', 
 		:option4 => 'Quicksort', 
 		:option5 => 'Tournament sort', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Networks', 
@@ -278,7 +302,8 @@ question_banks = [
 		:option3 => ' Ethernet protocols use a collision-detection method to ensure that messages are transmitted properly. ', 
 		:option4 => 'Networks connected by Ethernets are limited in length to a few hundred meters. ', 
 		:option5 => 'Packets sent on Ethernets are limited in size. ', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Operating Systems', 
@@ -291,7 +316,8 @@ question_banks = [
 		:option3 => 'I and II', 
 		:option4 => 'I and III', 
 		:option5 => 'II and III', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Operating Systems', 
@@ -303,7 +329,8 @@ question_banks = [
 		:option3 => '6', 
 		:option4 => '7', 
 		:option5 => '8', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -313,7 +340,8 @@ question_banks = [
 		:option3 => 'Range search: Given values a and b, find all the records whose key value is in the range [a b]', 
 		:option4 => 'Symbol table lookup: Given a program identifier, find its type and address. ', 
 		:option5 => 'Finding intersections: Given two sets of keys, find all key values in common to both sets.', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Networks', 
@@ -323,7 +351,8 @@ question_banks = [
 		:option3 => 'To determine the hardware address of a given host name', 
 		:option4 => 'To determine the hardware address of a given IP address ', 
 		:option5 => 'To determine the appropriate route for a datagram ', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -336,7 +365,8 @@ question_banks = [
 		:option3 => 'I and II only', 
 		:option4 => 'I and II only', 
 		:option5 => 'I, II, and III', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Networks', 
@@ -349,7 +379,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and III', 
 		:option5 => 'II and III', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -359,7 +390,8 @@ question_banks = [
 		:option3 => 'Finding ALL spanning trees of G', 
 		:option4 => 'Finding a largest clique in G', 
 		:option5 => 'Finding a node coloring of G (where adjacent nodes receive distinct colors) with the minimum number of colors ', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Operating Systems', 
@@ -373,7 +405,8 @@ question_banks = [
 		:option3 => 'I and III only', 
 		:option4 => 'II and III only', 
 		:option5 => 'I, II, and III', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -386,7 +419,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II only', 
 		:option5 => 'I, II and III', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Operating Systems', 
@@ -398,7 +432,8 @@ question_banks = [
 		:option3 => 'Global variables of the program', 
 		:option4 => 'Local variables on the call stack', 
 		:option5 => 'Values in machine registers', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -410,7 +445,8 @@ question_banks = [
 		:option3 => 'M = 7, m = 4', 
 		:option4 => 'M = 6, m = 4', 
 		:option5 => 'M = 6, m = 3', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -420,7 +456,8 @@ question_banks = [
 		:option3 => 'It cannot pass parameters by reference.', 
 		:option4 => 'It cannot call procedures implemented in a different language.', 
 		:option5 => 'It is used to call procedures at an outer nesting level.', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -435,7 +472,8 @@ question_banks = [
 		:option3 => 'I and II only', 
 		:option4 => 'I and III only', 
 		:option5 => 'I, II, II', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -445,7 +483,8 @@ question_banks = [
 		:option3 => 'All line segments can be displayed as straight.', 
 		:option4 => 'Polygons can be filled with solid colors and textures', 
 		:option5 => 'The complexity of the image representation is independent of the image.', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Operating Systems', 
@@ -459,7 +498,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II', 
 		:option5 => 'I and III', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -469,7 +509,8 @@ question_banks = [
 		:option3 => 'There is no other work for the processor to do.', 
 		:option4 => 'The task must meet some hard real-time deadlines.', 
 		:option5 => 'The program executes on a time-sharing system.', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -483,7 +524,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and III only', 
 		:option5 => 'I, II, and III', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Operating Systems', 
@@ -496,7 +538,8 @@ question_banks = [
 		:option3 => '0x76E81234; page mapped with READ/WRITE access ', 
 		:option4 => '0x76E81234; page mapped with COPY-ON-WRITE access', 
 		:option5 => '0x77E81234; page mapped with READ/WRITE access', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -508,7 +551,8 @@ question_banks = [
 		:option3 => '1/2', 
 		:option4 => '2/3', 
 		:option5 => '5/7', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -522,7 +566,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II', 
 		:option5 => 'I and III', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -536,7 +581,8 @@ question_banks = [
 		:option3 => 'I and II', 
 		:option4 => 'I and III', 
 		:option5 => 'II and III', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -546,7 +592,8 @@ question_banks = [
 		:option3 => 'Operator precedence ', 
 		:option4 => 'Type compatibility', 
 		:option5 => 'Type conversion', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -564,7 +611,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II', 
 		:option5 => 'II and III', 
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -574,7 +622,8 @@ question_banks = [
 		:option3 => 'Enigma, a transposition cipher  (Data Encryption Standard), a symmetric-key algorithm', 
 		:option4 => 'One-time pad', 
 		:option5 => 'RSA, a public-key algorithm', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -584,7 +633,8 @@ question_banks = [
 		:option3 => 'Q is in NP and R is polynomial-time reducible to Q.', 
 		:option4 => 'Q is NP-complete and Q is polynomial-time reducible to R.', 
 		:option5 => 'Q is NP-complete and R is polynomial-time reducible to Q.', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -597,7 +647,8 @@ question_banks = [
 		:option3 => 'I and III only', 
 		:option4 => 'II and III only', 
 		:option5 => 'I,II, and III', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -607,7 +658,8 @@ question_banks = [
 		:option3 => 'U X W Q Z Y V P', 
 		:option4 => 'U X Z Q W Y V P', 
 		:option5 => 'X Z U W Y Q V P', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -617,7 +669,8 @@ question_banks = [
 		:option3 => 'b = x^n', 
 		:option4 => 'b = z^n', 
 		:option5 => 'k != 0', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -627,7 +680,8 @@ question_banks = [
 		:option3 => 'v is an uncle of w', 
 		:option4 => 'v is a grandfather of w', 
 		:option5 => 'v is a male cousin of w.', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -637,7 +691,8 @@ question_banks = [
 		:option3 => '7', 
 		:option4 => '8', 
 		:option5 => '9.', 
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -647,7 +702,8 @@ question_banks = [
 		:option3 => '50%', 
 		:option4 => '100%', 
 		:option5 => '125%', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -657,7 +713,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II only', 
 		:option5 => 'I, II, and III', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -667,7 +724,8 @@ question_banks = [
 		:option3 => '1,024', 
 		:option4 => '2,048', 
 		:option5 => '4,096', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -677,7 +735,8 @@ question_banks = [
 		:option3 => '1,024', 
 		:option4 => '2,000', 
 		:option5 => '4,000', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -687,7 +746,8 @@ question_banks = [
 		:option3 => '-26', 
 		:option4 => '-28', 
 		:option5 => '-59', 
-		:answer => 3
+		:answer => 3,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -697,7 +757,8 @@ question_banks = [
 		:option3 => 'I and II only', 
 		:option4 => 'I and III only', 
 		:option5 => 'II, and III', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -707,7 +768,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II only', 
 		:option5 => 'II, and III',  
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Algorithms', 
@@ -717,7 +779,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II only', 
 		:option5 => 'I, II, and III', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -727,7 +790,8 @@ question_banks = [
 		:option3 => '8', 
 		:option4 => '6', 
 		:option5 => '5', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -737,7 +801,8 @@ question_banks = [
 		:option3 => '1.5',
 		:option4 => '2',
 		:option5 => 'More than 10',
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -747,7 +812,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and III', 
 		:option5 => 'II and III', 
-		:answer => 1
+		:answer => 1,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -757,7 +823,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II', 
 		:option5 => 'I and III', 
-		:answer => 4
+		:answer => 4,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -767,7 +834,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II',
 		:option5 => 'II and III',
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -777,7 +845,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II',
 		:option5 => 'II and III',
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 },
 {
 	:category => 'Software', 
@@ -787,7 +856,8 @@ question_banks = [
 		:option3 => 'III only', 
 		:option4 => 'I and II',
 		:option5 => 'II and III',
-		:answer => 5
+		:answer => 5,
+		:reviewStatus => 'Approved'
 }
 ]
 
