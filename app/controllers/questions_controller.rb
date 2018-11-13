@@ -7,13 +7,13 @@ class QuestionsController < ApplicationController
     end
     
     def index
-        @questions = QuestionBank.all
+        @questions = QuestionBank.where(creator: session[:email])
     end
     
     def create
-         @question = QuestionBank.create!(question_params)
-         @question.create!(creator: session[:email])
-         @question.create!(reviewStatus: "Pending")
+        @question = QuestionBank.create!(question_params)
+        @question.update(creator: session[:email])
+        @question.update(reviewStatus: "Pending")
 
         if params[:imagequestion].present?
             preloaded = Cloudinary::PreloadedFile.new(params[:imagequestion])

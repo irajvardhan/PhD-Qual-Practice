@@ -2,10 +2,10 @@ class QuizController < ApplicationController
     
     def index
         if params[:quizlimit] == "All"
-         @questions= QuestionBank.all
+         @questions= QuestionBank.where(reviewStatus: "Approved")
         
         else
-            @questions= QuestionBank.all.sample(params[:quizlimit].to_i)
+            @questions= QuestionBank.where(reviewStatus: "Approved").sample(params[:quizlimit].to_i)
         end
     end
 end
