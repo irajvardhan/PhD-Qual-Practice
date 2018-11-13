@@ -38,7 +38,10 @@
         - if logged_in?
           %ul.navbar-nav.ml-auto
             %li.nav-item
-              %a.nav-link{:href => "/questions"} Questions
+            - if is_admin?
+              %a.nav-link{:href => "/admin"} Admin
+            - else
+              %a.nav-link{:href => "/questions"} Your Questions
             %li.nav-item
               = link_to "Log out", logout_path, method: :delete, class:"nav-link"
         - else
@@ -51,7 +54,7 @@
     %br/
     %footer.footer.bg-dark
       .container
-        %span.text-muted Created by Team RubyGeeks
+        %span.text-muted Created by Team RubyGeeks; Updated by BestestSoftwareTeamEver
         %span.text-muted.float-right
           Source code available at 
-          = link_to "Github", "https://github.com/jsoumya/PhD-Qual-Practice", target: "_blank"
+          = link_to "Github", "https://github.com/BestestSoftwareTeamEver/PhD-Qual-Practice", target: "_blank"
