@@ -42,6 +42,9 @@
         .form-group
           = label :question, :answer, 'Correct Answer',class: "control-label"
           = text_field :question, 'answer', class:"form-control", autofocus: "true", placeholder: "Please add correct option number. For e.g., If Option 1 is correct, put 1 in this field"
+        .form-group
+          = label :question, :explaination, 'Explaination of Answer',class: "control-label"
+          = text_field :question, 'explaination', class:"form-control", autofocus: "true", placeholder: "Please add an explaination for why this answer is correct."
         .row
           .form-group.mx-auto
             = submit_tag 'Save Changes',class: "btn btn-primary"

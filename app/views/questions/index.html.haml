@@ -21,6 +21,7 @@
             %thead
                 %tr
                     %th Id
+                    %th Status
                     %th Title
                     %th Category
                     %th Edit
@@ -29,6 +30,7 @@
                 - @questions.each_with_index do |ques,index|
                     %tr
                         %td= ques.id
+                        %td= ques.reviewStatus
                         %td.truncate= ques.question
                         %td= ques.category
                         %td
