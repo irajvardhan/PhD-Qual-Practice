@@ -7,7 +7,8 @@ question_banks = [
 		:option3 => 'To determine the hardware address of a given host name',
 		:option4 => 'To determine the hardware address of a given IP address',
 		:option5 => 'To determine the appropriate route for a datagram',
-		:answer => 2
+		:answer => 2,
+		:reviewStatus => 'Approved'
 	},
 	{	
 		:category => 'Algorithms', 
