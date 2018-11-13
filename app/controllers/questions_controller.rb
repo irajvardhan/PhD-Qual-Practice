@@ -1,10 +1,9 @@
 class QuestionsController < ApplicationController
     
     before_action :logged_in_user, only: [:create, :new]
-    before_action :logged_in_admin, only: [:index]
     
     def question_params
-        params.require(:question).permit(:category, :question, :option1, :option2, :option3, :option4, :option5, :answer,:image1,:image2,:image3,:image4,:image5,:imagequestion)
+        params.require(:question).permit(:category, :question, :option1, :option2, :option3, :option4, :option5, :answer,:image1,:image2,:image3,:image4,:image5,:imagequestion, :explaination)
     end
     
     def index
@@ -13,6 +12,8 @@ class QuestionsController < ApplicationController
     
     def create
          @question = QuestionBank.create!(question_params)
+         @question.create!(creator: session[:email])
+         @question.create!(reviewStatus: "Pending")
 
         if params[:imagequestion].present?
             preloaded = Cloudinary::PreloadedFile.new(params[:imagequestion])
