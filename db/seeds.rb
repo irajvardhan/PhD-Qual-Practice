@@ -849,16 +849,520 @@ question_banks = [
 		:reviewStatus => 'Approved'
 },
 {
+	:category => 'Algorithms', 
+		:question => '3.2.png',
+		:option1 => '[7, 4, 2, 6, 1, 3]',
+		:option2 => '[7, 4, 6, 2, 1, 3]',
+		:option3 => '[7, 4, 6, 2, 3, 1]', 
+		:option4 => '[7, 6, 4, 2, 1, 3]',
+		:option5 => '[7, 6, 4, 2, 3, 1] ',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
 	:category => 'Software', 
-		:question => '1.62.png',
+		:question => '3.6.png',
+		:option1 => '5',
+		:option2 => '6',
+		:option3 => '7', 
+		:option4 => '8',
+		:option5 => '9',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.7.png',
+		:option1 => 'An instruction that changes the value of the program counter ',
+		:option2 => 'An instruction that sends output to a printer ',
+		:option3 => 'An instruction that modifies a memory management register ', 
+		:option4 => 'An instruction that halts the CPU ',
+		:option5 => 'An instruction that resets the computer’s time-of-day clock ',
+		:answer => 1,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Software', 
+		:question => '3.8.png',
+		:option1 => 'Singly-linked list, with head and tail pointers',
+		:option2 => 'Doubly-linked list, with only a head pointer',
+		:option3 => 'Array', 
+		:option4 => 'Binary tree',
+		:option5 => 'Hash table',
+		:answer => 1,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.9.png',
+		:option1 => '3',
+		:option2 => '6',
+		:option3 => '216', 
+		:option4 => '324',
+		:option5 => '729',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.10.png',
+		:option1 => 'None',
+		:option2 => 'I only',
+		:option3 => 'II only', 
+		:option4 => 'III only',
+		:option5 => 'I,II, and III',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.11.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'I and II only', 
+		:option4 => 'I and III only',
+		:option5 => 'I, II, and III',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Software', 
+		:question => '3.14.png',
+		:option1 => 'Linked List',
+		:option2 => 'Hash Table',
+		:option3 => 'Priority queue', 
+		:option4 => 'Queue',
+		:option5 => 'Set',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Software', 
+		:question => '3.15.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'I and II only', 
+		:option4 => 'I and III only',
+		:option5 => 'I,II, and II',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.16.png',
+		:option1 => '250',
+		:option2 => '499',
+		:option3 => '500', 
+		:option4 => '501',
+		:option5 => '1,000',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.17.png',
+		:option1 => '1',
+		:option2 => '2',
+		:option3 => '3', 
+		:option4 => '4',
+		:option5 => '5',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.18.png',
+		:option1 => 'No neutron machine can solve the Traveling Salesman problem in polynomial time.',
+		:option2 => 'No neutron machine can solve the Maximum Matching problem for bipartite graphs in polynomial
+time.',
+		:option3 => 'No neutron machine can determine whether the decimal expansion of has 7 consecutive 7s.', 
+		:option4 => 'No neutron machine can simulate a given Turing machine in polynomial time.',
+		:option5 => 'No neutron machine can determine in polynomial time whether a given Turing machine halts when
+its input tape is initially blank.',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.20.png',
+		:option1 => '6',
+		:option2 => '7',
+		:option3 => '9', 
+		:option4 => '10',
+		:option5 => '11',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.22.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'I and II', 
+		:option4 => 'I and III',
+		:option5 => 'II and III',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.24.png',
 		:option1 => 'I only',
 		:option2 => 'II only',
 		:option3 => 'III only', 
 		:option4 => 'I and II',
-		:option5 => 'II and III',
+		:option5 => 'I and III',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.25.png',
+		:option1 => '( x = 3 ) and ( y = 8 )',
+		:option2 => '( x = 8 ) and ( y = 3 )',
+		:option3 => '( x = 8 ) and ( y = 11 )', 
+		:option4 => '( x = 11 ) and ( y = 3 )',
+		:option5 => '( x = 11 ) and ( y = 8 ) ',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.26.png',
+		:option1 => 'Paging breaks a process’ virtual memory into physical units of the same size, whereas segmentation breaks
+a process’ virtual memory into logical units that are typically of different sizes. ',
+		:option2 => 'Paging suffers from external fragmentation, whereas segmentation suffers from internal fragmentation.',
+		:option3 => 'Paging requires page tables for address translation, whereas segmentation does not require segment tables
+for address translation. ', 
+		:option4 => 'Paging requires one page table per process, whereas segmentation requires only one global segment table
+for the entire system. ',
+		:option5 => 'Page tables are typically very small, whereas segment tables are always very large. ',
+		:answer => 1,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Software', 
+		:question => '3.27.png',
+		:option1 => 'For all x, y, and z, P1(x, y, z) and P2(x, y, z) have the same behavior.',
+		:option2 => 'For all x and y, there exists z such that P1(x, y, z) and P2(x, y, z) behave differently. ',
+		:option3 => 'For all x and z, there exists y such that P1(x, y, z) and P2(x, y, z) behave differently. ', 
+		:option4 => 'For all y and z, there exists x such that P1(x, y, z) and P2(x, y, z) behave differently. ',
+		:option5 => 'For all x, y, and z, P1(x, y, z) and P2(x, y, z) behave differently. ',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.28.png',
+		:option1 => 'If x is a composite integer, then x has a prime divisor less than or equal to the square root of x',
+		:option2 => 'There are infinitely many prime integers. ',
+		:option3 => 'Integers a and b are congruent modulo m if and only if there is an integer k such that a = b + km', 
+		:option4 => 'If a divides bc, then either a divides b or a divides c. ',
+		:option5 => 'If a divides b and b divides c, then a divides c. ',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Networks', 
+		:question => '3.29.png',
+		:option1 => 'L',
+		:option2 => '2L',
+		:option3 => '3L', 
+		:option4 => '5L',
+		:option5 => '6L',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.30.png',
+		:option1 => '5, 7, 10, 13, 14, 17, 20, 30',
+		:option2 => '10, 5, 13, 14, 7, 30, 17, 20 ',
+		:option3 => '10, 5, 13, 17, 20, 14, 7, 30', 
+		:option4 => '10, 5, 20, 13, 17, 30, 14, 7 ',
+		:option5 => '10, 20, 5, 17, 13, 14, 7, 30',
 		:answer => 5,
 		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.31.png',
+		:option1 => '100',
+		:option2 => '500',
+		:option3 => '555', 
+		:option4 => '1,000',
+		:option5 => '1,111',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.33.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'I and II only', 
+		:option4 => 'I and II only',
+		:option5 => 'I, II and III',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.36.png',
+		:option1 => '101 101 101',
+		:option2 => '101 202 202',
+		:option3 => '202 101 101', 
+		:option4 => '202 202 101',
+		:option5 => '202 202 202',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.37.png',
+		:option1 => '3',
+		:option2 => '4',
+		:option3 => '10', 
+		:option4 => '64',
+		:option5 => '256',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.38.png',
+		:option1 => 'P1	P2	P3',
+		:option2 => 'P1	P3	P2',
+		:option3 => 'P2	P1	P3', 
+		:option4 => 'P2	P3	P1',
+		:option5 => 'P3	P1	P2',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.39.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'I and II only', 
+		:option4 => 'II and III only',
+		:option5 => 'I, II and III',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.42.png',
+		:option1 => 'Bubblesort',
+		:option2 => 'Heapsort',
+		:option3 => 'Insertion Sort`', 
+		:option4 => 'Mergesort',
+		:option5 => 'Quicksort',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.43.png',
+		:option1 => 'None',
+		:option2 => 'I only',
+		:option3 => 'I and II only', 
+		:option4 => 'I and III only',
+		:option5 => 'I, II, and III',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.44.png',
+		:option1 => '64',
+		:option2 => '255',
+		:option3 => '256', 
+		:option4 => '262,143',
+		:option5 => '262,144',
+		:answer => 1,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.46.png',
+		:option1 => 'I only',
+		:option2 => 'I and II only',
+		:option3 => 'I and III only', 
+		:option4 => 'II and III only',
+		:option5 => 'I, II, and III',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.48.png',
+		:option1 => '1',
+		:option2 => '1.25',
+		:option3 => '1.5', 
+		:option4 => '2',
+		:option5 => '2.5',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.49.png',
+		:option1 => 'None',
+		:option2 => 'I and II only',
+		:option3 => 'I and III only', 
+		:option4 => 'II and III only',
+		:option5 => 'I, II, and III',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.50.png',
+		:option1 => 'I only',
+		:option2 => 'II only',
+		:option3 => 'III only', 
+		:option4 => 'I and II',
+		:option5 => 'I and III',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.53.png',
+		:option1 => 'None',
+		:option2 => 'I only',
+		:option3 => 'III only', 
+		:option4 => 'I and III only',
+		:option5 => 'I , II and III',
+		:answer => 1,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.54.png',
+		:option1 => 'None',
+		:option2 => 'I and II only',
+		:option3 => 'I and III only', 
+		:option4 => 'II and III only',
+		:option5 => 'I, II, and III',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.56.png',
+		:option1 => '0',
+		:option2 => '1',
+		:option3 => '2', 
+		:option4 => '3',
+		:option5 => '4',
+		:answer => 4,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Operating Systems', 
+		:question => '3.58.png',
+		:option1 => '10X',
+		:option2 => '20X',
+		:option3 => '40X', 
+		:option4 => '90X',
+		:option5 => 'Infinite',
+		:answer => 1,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.60.png',
+		:option1 => 'None',
+		:option2 => 'I and II only',
+		:option3 => 'I and III only', 
+		:option4 => 'II and III only',
+		:option5 => 'I, II and III',
+		:answer => 5,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.61.png',
+		:option1 => 'I only',
+		:option2 => 'I and II only',
+		:option3 => 'I and III only', 
+		:option4 => 'II and III only',
+		:option5 => 'I, II and III',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.62.png',
+		:option1 => '3',
+		:option2 => '4',
+		:option3 => '5', 
+		:option4 => '6',
+		:option5 => '7',
+		:answer => 1,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.65.png',
+		:option1 => 'One of the three statements is known to be false; it is not currently known whether the other two statements
+are true or false.',
+		:option2 => 'Two of the three statements are known to be false; it is not currently known whether the other statement
+is true or false.',
+		:option3 => 'One of the three statements is known to be true; another statement is known to be false; it is not currently
+known whether the remaining statement is true or false.', 
+		:option4 => 'One of the three statements is known to be true; the other two statements are known to be false.',
+		:option5 => 'Two of the three statements are known to be true; the other statement is known to be false.',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.66.png',
+		:option1 => '46',
+		:option2 => '218',
+		:option3 => '248', 
+		:option4 => '1,036',
+		:option5 => '5,672',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.68.png',
+		:option1 => '1/3',
+		:option2 => '5/12',
+		:option3 => '5/9', 
+		:option4 => '2/3',
+		:option5 => '5/6',
+		:answer => 3,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.69.png',
+		:option1 => '13',
+		:option2 => '27',
+		:option3 => '37', 
+		:option4 => '39',
+		:option5 => '54',
+		:answer => 2,
+		:reviewStatus => 'Approved'
+},
+{
+	:category => 'Algorithms', 
+		:question => '3.70.png',
+		:option1 => 'possibly finite and possibly infinite, but definitely decidable',
+		:option2 => 'possibly finite and possibly infinite, but definitely undecidable ',
+		:option3 => 'infinite, but possibly decidable and possibly undecidable', 
+		:option4 => 'infinite and decidable',
+		:option5 => 'infinite and undecidable',
+		:answer => 3,
+		:reviewStatus => 'Approved'
 }
+
 ]
 
 question_banks.each do |question|
