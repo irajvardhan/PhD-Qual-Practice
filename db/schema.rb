@@ -20,10 +20,12 @@ ActiveRecord::Schema.define(version: 20181024034452) do
     t.string   "option2"
     t.string   "option3"
     t.string   "option4"
+    t.string   "option5"
     t.integer  "answer"
+    t.string   "reviewStatus"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "option5"
+    
   end
 
   create_table "users", force: :cascade do |t|
