@@ -7,7 +7,9 @@ class CreateQuestionBanks < ActiveRecord::Migration
       t.string :option2
       t.string :option3
       t.string :option4
+      t.string :option5
       t.integer :answer
+      t.string :reviewStatus
 
       t.timestamps null: false
     end
