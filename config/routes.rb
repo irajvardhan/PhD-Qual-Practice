@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
   resources :admin
-  get '/admin' =>  'admin#index'
-  get '/admin_questions' => 'admin#admin_questions' 
-  get '/admin/:id' => 'admin#show'
+  get '/admin', to:  'admin#index'
+  get '/admin_questions', to: 'admin#admin_questions' 
+  get '/admin/:id', to: 'admin#show'
   
   resources :users
   get '/register', to: 'users#new'
