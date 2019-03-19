@@ -32,12 +32,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.current_place = 0
     
-    if @user.email == "admin@tamu.edu"
-      @user.is_admin = true
-    else
-      @user.is_admin = false
-    end
-    
+#    if @user.email == "admin@tamu.edu"
+#      @user.is_admin = true
+#    else
+#      @user.is_admin = false
+#    end
+         
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id

@@ -28,6 +28,9 @@
         .field
           = f.label :password_confirmation
           = f.password_field :password_confirmation, class: 'form-control --marginbottom16'
+        .field
+          = f.label :is_admin
+          = f.check_box :is_admin
         .actions
           = f.submit "Register", class: "btn btn-primary"
       - session[:password] = nil
