@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :admin
   get '/admin' => 'admin#index'
+  get '/admin/questions' => 'admin#questions'
   get '/admin/:id' => 'admin#show'
   
   resources :users
