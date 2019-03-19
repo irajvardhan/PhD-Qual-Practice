@@ -6,7 +6,7 @@ class AdminController < ApplicationController
     @users = User.all
   end
   
-  def questions
+  def admin_questions
     @questions = QuestionBank.all
   end
 
