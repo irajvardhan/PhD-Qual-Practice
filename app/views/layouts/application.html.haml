@@ -39,7 +39,8 @@
           %ul.navbar-nav.ml-auto
             %li.nav-item
             - if is_admin?
-              %a.nav-link{:href => "/admin"} Admin
+              %a.nav-link{:href => "/admin"} Your Questions
+              %a.nav-link{:href => "/admin"} Users 
             - else
               %a.nav-link{:href => "/questions"} Your Questions
             %li.nav-item
