@@ -55,25 +55,25 @@
 
     .container
 
-     .table-responsive.--margintop16#studentsTB
-          %table{:id=>'students',:class=>'default table table-hover'}
-              %thead
-                  %tr
-                  %th Name  
-                  %th Email  
-                  %th Admin  
-                  %th  
-                    
-          
-              %tbody
-                  - @users.each do |user|
-                      %tr
-                          %td= user.name
-                          %td= user.email
-                          %td= user.is_admin
-                          %td
-                              = link_to admin_index_path,:method=>:delete, :data=>{:confirm=>"Are you sure you want to delete this user? "} do
-                                    %i{:class=>'fa fa-trash'}r
+    .table-responsive.--margintop16#studentsTB
+         %table{:id=>'students',:class=>'default table table-hover'}
+             %thead
+                 %tr
+                 %th Name  
+                 %th Email  
+                 %th Admin  
+                 %th  
+                   
+         
+             %tbody
+                 - @users.each do |user|
+                     %tr
+                         %td= user.name
+                         %td= user.email
+                         %td= user.is_admin
+                         %td
+                             = link_to admin_index_path,:method=>:delete, :data=>{:confirm=>"Are you sure you want to delete this user? "} do
+                                   %i{:class=>'fa fa-trash'}r
 
 %br
 %br
