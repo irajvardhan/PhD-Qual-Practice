@@ -68,10 +68,13 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to admin_index_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:destroy] = "User-'#{@user.username}' deleted."
+    redirect_to admin_index_path
+  end
+#    respond_to do |format|
+#      format.html { redirect_to admin_index_url, notice: 'User was successfully destroyed.' }
+#      format.json { head :no_content }
+    
   end
 
   private
