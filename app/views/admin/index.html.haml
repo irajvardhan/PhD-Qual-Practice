@@ -55,16 +55,6 @@
 
     .container
 
--#      - if !flash[:success].blank?
--#          .alert.alert-success.alert-dismissible.fade.show{:role=>"alert"}
--#              = flash[:success]
--#              %button.close{:type=>"button",:data=>{:dismiss=>"alert"},:aria=>{:label=>"Close"}}
--#                  %span{:aria=>{:hidden=>"true"}} &times;
--#      - if !flash[:destroy].blank?
--#          .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
--#              = flash[:destroy]
--#              %button.close{:type=>"button",:data=>{:dismiss=>"alert"},:aria=>{:label=>"Close"}}
--#                  %span{:aria=>{:hidden=>"true"}} &times;
       .table-responsive.--margintop16#studentsTB
             %table{:id=>'students',:class=>'default table table-hover'}
                 %thead
