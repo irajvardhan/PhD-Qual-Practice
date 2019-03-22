@@ -21,11 +21,11 @@ class AdminController < ApplicationController
 	@user = User.find(params[:id])
 	@user.destroy
     	flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
-    	redirect_to admin_path
+    	redirect_to admin_index_path
     else
     	@question = QuestionBank.find(params[:id])
     	@question.destroy
-    	flash[:destroy] = "Question-'#{@question.id}' #{@params} deleted."
+    	flash[:destroy] = "Question-'#{@question.id}' #{@params[:category]} deleted."
     	redirect_to admin_questions_path
     end
   end
