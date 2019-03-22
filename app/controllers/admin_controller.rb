@@ -25,7 +25,7 @@ class AdminController < ApplicationController
     else
 	@user = User.find(params[:id])
 	@user.destroy
-    	flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
+    	flash[:notice] = "User/Admin-'#{@user.email}' deleted."
     	redirect_to admin_index_path
 
     end
