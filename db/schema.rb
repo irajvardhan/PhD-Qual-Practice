@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181024034452) do
+ActiveRecord::Schema.define(version: 20181113060748) do
 
   create_table "question_banks", force: :cascade do |t|
     t.string   "category"
