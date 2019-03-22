@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/admin', to:  'admin#index'
   get '/admin_questions', to: 'admin#admin_questions' 
   get '/admin/:id', to: 'admin#show'
-  
+  delete '/user_delete', to: 'admin#user_destroy'
+
   resources :users
   get '/register', to: 'users#new'
   post '/register', to: 'users#create'
