@@ -17,16 +17,17 @@ class AdminController < ApplicationController
   end
 
   def destroy
-    if params.key?("name")
-	@user = User.find(params[:id])
-	@user.destroy
-    	flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
-    	redirect_to admin_index_path
-    else
+    if params.key?("creator")
     	@question = QuestionBank.find(params[:id])
     	@question.destroy
     	flash[:destroy] = "Question-'#{@question.id}' #{@params[:category]} deleted."
     	redirect_to admin_questions_path
+    else
+	@user = User.find(params[:id])
+	@user.destroy
+    	flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
+    	redirect_to admin_index_path
+
     end
   end
 end
