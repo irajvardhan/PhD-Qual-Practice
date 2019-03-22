@@ -25,7 +25,7 @@ class AdminController < ApplicationController
     else
     	@question = QuestionBank.find(params[:id])
     	@question.destroy
-    	flash[:destroy] = "Question-'#{@question.id}' deleted."
+    	flash[:destroy] = "Question-'#{@question.id}' #{@params} deleted."
     	redirect_to admin_questions_path
     end
   end
