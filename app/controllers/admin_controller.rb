@@ -22,14 +22,16 @@ class AdminController < ApplicationController
     	@question.destroy
     	flash[:destroy] = "Question-'#{@question.id}' deleted."
     	redirect_to admin_questions_path
-    elsif (params[:flag] == "u") && ( params[:user][:id] != session[:user_id])
+    elsif (params[:flag] == "u") 
 	@user = User.find(params[:id])
-	#@user.destroy
-    	flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
-    	redirect_to admin_index_path
-    else
-	flash[:destroy] = "You cannot delete your own account."
-	redirect_to admin_index_path
+	if @user.id != session[:user_id]
+	  #@user.destroy
+    	  flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
+    	  redirect_to admin_index_path
+        else
+	  flash[:destroy] = "You cannot delete your own account."
+	  redirect_to admin_index_path
+	end
     end
   end
 end
