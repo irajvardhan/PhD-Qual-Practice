@@ -17,14 +17,12 @@ class AdminController < ApplicationController
   end
 
   def destroy
-    session[:id] = session[:id] || params[:id]
-  
     if params[:flag] == "q"
     	@question = QuestionBank.find(params[:id])
     	@question.destroy
     	flash[:destroy] = "Question-'#{@question.id}' deleted."
     	redirect_to admin_questions_path
-    elsif (params[:flag] == "u") && ( params[:id] != session[:id])
+    elsif (params[:flag] == "u") && ( params[:id] != session[:user_id])
 	@user = User.find(params[:id])
 	#@user.destroy
     	flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
