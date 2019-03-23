@@ -25,7 +25,7 @@ class AdminController < ApplicationController
     elsif (params[:flag] == "u") 
 	@user = User.find(params[:id])
 	if @user.id != session[:user_id]
-	  #@user.destroy
+	  @user.destroy
     	  flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
     	  redirect_to admin_index_path
         else
