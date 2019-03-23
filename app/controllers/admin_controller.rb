@@ -3,7 +3,6 @@ class AdminController < ApplicationController
 
   def index
     @users = User.all
-    session[:id] = session[:id] || params[:id]
   end
   
   def admin_questions
@@ -18,6 +17,7 @@ class AdminController < ApplicationController
   end
 
   def destroy
+    session[:id] = session[:id] || params[:id]
   
     if params[:flag] == "q"
     	@question = QuestionBank.find(params[:id])
