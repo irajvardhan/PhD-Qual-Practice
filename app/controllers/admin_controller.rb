@@ -1,8 +1,9 @@
 class AdminController < ApplicationController
   before_action :logged_in_admin, only: [:index, :show]
-  
+
   def index
     @users = User.all
+    session[:id] = session[:id] || params[:id]
   end
   
   def admin_questions
@@ -23,7 +24,7 @@ class AdminController < ApplicationController
     	@question.destroy
     	flash[:destroy] = "Question-'#{@question.id}' deleted."
     	redirect_to admin_questions_path
-    elsif (params[:flag] == "u") && (params[:id] != session[:id])
+    elsif (params[:flag] == "u") && ( params[:id] != session[:id])
 	@user = User.find(params[:id])
 	#@user.destroy
     	flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
