@@ -7,7 +7,7 @@ gem 'rails', '4.2.8'
 gem 'bcrypt',         '3.1.11'
 
 
-gem 'pg','~> 0.21'
+gem 'pg','0.20'
 # Use haml
 gem 'haml'
 gem 'haml-rails'
@@ -52,7 +52,7 @@ group :development, :test do
 end
 
 group :development do
-   #gem 'sqlite3'
+   gem 'sqlite3'
 end
 
 
