@@ -1,4 +1,3 @@
-require 'digest'
 class User < ActiveRecord::Base
     has_secure_password
     attr_accessor :reset_token
@@ -12,7 +11,13 @@ class User < ActiveRecord::Base
     reset_digest=User.digest(reset_token)
     reset_sent_at=Time.zone.now
   end
-
+  
+  def User.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
+  
   # Sends password reset email.
   def send_password_reset_email
     #UserMailer.password_reset(self).deliver_now
