@@ -20,7 +20,8 @@ class User < ActiveRecord::Base
   
   # Sends password reset email.
   def send_password_reset_email
-    UserMailer.password_reset(self)
+     message = UserMailer.password_reset(self)
+    message.deliver_now
     #.deliver_now
   end
 
