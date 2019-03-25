@@ -1,3 +1,4 @@
+require 'digest'
 class User < ActiveRecord::Base
     has_secure_password
     attr_accessor :reset_token
@@ -8,7 +9,7 @@ class User < ActiveRecord::Base
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token= SecureRandom.urlsafe_base64
-    #reset_digest=User.digest(reset_token)
+    reset_digest=User.digest(reset_token)
     reset_sent_at=Time.zone.now
   end
 
