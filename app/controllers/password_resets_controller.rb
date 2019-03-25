@@ -7,9 +7,9 @@ class PasswordResetsController < ApplicationController
   end
   
   def create
-    @user = User.where(:email => params[:email])
+    @user = User.find_by(email: params[:password_reset][:email].downcase)
     if @user
-      #@user.create_reset_digest
+      @user.create_reset_digest
       @user.send_password_reset_email
       flash[:info] = "Email sent with password reset instructions"
       redirect_to login_path
@@ -53,7 +53,7 @@ class PasswordResetsController < ApplicationController
     end
   
      def check_expiration
-      if @user && @user.password_reset_expired?
+      if (@user && @user.password_reset_expired?)
         flash[:danger] = "Password reset has expired."
         redirect_to new_password_reset_url
       end
