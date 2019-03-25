@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token= SecureRandom.urlsafe_base64
-    #update_attribute(:reset_digest,  User.digest(reset_token))
-    #update_attribute(:reset_sent_at, Time.zone.now)
+    reset_digest=User.digest(reset_token)
+    reset_sent_at=Time.zone.now
   end
 
   # Sends password reset email.
