@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
     #self.reset_token = User.new_token
     #update_attribute(:reset_digest,  User.digest(reset_token))
     #update_attribute(:reset_sent_at, Time.zone.now)
+    reset_sent_at = Time.zone.now
   end
 
   # Sends password reset email.
