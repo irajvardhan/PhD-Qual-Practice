@@ -8,8 +8,9 @@ class User < ActiveRecord::Base
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token= SecureRandom.urlsafe_base64
-    reset_digest=User.digest(reset_token)
-    reset_sent_at=Time.zone.now
+    #reset_digest=User.digest(reset_token)
+    #reset_sent_at=Time.zone.now
+    update_columns(reset_digest:  FILL_IN, reset_sent_at: FILL_IN)
   end
   
   def User.digest(string)
@@ -23,6 +24,11 @@ class User < ActiveRecord::Base
     UserMailer.password_reset(self).deliver
   end
 
+  # Returns true if a password reset has expired.
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+  
   private
 
     # Converts email to all lower-case.
