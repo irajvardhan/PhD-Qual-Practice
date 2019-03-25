@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token= SecureRandom.urlsafe_base64
-    #reset_digest=User.digest(reset_token)
-    #reset_sent_at=Time.zone.now
-    update_columns(reset_digest:  FILL_IN, reset_sent_at: FILL_IN)
+    reset_digest=User.digest(reset_token)
+    reset_sent_at=Time.zone.now
+    #update_columns(reset_digest:  FILL_IN, reset_sent_at: FILL_IN)
   end
   
   def User.digest(string)
