@@ -43,7 +43,7 @@ class PasswordResetsController < ApplicationController
     end
     
     def get_user
-      @user = User.find_by(email: params[:email])
+      @user = User.find_by_token_id(params[:id])
     end
 
     # Confirms a valid user.
@@ -57,7 +57,7 @@ class PasswordResetsController < ApplicationController
       if (@user && @user.password_reset_expired?)
         flash[:danger] = "Password reset has expired."
         redirect_to new_password_reset_url
-      end
+      end 
     end
     
 end
