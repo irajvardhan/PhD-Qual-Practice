@@ -34,7 +34,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def edit
-    redirect_to new_password_reset_path
+    redirect_to login_path
   end
   
    private
