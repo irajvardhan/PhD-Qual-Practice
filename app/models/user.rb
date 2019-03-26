@@ -1,15 +1,15 @@
 class User < ActiveRecord::Base
     has_secure_password
+    
+    # Modified for password reset functionality
     attr_accessor :reset_token
     before_save   :downcase_email
 
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token= SecureRandom.urlsafe_base64
-    #reset_digest=User.digest(reset_token)
     self.reset_sent_at=Time.zone.now
     save!
-   # update_columns(reset_digest:  User.digest(reset_token), reset_sent_at: Time.zone.now)
   end
   
   def User.digest(string)
