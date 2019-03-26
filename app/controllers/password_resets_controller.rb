@@ -29,7 +29,7 @@ class PasswordResetsController < ApplicationController
       redirect_to root_url, :notice => "Password has been reset!"
     #else
      # redirect_to root_url, :notice => "Problem!"
-    end
+    #end
   end
 
 
@@ -58,6 +58,6 @@ class PasswordResetsController < ApplicationController
         flash[:danger] = "Password reset has expired."
         redirect_to new_password_reset_url
       end 
-    end
+     end
     
 end
