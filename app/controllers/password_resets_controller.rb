@@ -26,7 +26,7 @@ class PasswordResetsController < ApplicationController
   # 4. A successful update
   def update
     #if @user.update_attributes(params[:user])
-      redirect_to root_url, :notice => "Password has been reset!"
+      redirect_to new_password_reset_url
     #else
      # redirect_to root_url, :notice => "Problem!"
     #end
