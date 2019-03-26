@@ -1,7 +1,7 @@
 class PasswordResetsController < ApplicationController
-  before_action :get_user,   only: [:edit, :update]
-  before_action :valid_user, only: [:edit, :update]
-  before_action :check_expiration, only: [:edit, :update]    # Case (1)
+  #before_action :get_user,   only: [:edit, :update]
+  #before_action :valid_user, only: [:edit, :update]
+  #before_action :check_expiration, only: [:edit, :update]    # Case (1)
     
   def new
   end
@@ -34,7 +34,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def edit
-    redirect_to login_path #
+    redirect_to "/password_resets/#{User.find_by_token(user.reset_token)[:id]}/edit"
   end
   
    private
