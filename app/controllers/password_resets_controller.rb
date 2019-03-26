@@ -34,6 +34,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def edit
+    redirect_to edit_password_reset_path(User.find_by_email(user.email)[:id])
   end
   
    private
