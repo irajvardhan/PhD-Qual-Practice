@@ -34,7 +34,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def edit
-    render "/password_resets/#{User.find_by_token(user.reset_token)[:id]}/edit"
+    render "/password_resets/#{@user.reset_token}/edit"
   end
   
    private
