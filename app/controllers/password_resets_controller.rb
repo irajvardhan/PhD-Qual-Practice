@@ -19,6 +19,11 @@ class PasswordResetsController < ApplicationController
     end
   end
   
+  #Cases 1,2,3,4:
+  # 1. An expired password reset
+  # 2. A failed update due to an invalid password
+  # 3. A failed update (which initially looks “successful”) due to an empty password and confirmation
+  # 4. A successful update
   def update
     if params[:user][:password].empty?                  # Case (3)
       @user.errors.add(:password, "can't be empty")
