@@ -25,10 +25,10 @@ class PasswordResetsController < ApplicationController
   # 3. A failed update (which initially looks “successful”) due to an empty password and confirmation
   # 4. A successful update
   def update
-    if @user.update_attributes(params[:user])
+    #if @user.update_attributes(params[:user])
       redirect_to root_url, :notice => "Password has been reset!"
-    else
-      redirect_to root_url, :notice => "Problem!"
+    #else
+     # redirect_to root_url, :notice => "Problem!"
     end
   end
 
