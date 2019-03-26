@@ -25,11 +25,13 @@ class PasswordResetsController < ApplicationController
   # 3. A failed update (which initially looks “successful”) due to an empty password and confirmation
   # 4. A successful update
   def update
-    #if @user.update_attributes(params[:user])
-      redirect_to new_password_reset_url
-    #else
-     # redirect_to root_url, :notice => "Problem!"
-    #end
+  if @user.password_reset_sent_at < 2.hours.ago
+    redirect_to new_password_reset_path, :alert => "Password reset has expired."
+  elsif @user.update_attributes(params[:user])
+    redirect_to login_path, :notice => "Password has been reset!"
+  else
+    render :edit
+  end
   end
 
 
@@ -58,6 +60,6 @@ class PasswordResetsController < ApplicationController
         flash[:danger] = "Password reset has expired."
         redirect_to new_password_reset_url
       end 
-     end
+    end
     
 end
