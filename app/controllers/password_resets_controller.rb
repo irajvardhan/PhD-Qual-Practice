@@ -34,7 +34,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def edit
-    redirect_to edit_password_reset_path(User.find_by_token(user.reset_token)[:id])
+    redirect_to "/password_resets/#{User.find_by_token(user.reset_token)[:id]}/edit"
   end
   
    private
