@@ -34,7 +34,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def edit
-    render "/password_resets/#{@user.reset_token}/edit"
+    redirect_to new_password_reset_path
   end
   
    private
