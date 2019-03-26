@@ -19,7 +19,7 @@ class PasswordResetsController < ApplicationController
     end
   end
   
-  def update
+    def update
     if params[:user][:password].empty?                  # Case (3)
       @user.errors.add(:password, "can't be empty")
       render 'edit'
@@ -34,9 +34,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def edit
-   # @user = User.find_by_reset_token!(params[:id])
-  #  redirect_to login_path
-    #redirect_to "/password_resets/#{User.find_by_token(user.reset_token)[:id]}/edit"
+    
   end
   
    private
