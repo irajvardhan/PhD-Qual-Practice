@@ -1,7 +1,7 @@
 class PasswordResetsController < ApplicationController
   before_action :get_user,   only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
-  before_action :check_expiration, only: [:edit, :update]    # Case (1)
+  before_action :check_expiration, only: [:edit]    # Case (1)
     
   def new
   end
@@ -25,16 +25,13 @@ class PasswordResetsController < ApplicationController
   # 3. A failed update (which initially looks “successful”) due to an empty password and confirmation
   # 4. A successful update
   def update
-    if params[:user][:password].empty?                  # Case (3)
-      @user.errors.add(:password, "can't be empty")
-      render 'edit'
-    elsif @user.update_attributes(params[:user])          # Case (4)
-     # log_in @user
-      flash[:success] = "Password has been reset."
-      redirect_to root_url
-    else
-      render 'edit'                                     # Case (2)
-    end
+  if @user.password_reset_sent_at < 2.hours.ago
+    redirect_to new_password_reset_path, :alert => "Password reset has expired."
+  elsif @user.update_attributes(params[:user])
+    redirect_to root_url, :notice => "Password has been reset!"
+  else
+    render :edit
+  end
   end
 
 
