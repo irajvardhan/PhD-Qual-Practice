@@ -1373,7 +1373,8 @@ users = [
 {
    :name => 'Prateek',
    :email => 'prat19@gmail.com',
-   :password_digest => '1234'
+   :password_digest => '1234',
+   :last_login_at => '2016-03-28 06:13:02.502363'
 }
 ]
 
