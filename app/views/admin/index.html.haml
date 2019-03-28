@@ -26,6 +26,7 @@
         %table{:id=>'students',:class=>'default table table-hover'}
             %thead
                 %tr
+                %th Admin Approval
                 %th Name
                 %th Email
                 %th Admin
@@ -35,6 +36,11 @@
             %tbody
                 - @users.each do |user|
                     %tr
+                        %td= user.reviewStatus
+                            - if user.reviewStatus.eql? "Pending"
+                                = link_to admin_path(user) do
+                                    %i{:class=>'fa fa-check'}
+
                         %td= user.name
                         %td= user.email
                         %td= user.is_admin

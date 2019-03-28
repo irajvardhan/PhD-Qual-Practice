@@ -31,7 +31,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.current_place = 0
-    
+
+    if params[:is_admin] == true
+      @user.update(reviewStatus: "Pending")
+      @user.update(is_admin: "false")
+    else 
+      @user.update(reviewStatus: nil)
+    end
 #    if @user.email == "admin@tamu.edu"
 #      @user.is_admin = true
 #    else
