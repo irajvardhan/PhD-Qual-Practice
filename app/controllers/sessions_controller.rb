@@ -18,8 +18,6 @@ class SessionsController < ApplicationController
     end
 
     if @user && @user.authenticate(params[:session][:password])
-      @user.last_login_at = Time.now
-      @user.save!
       session[:user_id] = @user.id
       session[:flash] = ("Welcome: " + @user.name)
       redirect_to root_url
