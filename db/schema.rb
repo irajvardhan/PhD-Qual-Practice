@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20181113060748) do
     t.string   "password_digest"
     t.string   "current_place"
     t.boolean  "is_admin"
+    t.string   "reviewStatus"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
