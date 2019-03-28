@@ -36,11 +36,12 @@
             %tbody
                 - @users.each do |user|
                     %tr
-                        %td= user.reviewStatus
+                        %td
+                            = user.reviewStatus
                             - if user.reviewStatus.eql? "Pending"
                                 = link_to admin_path(user) do
                                     %i{:class=>'fa fa-check'}
-
+  
                         %td= user.name
                         %td= user.email
                         %td= user.is_admin
