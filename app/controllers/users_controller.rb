@@ -33,8 +33,8 @@ class UsersController < ApplicationController
     @user.current_place = 0
 
     if params[:is_admin] == true
-      @user.update(reviewStatus: "Pending")
-      @user.update(is_admin: "false")
+      @user.reviewStatus = "Pending"
+      @user.is_admin = false
     else 
       @user.update(reviewStatus: nil)
     end
