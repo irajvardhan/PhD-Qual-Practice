@@ -1370,7 +1370,11 @@ question_banks.each do |question|
 end
 
 users = [
-
+{
+   :name => 'Prateek',
+   :email => 'prat19@gmail.com',
+   :password_digest => '1234'
+}
 ]
 
 users.each do |user|
