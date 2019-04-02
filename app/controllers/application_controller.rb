@@ -5,13 +5,12 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   
   helper :all
-  protect_from_forgery
   before_filter :prepare_for_mobile
 
-  layout :which_layout
-  def which_layout
-    mobile_device? ? 'mobile' : 'application'
-  end
+  #layout :which_layout
+  #def which_layout
+  #  mobile_device? ? 'mobile' : 'application'
+  #end
   
   protected
   def authorize
@@ -21,7 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  
   def mobile_device?
     if session[:mobile_param]
       session[:mobile_param] == "1"
