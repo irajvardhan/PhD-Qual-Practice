@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   
   helper :all
-  before_filter :prepare_for_mobile
+  #before_filter :prepare_for_mobile
 
   #layout :which_layout
   #def which_layout
