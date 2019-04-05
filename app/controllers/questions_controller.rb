@@ -41,7 +41,11 @@ class QuestionsController < ApplicationController
         end
        
         flash[:success] = "Question was successfully added"
-        redirect_to questions_path
+        if User.find_by(id: session[:user_id]).reviewStatus == "Approved"
+       	    redirect_to admin_questions_path
+	else
+            redirect_to questions_path
+	end
     end
     
     def edit
