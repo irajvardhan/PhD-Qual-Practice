@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
     if @user.is_admin == true
       @user.reviewStatus = "Pending"
-      #@user.is_admin = false
+      
     else 
       @user.update(reviewStatus: nil)
     end
