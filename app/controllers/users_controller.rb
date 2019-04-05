@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.current_place = 0
 
-    if params[:is_admin] == true
+    if @user.is_admin == true
       @user.reviewStatus = "Pending"
       @user.is_admin = false
     else 
