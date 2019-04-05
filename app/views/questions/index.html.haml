@@ -1,5 +1,6 @@
 %center
-    %h1 Your Questions
+    %h1 Welcome, #{session[:user_id]}! #{session[:email]}
+    %h1 Your Questions 
 
 %script{:src => "https://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"}
 %link{:href => "https://cdn.datatables.net/1.10.15/css/jquery.dataTables.css", :rel => "stylesheet"}/
