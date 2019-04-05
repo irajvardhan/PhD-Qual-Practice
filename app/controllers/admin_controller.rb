@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_action :logged_in_admin, only: [:index, :show]
+  before_action :logged_in_admin, only: [:index, :show, :admin_questions]
 
   def index
     @users = User.all
