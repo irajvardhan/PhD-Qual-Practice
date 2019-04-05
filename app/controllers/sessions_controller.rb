@@ -18,9 +18,10 @@ class SessionsController < ApplicationController
     end
 
     if @user && @user.authenticate(params[:session][:password])
+      session[:email] = params[:session][:email]
+      session[:name] = @user.name
       session[:user_id] = @user.id
       session[:flash] = ("Welcome: " + @user.name)
-      session[:email] = @user.email
       redirect_to root_url
       return
     else
@@ -31,7 +32,10 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[:email] = nil
+    session[:name] = nil
     session[:user_id] = nil
+    session[:password] = nil
     session[:flash] = ("Succesfully logged out")
     redirect_to login_url
     return
