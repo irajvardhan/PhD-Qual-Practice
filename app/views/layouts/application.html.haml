@@ -38,7 +38,7 @@
         - if logged_in?
           %ul.navbar-nav.ml-auto
             %li.nav-item  
-            - if User.find_by(id: session[:user_id]) #.reviewStatus == "Approved"   
+            - if User.find_by(id: session[:user_id]).reviewStatus == "Approved"   
               %a.nav-link{:href => "/admin_questions"} Your Questions
               %a.nav-link{:href => "/admin"} Users 
             - else
