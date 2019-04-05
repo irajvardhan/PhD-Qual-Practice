@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     end
 
     if @user && @user.authenticate(params[:session][:password])
-      session[:email] = params[:session][:email]
+      session[:email] = @user.email 
       session[:name] = @user.name
       session[:user_id] = @user.id
       session[:flash] = ("Welcome: " + @user.name)
