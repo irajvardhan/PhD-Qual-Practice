@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
     end
     
     def index
-        @questions = QuestionBank.where(creator: session[:email])
+        @user_questions = QuestionBank.where(creator: session[:email])
     end
     
     def create

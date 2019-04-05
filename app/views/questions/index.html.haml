@@ -27,7 +27,7 @@
                     %th Edit
                     %th Delete
             %tbody
-                - @questions.each_with_index do |ques,index|
+                - @user_questions.each_with_index do |ques,index|
                     %tr
                         %td= ques.id
                         %td= ques.reviewStatus
