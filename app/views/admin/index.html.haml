@@ -39,7 +39,7 @@
                         %td
                             = user.reviewStatus
                             - if user.reviewStatus.eql? "Pending"
-                                = link_to admin_path(user) do
+                                = link_to admin_path(user, :flag_ => "u") do
                                     %i{:class=>'fa fa-check'}
   
                         %td= user.name

@@ -35,7 +35,7 @@
                         %td
                             = ques.reviewStatus
                             - if ques.reviewStatus.eql? "Pending"
-                                = link_to admin_path(ques) do
+                                = link_to admin_path(ques, :flag_ => "q") do
                                     %i{:class=>'fa fa-check'}
                                 
                         %td= ques.creator 
