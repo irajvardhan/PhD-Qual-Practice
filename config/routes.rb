@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   resources :admin
-  get '/admin' => 'admin#index'
-  get '/admin/:id' => 'admin#show'
-  
+  get '/admin', to:  'admin#index'
+  get '/admin_questions', to: 'admin#admin_questions' 
+  get '/admin/:id', to: 'admin#show'
+
+
   resources :users
   get '/register', to: 'users#new'
   post '/register', to: 'users#create'
@@ -20,8 +22,7 @@ Rails.application.routes.draw do
   resources :selquiz
   get '/quiz', to: 'practice#index'
   
-  resources :admin
-  
+ 
   resources :practice
   get '/index', to: 'practice#index'
   

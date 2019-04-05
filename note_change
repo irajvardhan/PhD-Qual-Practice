@@ -1,0 +1,9 @@
+1) Existing users/admin condition
+2) Request to be admin and admin can approve other admin (admin cannot delete himself)
+3) Your questions page for admin. (link not visible for admin)
+4) delete user redirection problem from admin page 
+5) Your questions would have personally added question & bookmarked questions.
+
+*Note:
+
+If no admin exists, all users can edit/delete/view all questions but cannot approve.

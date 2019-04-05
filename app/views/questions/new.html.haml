@@ -5,7 +5,8 @@
   %hr/
   .row
     .col-md-10
-      = form_tag questions_path,:id=>"createQuestionForm" do
+      
+      = form_tag questions_path, :id=>"createQuestionForm" do
         .form-group
           = label :question, :category, 'Question Category',class: "control-label"
           = select :question,:category, ['Networks', 'Algorithms', 'Operating Systems', 'Software'],{}, class:"form-control"

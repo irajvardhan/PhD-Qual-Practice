@@ -29,7 +29,7 @@ module SessionsHelper
     end
     
     def logged_in_admin
-      unless logged_in? && is_admin?
+      unless logged_in? && User.find_by(id: session[:user_id]).reviewStatus == "Approved"
         flash[:session] = "Only Admins are allowed to see this page."
         redirect_to root_url
       end
