@@ -10,10 +10,17 @@ class AdminController < ApplicationController
   end
 
   def show
-    @question = QuestionBank.find(params[:id])
-    @question.update(reviewStatus: "Approved")
-    redirect_to action: "index"
-    return
+    if params[:flag_] == "q"
+    	@question = QuestionBank.find(params[:id])
+    	@question.update(reviewStatus: "Approved")
+    	redirect_to admin_questions_path
+    	return
+    elsif params[:flag_] == "u"
+	@user = User.find(params[:id])
+	@user.update(reviewStatus: "Approved")
+	redirect_to admin_index_path
+	return
+    end
   end
 
   def destroy
