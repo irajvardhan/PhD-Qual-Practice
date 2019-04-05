@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
       session[:flash] = ""
       return
     end
+    
 
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
