@@ -5,12 +5,13 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   
   helper :all
-  before_filter :prepare_for_mobile
+  #before_filter :prepare_for_mobile
+  before_action :detect_device_variant
 
-  layout :which_layout
-  def which_layout
-    mobile_device? ? 'mobile' : 'application'
-  end
+  #layout :which_layout
+  #def which_layout
+  #  mobile_device? ? 'mobile' : 'application'
+  #end
   
   protected
   def authorize
@@ -18,19 +19,25 @@ class ApplicationController < ActionController::Base
       redirect_to login_url, notice:"You need to login to see this page"
     end
   end
-
-  private
-  def mobile_device?
-    if session[:mobile_param]
-      session[:mobile_param] == "1"
-    else
-      request.user_agent =~ /Mobile|webOS/
-    end
-  end
-  helper_method :mobile_device?
   
-  def prepare_for_mobile
-    session[:mobile_param] = params[:mobile] if params[:mobile]
-    request.format = :mobile if mobile_device?
+  private
+
+  def detect_device_variant
+    request.variant = :phone if browser.device.mobile?
   end
+
+  #private
+  #def mobile_device?
+  #  if session[:mobile_param]
+  #    session[:mobile_param] == "1"
+   # else
+    #  request.user_agent =~ /Mobile|webOS|iPhone/
+  #  end
+  #end
+  #helper_method :mobile_device?
+  
+#  def prepare_for_mobile
+ #   session[:mobile_param] = params[:mobile] if params[:mobile]
+  #  request.format = :mobile if mobile_device?
+  #end
 end

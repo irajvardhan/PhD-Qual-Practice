@@ -44,6 +44,7 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
+    browser (2.0.3)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (2.4.4)
@@ -269,6 +270,7 @@ PLATFORMS
 DEPENDENCIES
   ZenTest (= 4.11.0)
   bcrypt (= 3.1.11)
+  browser (= 2.0.3)
   byebug
   capybara (= 2.4.4)
   cloudinary
@@ -300,4 +302,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.16.5
+   1.16.6
