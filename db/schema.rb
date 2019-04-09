@@ -42,6 +42,6 @@ ActiveRecord::Schema.define(version: 20190328042426) do
     t.datetime "updated_at",      null: false
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.datetime "last_login_at"
   end
-
 end
