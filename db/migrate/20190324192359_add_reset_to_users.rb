@@ -4,4 +4,3 @@ class AddResetToUsers < ActiveRecord::Migration
     add_column :users, :reset_sent_at, :datetime
   end
 end
-
