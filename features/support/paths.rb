@@ -21,7 +21,7 @@ module NavigationHelpers
 
     when /^Select Category\s?page$/
       '/selcat'
-
+ 
     when /^Quiz Category\s?page$/
       '/selquiz'
 
