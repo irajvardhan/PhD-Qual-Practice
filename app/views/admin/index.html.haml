@@ -23,6 +23,7 @@
                 %tr
                     %th Id
                     %th Status
+                    %th Creator
                     %th Title
                     %th Category
                     %th Edit
@@ -37,6 +38,7 @@
                                 = link_to admin_path(ques) do
                                     %i{:class=>'fa fa-check'}
                                 
+                        %td= ques.creator
                         %td.truncate= ques.question
                         %td= ques.category
                         %td
