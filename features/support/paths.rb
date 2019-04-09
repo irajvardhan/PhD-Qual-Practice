@@ -24,7 +24,12 @@ module NavigationHelpers
 
     when /^Quiz Category\s?page$/
       '/selquiz'
+      
+    when /^the Forgot password\s?page$/
+      '/password_resets/new'
 
+    when /^the reset password\s?page for "(.*)"$/
+      "password_resets/265599eadb0d4216a4f5a9d4ac77b091/edit"
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

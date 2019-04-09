@@ -1370,7 +1370,8 @@ question_banks.each do |question|
 end
 
 users = [
-
+{:name => 'Sweta', :email => 'swetuorama@gmail.com', :password_digest => '1234',
+ :reset_digest=> '265599eadb0d4216a4f5a9d4ac77b091', :reset_sent_at => DateTime.new(2019,03,26,12,00,00,"-07:00") },
 ]
 
 users.each do |user|
