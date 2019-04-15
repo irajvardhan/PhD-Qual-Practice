@@ -1376,3 +1376,26 @@ users = [
 users.each do |user|
   User.create(user)
 end
+
+category_banks = [
+{
+                :category => 'Networks',
+                :reviewStatus => 'Approved'
+},
+{
+                :category => 'Algorithms',
+                :reviewStatus => 'Approved'
+},
+{
+                :category => 'Operating Systems',
+                :reviewStatus => 'Approved'
+},
+{
+                :category => 'Software',
+                :reviewStatus => 'Approved'
+}
+]
+
+category_banks.each do |categories|
+  CategoryBank.create(categories)
+end

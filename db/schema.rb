@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181113060748) do
+ActiveRecord::Schema.define(version: 20190325024057) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "category_banks", force: :cascade do |t|
+    t.string   "category"
+    t.string   "reviewStatus"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "creator"
+  end
 
   create_table "question_banks", force: :cascade do |t|
     t.string   "category"
@@ -23,9 +34,10 @@ ActiveRecord::Schema.define(version: 20181113060748) do
     t.string   "option5"
     t.integer  "answer"
     t.string   "reviewStatus"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "creator"
+    t.string   "explaination"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,9 +46,9 @@ ActiveRecord::Schema.define(version: 20181113060748) do
     t.string   "password_digest"
     t.string   "current_place"
     t.boolean  "is_admin"
-    t.string   "reviewStatus"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "reviewStatus"
   end
 
 end

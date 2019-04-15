@@ -37,6 +37,12 @@ Rails.application.routes.draw do
   resources :questions
 
   get 'new_question' => 'questions#new'
+  
+
+resources :categories
+
+  get 'new_categories' => 'categories#new'
+
 
   # get 'admin/index'
 

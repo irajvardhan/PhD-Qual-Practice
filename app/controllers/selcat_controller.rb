@@ -1,7 +1,7 @@
 class SelcatController < ApplicationController
     
     def index
-        @all_categories = QuestionBank.category
+        @a_categories = CategoryBank.all  #QuestionBank.category
     end
     
 end

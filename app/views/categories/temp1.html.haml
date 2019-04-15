@@ -1,0 +1,12 @@
+.container.jumbotron
+  %h1.row Exsisting Categories 
+  %tbody
+    - @all_categories.each do |categories|
+      %tr
+        %td= categories.category
+        %br
+  .row
+    .mx-auto
+      /= submit_tag 'Start Practice', name:nil, class: "btn btn-lg btn-primary --margintop16"
+      =link_to "Add new category", new_category_path,:class=>'btn btn-primary'
+

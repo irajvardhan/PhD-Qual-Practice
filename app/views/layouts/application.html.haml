@@ -41,8 +41,12 @@
             - if User.find_by(id: session[:user_id]).reviewStatus == "Approved"   
               %a.nav-link{:href => "/admin_questions"} Your Questions
               %a.nav-link{:href => "/admin"} Users 
+              %li.nav-item
+                %a.nav-link{:href => "/categories"} Categories
             - else
               %a.nav-link{:href => "/questions"} Your Questions
+              %li.nav-item
+                %a.nav-link{:href => "/categories"} Categories
             %li.nav-item
               = link_to "Log out", logout_path, method: :delete, class:"nav-link"
         - else

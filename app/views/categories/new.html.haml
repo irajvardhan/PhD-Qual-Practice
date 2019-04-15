@@ -1,0 +1,9 @@
+.container.jumbotron
+  %h2 Create New Categories
+  = form_tag categories_path, :method => :post do
+    = label :category_banks, :category, 'Category'
+    = text_field :category_banks, :category
+  .row
+    /.mx_auto
+    /%div.some{ :style => "position: absolute; left: 150px; top: 150px;" }
+    = submit_tag 'Save Changes',class: "btn btn-primary"

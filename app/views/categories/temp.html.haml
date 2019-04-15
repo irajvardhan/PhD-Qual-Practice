@@ -1,0 +1,33 @@
+%center
+    %table{:id=>'students',:class=>'default table table-hover'}
+        %thead
+            %tr
+                %th Id
+                %th Status
+                %th Creator
+                %th Category
+                %th Edit
+                %th Delete
+                %th
+        %tbody
+            - @all_categories.each_with_index do |category,index|
+                %tr
+                    %td= category.id
+                    %td
+                        = category.reviewStatus
+                        - if category.reviewStatus.eql? "Pending"
+                            = link_to admin_path(category) do
+                                %i{:class=>'fa fa-check'}
+
+                    %td= category.creator
+                    /%td.truncate= category.question
+                    %td= category.category
+                    %td
+                        =link_to edit_category_path(category) do
+                            %i{:class=>'fa fa-edit'}
+                    %td
+                        =link_to category_path(category),:method=>:delete, :data=>{:confirm=>"Are you sure you want to delete this category? "} do
+                            %i{:class=>'fa fa-trash'}
+
+
+

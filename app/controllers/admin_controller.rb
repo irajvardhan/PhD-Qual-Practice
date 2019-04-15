@@ -3,10 +3,15 @@ class AdminController < ApplicationController
 
   def index
     @users = User.all
+    @all_categories = CategoryBank.all
   end
   
   def admin_questions
     @questions = QuestionBank.all
+  end
+
+  def admin_categories
+    @questions = CategoryBank.all
   end
 
   def show

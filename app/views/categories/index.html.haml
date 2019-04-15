@@ -1,0 +1,31 @@
+%script{:src => "https://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"}
+%link{:href => "https://cdn.datatables.net/1.10.15/css/jquery.dataTables.css", :rel => "stylesheet"}/
+%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+.container
+    %center
+        %table{:id=>'students',:class=>'default table table-hover'}
+            %thead
+                %tr
+                    %th Id
+                    %th Status
+                    %th Creator
+                    %th Category
+                    %th Delete
+                    %th
+            %tbody
+                - @all_categories.each_with_index do |category,index|
+                    %tr
+                        %td= category.id
+                        %td
+                            = category.reviewStatus
+                            - if category.reviewStatus.eql? "Pending"
+                                = link_to category_path(category) do
+                                    %i{:class=>'fa fa-check'}
+
+                        %td= category.creator
+                        %td= category.category
+                        %td
+                            =link_to category_path(category),:method=>:delete, :data=>{:confirm=>"Are you sure you want to delete this category? "} do
+                                %i{:class=>'fa fa-trash'}
+
+            =link_to "Add new category", new_category_path,:class=>'btn btn-primary'
