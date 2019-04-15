@@ -10,7 +10,8 @@
                     %th Status
                     %th Creator
                     %th Category
-                    %th Delete
+                    - if User.find_by(id: session[:user_id]).reviewStatus == "Approved"
+                        %th Delete
                     %th
             %tbody
                 - @all_categories.each_with_index do |category,index|
@@ -19,13 +20,15 @@
                         %td
                             = category.reviewStatus
                             - if category.reviewStatus.eql? "Pending"
-                                = link_to category_path(category) do
-                                    %i{:class=>'fa fa-check'}
+                                - if User.find_by(id: session[:user_id]).reviewStatus == "Approved"
+                                    = link_to category_path(category) do
+                                        %i{:class=>'fa fa-check'}
 
                         %td= category.creator
                         %td= category.category
                         %td
-                            =link_to category_path(category),:method=>:delete, :data=>{:confirm=>"Are you sure you want to delete this category? "} do
-                                %i{:class=>'fa fa-trash'}
+                            - if User.find_by(id: session[:user_id]).reviewStatus == "Approved"
+                                =link_to category_path(category),:method=>:delete, :data=>{:confirm=>"Are you sure you want to delete this category? "} do
+                                    %i{:class=>'fa fa-trash'}
 
             =link_to "Add new category", new_category_path,:class=>'btn btn-primary'

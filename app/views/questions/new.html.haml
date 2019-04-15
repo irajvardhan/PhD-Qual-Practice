@@ -9,7 +9,7 @@
       = form_tag questions_path, :id=>"createQuestionForm" do
         .form-group
           = label :question, :category, 'Question Category',class: "control-label"
-          = select :question,:category, ['Networks', 'Algorithms', 'Operating Systems', 'Software'],{}, class:"form-control"
+          = select :question,:category, CategoryBank.all,{}, class:"form-control"
         .form-group
           = label :question, :question, 'Question',class: "control-label"
           = text_field :question, 'question', class:"form-control", autofocus: "true", placeholder: "Please add Question text or Image"
