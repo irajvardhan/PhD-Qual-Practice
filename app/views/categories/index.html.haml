@@ -2,11 +2,20 @@
 %link{:href => "https://cdn.datatables.net/1.10.15/css/jquery.dataTables.css", :rel => "stylesheet"}/
 %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
 .container
+    - if !flash[:success].blank?
+        .alert.alert-success.alert-dismissible.fade.show{:role=>"alert"}
+            = flash[:success]
+            %button.close{:type=>"button",:data=>{:dismiss=>"alert"},:aria=>{:label=>"Close"}}
+                %span{:aria=>{:hidden=>"true"}} &times;
+    - if !flash[:destroy].blank?
+        .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
+            = flash[:destroy]
+            %button.close{:type=>"button",:data=>{:dismiss=>"alert"},:aria=>{:label=>"Close"}}
+                %span{:aria=>{:hidden=>"true"}} &times;
     %center
         %table{:id=>'students',:class=>'default table table-hover'}
             %thead
                 %tr
-                    %th Id
                     %th Status
                     %th Creator
                     %th Category
@@ -16,7 +25,6 @@
             %tbody
                 - @all_categories.each_with_index do |category,index|
                     %tr
-                        %td= category.id
                         %td
                             = category.reviewStatus
                             - if category.reviewStatus.eql? "Pending"

@@ -8,10 +8,15 @@ class QuestionsController < ApplicationController
     
     def index
         @user_questions = QuestionBank.where(creator: session[:email])
+        @categories_all = CategoryBank.all
+    end
+
+    def new
+        @categories_all = CategoryBank.all
     end
     
     def create
-        @all_categories = CategoryBank.all
+        @categories_all = CategoryBank.all
 	@question = QuestionBank.create!(question_params)
         @question.update(creator: session[:email])
         @question.update(reviewStatus: "Pending")
@@ -50,12 +55,13 @@ class QuestionsController < ApplicationController
     end
     
     def edit
+        @categories_all = CategoryBank.all
         @question = QuestionBank.find(params[:id])
        # redirect_to questions_path(@question)
     end
     
     def update
-
+        @categories_all = CategoryBank.all
         @question = QuestionBank.find(params[:id])
         @question.update_attributes!(question_params)
         if params[:imagequestion].present?

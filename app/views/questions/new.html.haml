@@ -5,11 +5,12 @@
   %hr/
   .row
     .col-md-10
-      
+      /- @categories_all.each_with_index do |category,index|
       = form_tag questions_path, :id=>"createQuestionForm" do
         .form-group
           = label :question, :category, 'Question Category',class: "control-label"
-          = select :question,:category, CategoryBank.all,{}, class:"form-control"
+          /- @categories_all.each_with_index do |category,index|
+          = select :question,:category, CategoryBank.all.collect {|p| [p.category]},{}, class:"form-control"
         .form-group
           = label :question, :question, 'Question',class: "control-label"
           = text_field :question, 'question', class:"form-control", autofocus: "true", placeholder: "Please add Question text or Image"
