@@ -40,7 +40,7 @@
                                 
                         %td= ques.creator 
                         %td.truncate= ques.question
-                        %td= ques.category
+                        %td= ques.category.inspect
                         %td
                             =link_to edit_question_path(ques) do
                                 %i{:class=>'fa fa-edit'}
