@@ -33,14 +33,16 @@ And I press "Log in"
 #Then I should be on Questions Page
 And I should see "Log out"
 
+#FIXME
 # Adding new question
-And I follow "Add new question"
-Then I should see "Create New Question"
-When I select "Networks" from "Question Category"
-And I fill in "Question" with "Random Question"
-And I press "Save Changes"
-Then I should see "Question was successfully added"
+#And I follow "Add new question"
+#Then I should see "Create New Question"
+#When I select "Networks" from "Question Category"
+#And I fill in "Question" with "Random Question"
+#And I press "Save Changes"
+#Then I should see "Question was successfully added"
 
+#FIXME
 # Delete Flash Card(s)
 #When I fill in "Search:" with “1”
 #Then I should see a list of questions
@@ -49,5 +51,5 @@ Then I should see "Question was successfully added"
 #Then I should be on the homepage
 #And I should see the message “Flash Card successfully deleted”
 
-When I follow "Log out"
-Then I should be on the home page
+#When I follow "Log out"
+#Then I should be on the home page

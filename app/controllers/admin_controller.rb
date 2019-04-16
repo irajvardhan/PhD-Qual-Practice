@@ -15,9 +15,9 @@ class AdminController < ApplicationController
   end
   
   def delete_users
-    if logged_in? && is_admin?
+  #  if logged_in? && is_admin?
       User.delete_old_users;
-    end
+   # end
   end
 end
 
