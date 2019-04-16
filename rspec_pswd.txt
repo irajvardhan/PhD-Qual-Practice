@@ -1,0 +1,72 @@
+.*............*********........******
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) PracticeController questions for practice not all args are
+     # Not yet implemented
+     # ./spec/controllers/practice_controller_spec.rb:14
+
+  2) AdminHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/admin_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/admin_helper_spec.rb:14
+
+  3) PasswordResetsHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/password_resets_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/password_resets_helper_spec.rb:14
+
+  4) PracticeHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/practice_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/practice_helper_spec.rb:14
+
+  5) QuestionsHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/questions_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/questions_helper_spec.rb:15
+
+  6) QuizHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/quiz_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/quiz_helper_spec.rb:14
+
+  7) SelcatHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/selcat_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/selcat_helper_spec.rb:14
+
+  8) SessionsHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/sessions_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/sessions_helper_spec.rb:14
+
+  9) UsersHelper add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/helpers/users_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/users_helper_spec.rb:14
+
+  10) User add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/models/user_spec.rb
+     # Not yet implemented
+     # ./spec/models/user_spec.rb:4
+
+  11) admin/index.html.haml add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/views/admin/index.html.haml_spec.rb
+     # Not yet implemented
+     # ./spec/views/admin/index.html.haml_spec.rb:4
+
+  12) password_resets/edit.html.haml add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/views/password_resets/edit.html.haml_spec.rb
+     # Not yet implemented
+     # ./spec/views/password_resets/edit.html.haml_spec.rb:4
+
+  13) password_resets/new.html.haml add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/views/password_resets/new.html.haml_spec.rb
+     # Not yet implemented
+     # ./spec/views/password_resets/new.html.haml_spec.rb:4
+
+  14) sessions/create.html.haml add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/views/sessions/create.html.haml_spec.rb
+     # Not yet implemented
+     # ./spec/views/sessions/create.html.haml_spec.rb:4
+
+  15) sessions/destroy.html.haml add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/views/sessions/destroy.html.haml_spec.rb
+     # Not yet implemented
+     # ./spec/views/sessions/destroy.html.haml_spec.rb:4
+
+  16) sessions/new.html.haml add some examples to (or delete) /home/ec2-user/environment/PhD-Qual-Practice/spec/views/sessions/new.html.haml_spec.rb
+     # Not yet implemented
+     # ./spec/views/sessions/new.html.haml_spec.rb:4
+
+Finished in 0.2148 seconds (files took 2.1 seconds to load)
+37 examples, 0 failures, 16 pending
+
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/PhD-Qual-Practice/coverage. 196 / 262 LOC (74.81%) covered.
