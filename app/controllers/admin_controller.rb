@@ -8,7 +8,6 @@ class AdminController < ApplicationController
   
   def admin_questions
     @questions = QuestionBank.all
-    @all_categories = CategoryBank.all
   end
 
   def admin_categories
