@@ -48,7 +48,7 @@ class CategoriesController < ApplicationController
     def destroy
         @all_category = CategoryBank.find(params[:id])
         @all_category.destroy
-        flash[:destroy] = "Category-'#{@all_category.id}' deleted."
+        flash[:destroy] = "Category-'#{@all_category.category}' deleted."
         redirect_to categories_path
     end    
 end
