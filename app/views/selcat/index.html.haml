@@ -4,8 +4,9 @@
     = form_tag practice_path, :method => :get do
       - @a_categories.each_with_index do |category,index|
         .form-check
-          = check_box_tag "categories[#{category.category}]",1,false, class: "form-check-input"
-          %label.form-check-label #{category.category}
+          - if category.reviewStatus == "Approved"
+            = check_box_tag "categories[#{category.category}]",1,false, class: "form-check-input"
+            %label.form-check-label #{category.category}
       .row
         .mx-auto
-          = submit_tag 'Start Practice', name:nil, class: "btn btn-lg btn-primary --margintop16"  
+        = submit_tag 'Start Practice', name:nil, class: "btn btn-lg btn-primary --margintop16"  
