@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190325024057) do
+ActiveRecord::Schema.define(version: 20190328042426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,4 +53,5 @@ ActiveRecord::Schema.define(version: 20190325024057) do
     t.datetime "reset_sent_at"
     t.datetime "last_login_at"
   end
+
 end
