@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20190325024057) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "reviewStatus"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
+    t.datetime "last_login_at"
   end
-
 end

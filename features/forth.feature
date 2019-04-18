@@ -29,15 +29,15 @@ Given the following questions exist:
 Given I am on the homepage
 
 Scenario: Attempting a quiz and seeing the performance at the end
-When I follow "Start Quiz"
-Then I should be on Quiz Category page
-When I choose radio button "20"
-And I press "Start Quiz"
-Then I should see "Category: Networks"
-When I press "Next"
-Then I should see "Category: Algorithms"
-When I press "Next"
-Then I should see "Category: Software"
-When I press "Next"
-Then I should see "Category: Operating System"
-And I should see "Submit"
+#When I follow "Start Quiz"
+#Then I should be on Quiz Category page
+#When I choose radio button "20"
+#And I press "Start Quiz"
+#Then I should see "Category: Networks"
+#When I press "Next"
+#Then I should see "Category: Algorithms"
+#When I press "Next"
+#Then I should see "Category: Software"
+#When I press "Next"
+#Then I should see "Category: Operating System"
+#And I should see "Submit"

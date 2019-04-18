@@ -1,0 +1,175 @@
+Using the default profile...
+Feature: Password Reset
+As a PhD Qual user
+So that I can reset my password whenever I forget it
+A reset password functionality must be present
+
+  Scenario: Forgot password link must be present # features/Password_Reset.feature:6
+    Given I am on the login page                 # features/step_definitions/web_steps.rb:44
+    Then I should see "Forgot password?"         # features/step_definitions/web_steps.rb:105
+
+  Scenario: I should be redirected to the reset password page when I press Forgot password? # features/Password_Reset.feature:10
+    Given I am on the login page                                                            # features/step_definitions/web_steps.rb:44
+    When I follow "Forgot password?"                                                        # features/step_definitions/web_steps.rb:56
+    Then I should be on the Forgot password page                                            # features/step_definitions/web_steps.rb:230
+    And I should see "Forgot password"                                                      # features/step_definitions/web_steps.rb:105
+
+  # Sad Path
+  Scenario: I should see the Reset password form      # features/Password_Reset.feature:17
+    Given I am on the reset password page for "Sweta" # features/step_definitions/web_steps.rb:44
+    Then I should see "Home PhD Flash Cards"          # features/step_definitions/web_steps.rb:105
+
+Feature: See flash card ID
+As a PhD Qual user
+So that I can identify flach cards to which I want to return
+A uniqu ID should be assigned to each card
+
+  Scenario: See card ID in practice mode     # features/Unique_Card_ID.feature:6
+    Given I am on the home page              # features/step_definitions/web_steps.rb:44
+    Then I should see "Welcome"              # features/step_definitions/web_steps.rb:105
+    When I follow "Start Practice"           # features/step_definitions/web_steps.rb:56
+    Then I should be on Select Category page # features/step_definitions/web_steps.rb:230
+    When I check the checkbox "Networks"     # features/step_definitions/web_steps.rb:274
+    And I check the checkbox "Algorithms"    # features/step_definitions/web_steps.rb:274
+    And I check the checkbox "Software"      # features/step_definitions/web_steps.rb:274
+    Then I press "Start Practice"            # features/step_definitions/web_steps.rb:52
+
+  Scenario: See card ID in practice mode   # features/Unique_Card_ID.feature:16
+    Given I am on the home page            # features/step_definitions/web_steps.rb:44
+    Then I should see "Welcome"            # features/step_definitions/web_steps.rb:105
+    When I follow "Start Quiz"             # features/step_definitions/web_steps.rb:56
+    Then I should be on Quiz Category page # features/step_definitions/web_steps.rb:230
+    When I choose radio button "20"        # features/step_definitions/web_steps.rb:285
+    And I press "Start Quiz"               # features/step_definitions/web_steps.rb:52
+
+Feature: View the flash cards
+As a PhD Qual user
+So that I can view the random flash cards
+I want to see next or previous flash cards
+
+  Background: questions in database      # features/first.feature:6
+    Given the following questions exist: # features/step_definitions/web_steps.rb:262
+      | question | option1 | option2 | option3 | option4 | option5 | answer | category         |
+      | QueCat1  | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat2  | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat3  | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat4  | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+    And I am on the home page            # features/step_definitions/web_steps.rb:44
+
+  Scenario: Show next/previous flash card    # features/first.feature:16
+    Then I should see "Welcome"              # features/step_definitions/web_steps.rb:105
+    When I follow "Start Practice"           # features/step_definitions/web_steps.rb:56
+    Then I should be on Select Category page # features/step_definitions/web_steps.rb:230
+    When I check the checkbox "Networks"     # features/step_definitions/web_steps.rb:274
+    And I check the checkbox "Algorithms"    # features/step_definitions/web_steps.rb:274
+    And I check the checkbox "Software"      # features/step_definitions/web_steps.rb:274
+    Then I press "Start Practice"            # features/step_definitions/web_steps.rb:52
+    Then I should see "QueCat1"              # features/step_definitions/web_steps.rb:105
+    When I press "Next"                      # features/step_definitions/web_steps.rb:52
+    Then I should see "QueCat2"              # features/step_definitions/web_steps.rb:105
+    And I press "Next"                       # features/step_definitions/web_steps.rb:52
+    Then I should see "QueCat3"              # features/step_definitions/web_steps.rb:105
+
+Feature: Attempt a quiz
+As a PhD candidate
+I want to attempt a quiz
+
+  Background: questions in database      # features/forth.feature:5
+    Given the following questions exist: # features/step_definitions/web_steps.rb:262
+      | question | option1 | option2 | option3 | option4 | option5 | answer | category         |
+      | QueCat1  | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat2  | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat3  | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat4  | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+      | QueCat5  | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat6  | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat7  | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat8  | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+      | QueCat9  | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat10 | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat11 | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat12 | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+      | QueCat13 | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat14 | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat15 | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat16 | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+      | QueCat17 | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat18 | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat19 | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat20 | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+    Given I am on the homepage           # features/step_definitions/web_steps.rb:44
+
+  Scenario: Attempting a quiz and seeing the performance at the end # features/forth.feature:31
+
+Feature: Add/delete Flash Cards
+As an admin
+So that PhD Qual users can practice
+I want to add/delete Flash Cards
+
+  Background: Admin should be able to login # features/second.feature:6
+    Given the admin exists:                 # features/step_definitions/web_steps.rb:268
+      | name   | email             | password | password_confirmation |
+      | satish | admin@cs.tamu.edu | foobar   | foobar                |
+    Given the following questions exist:    # features/step_definitions/web_steps.rb:262
+      | question | option1 | option2 | option3 | option4 | option5 | answer | category         |
+      | QueCat1  | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat2  | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat3  | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat4  | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+    And I am on the home page               # features/step_definitions/web_steps.rb:44
+    And I follow "Login"                    # features/step_definitions/web_steps.rb:56
+
+  Scenario: I should not be able to login with the wrong credentials # features/second.feature:21
+    When I fill in "Email" with "fakeadmin@cs.tamu.edu"              # features/step_definitions/web_steps.rb:60
+    And I fill in "Password" with "fakebar"                          # features/step_definitions/web_steps.rb:60
+    Then I should be on the login page                               # features/step_definitions/web_steps.rb:230
+
+  Scenario: I should be able to add or delete question after I am logged in # features/second.feature:26
+    Given I am on the home page                                             # features/step_definitions/web_steps.rb:44
+    And I follow "Login"                                                    # features/step_definitions/web_steps.rb:56
+    Then I should be on the login page                                      # features/step_definitions/web_steps.rb:230
+    When I fill in "Email" with "admin@cs.tamu.edu"                         # features/step_definitions/web_steps.rb:60
+    And I fill in "Password" with "foobar"                                  # features/step_definitions/web_steps.rb:60
+    And I press "Log in"                                                    # features/step_definitions/web_steps.rb:52
+      #Then I should be on Questions Page
+    And I should see "Log out"                                              # features/step_definitions/web_steps.rb:105
+
+Feature: Select Flash Cards based on category
+
+  Background: questions in database      # features/third.feature:3
+    Given the following questions exist: # features/step_definitions/web_steps.rb:262
+      | question | option1 | option2 | option3 | option4 | option5 | answer | category         |
+      | QueCat1  | AA      | BB      | CC      | DD      | EE      | BB     | Networks         |
+      | QueCat2  | AA      | BB      | CC      | DD      | EE      | DD     | Algorithms       |
+      | QueCat3  | AA      | BB      | CC      | DD      | EE      | CC     | Software         |
+      | QueCat4  | AA      | BB      | CC      | DD      | EE      | EE     | Operating System |
+    And I am on the home page            # features/step_definitions/web_steps.rb:44
+
+  Scenario: Select a single Category                       # features/third.feature:13
+    Then I should see "Welcome to the PhDQual Flash Cards" # features/step_definitions/web_steps.rb:105
+    When I follow "Start Practice"                         # features/step_definitions/web_steps.rb:56
+    Then I should be on Select Category page               # features/step_definitions/web_steps.rb:230
+    And I should see "Select a Category"                   # features/step_definitions/web_steps.rb:105
+    When I check the checkbox "Networks"                   # features/step_definitions/web_steps.rb:274
+    And I press "Start Practice"                           # features/step_definitions/web_steps.rb:52
+    Then I should see "QueCat1"                            # features/step_definitions/web_steps.rb:105
+    And I should see "Category: Networks"                  # features/step_definitions/web_steps.rb:105
+
+  Scenario: Select multiple categories       # features/third.feature:23
+    Given I am on Select Category page       # features/step_definitions/web_steps.rb:44
+    Then I should see "Networks"             # features/step_definitions/web_steps.rb:105
+    And I should see "Algorithms"            # features/step_definitions/web_steps.rb:105
+    When I check the checkbox "Networks"     # features/step_definitions/web_steps.rb:274
+    And I check the checkbox "Algorithms"    # features/step_definitions/web_steps.rb:274
+    And I check the checkbox "Software"      # features/step_definitions/web_steps.rb:274
+    And I press "Start Practice"             # features/step_definitions/web_steps.rb:52
+    Then I should see "Category: Networks"   # features/step_definitions/web_steps.rb:105
+    When I press "Next"                      # features/step_definitions/web_steps.rb:52
+    Then I should see "Category: Algorithms" # features/step_definitions/web_steps.rb:105
+    When I press "Next"                      # features/step_definitions/web_steps.rb:52
+    Then I should see "Category: Software"   # features/step_definitions/web_steps.rb:105
+
+11 scenarios (11 passed)
+80 steps (80 passed)
+0m0.744s
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/PhD-Qual-Practice/coverage. 196 / 262 LOC (74.81%) covered.

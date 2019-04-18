@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:session][:email])
-
+    
     # @user = User.where(email: params[:session][:email]).first
     
     if @user.nil?
@@ -16,11 +16,13 @@ class SessionsController < ApplicationController
       session[:flash] = ""
       return
     end
+    
 
     if @user && @user.authenticate(params[:session][:password])
       session[:email] = @user.email 
       session[:name] = @user.name
       session[:user_id] = @user.id
+      #@user.update_attribute(:last_login_at, Time.now)
       session[:flash] = ("Welcome: " + @user.name)
       redirect_to root_url
       return
@@ -40,4 +42,5 @@ class SessionsController < ApplicationController
     redirect_to login_url
     return
   end
+  
 end

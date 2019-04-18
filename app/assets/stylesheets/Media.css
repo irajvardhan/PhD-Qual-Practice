@@ -2,10 +2,10 @@
 }
 
 /*For small devices*/
-@media (max-width: 767px) {
+@media (max-width: 600px) {
    
    .questionItem{
-    min-height:400px !important;
+    min-height:600px !important;
 } 
 }
 

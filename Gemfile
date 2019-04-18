@@ -5,9 +5,9 @@ ruby "2.4.1"
 
 gem 'rails', '4.2.8'
 gem 'bcrypt',         '3.1.11'
+gem 'actionview-encoded_mail_to'
 
-
-gem 'pg','~> 0.21'
+gem 'pg','0.20'
 # Use haml
 gem 'haml'
 gem 'haml-rails'
@@ -29,6 +29,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'cloudinary'
+
+
+#Browser for detecting smartphone and laptop view
+gem 'browser', '2.0.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -52,7 +56,7 @@ group :development, :test do
 end
 
 group :development do
-   #gem 'sqlite3'
+   gem 'sqlite3'
 end
 
 

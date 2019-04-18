@@ -20,140 +20,186 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
 
-  # This should return the minimal set of attributes required to create a valid
-  # User. As you add validations to User, be sure to
-  # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
-
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
-
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # UsersController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
-
-  describe "GET #index" do
-    it "assigns all users as @users" do
-      user = User.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:users)).to eq([user])
-    end
+#  # This should return the minimal set of attributes required to create a valid
+#  # User. As you add validations to User, be sure to
+#  # adjust the attributes here as well.
+#  let(:valid_attributes) {
+#    skip("Add a hash of attributes valid for your model")
+#  }
+#
+#  let(:invalid_attributes) {
+#    skip("Add a hash of attributes invalid for your model")
+#  }
+#
+#  # This should return the minimal set of values that should be in the session
+#  # in order to pass any filters (e.g. authentication) defined in
+#  # UsersController. Be sure to keep this updated too.
+#  let(:valid_session) { {} }
+#  
+#    describe "GET #index" do
+#    it "assigns all users as @users" do
+#      user = User.create! valid_attributes
+#      get :index, {}, valid_session
+#      expect(assigns(:users)).to eq([user])
+#    end
+#  end
+#
+#  describe "GET #show" do
+#    it "assigns the requested user as @user" do
+#      user = User.create! valid_attributes
+#      get :show, {:id => user.to_param}, valid_session
+#      expect(assigns(:user)).to eq(user)
+#    end
+#  end
+#
+#  describe "GET #new" do
+#    it "assigns a new user as @user" do
+#      get :new, {}, valid_session
+#      expect(assigns(:user)).to be_a_new(User)
+#    end
+#  end
+#
+#  describe "GET #edit" do
+#    it "assigns the requested user as @user" do
+#      user = User.create! valid_attributes
+#      get :edit, {:id => user.to_param}, valid_session
+#      expect(assigns(:user)).to eq(user)
+#    end
+#  end
+#
+#  describe "POST #create" do
+#    context "with valid params" do
+#      it "creates a new User" do
+#        expect {
+#          post :create, {:user => valid_attributes}, valid_session
+#        }.to change(User, :count).by(1)
+#      end
+#
+#      it "assigns a newly created user as @user" do
+#        post :create, {:user => valid_attributes}, valid_session
+#        expect(assigns(:user)).to be_a(User)
+#        expect(assigns(:user)).to be_persisted
+#      end
+#
+#      it "redirects to the created user" do
+#        post :create, {:user => valid_attributes}, valid_session
+#        expect(response).to redirect_to(User.last)
+#      end
+#    end
+#
+#    context "with invalid params" do
+#      it "assigns a newly created but unsaved user as @user" do
+#        post :create, {:user => invalid_attributes}, valid_session
+#        expect(assigns(:user)).to be_a_new(User)
+#      end
+#
+#      it "re-renders the 'new' template" do
+#        post :create, {:user => invalid_attributes}, valid_session
+#        expect(response).to render_template("new")
+#      end
+#    end
+#  end
+#
+#  describe "PUT #update" do
+#    context "with valid params" do
+#      let(:new_attributes) {
+#        skip("Add a hash of attributes valid for your model")
+#      }
+#
+#      it "updates the requested user" do
+#        user = User.create! valid_attributes
+#        put :update, {:id => user.to_param, :user => new_attributes}, valid_session
+#        user.reload
+#        skip("Add assertions for updated state")
+#      end
+#
+#      it "assigns the requested user as @user" do
+#        user = User.create! valid_attributes
+#        put :update, {:id => user.to_param, :user => valid_attributes}, valid_session
+#        expect(assigns(:user)).to eq(user)
+#      end
+#
+#      it "redirects to the user" do
+#        user = User.create! valid_attributes
+#        put :update, {:id => user.to_param, :user => valid_attributes}, valid_session
+#        expect(response).to redirect_to(user)
+#      end
+#    end
+#
+#    context "with invalid params" do
+#      it "assigns the user as @user" do
+#        user = User.create! valid_attributes
+#        put :update, {:id => user.to_param, :user => invalid_attributes}, valid_session
+#        expect(assigns(:user)).to eq(user)
+#      end
+#
+#      it "re-renders the 'edit' template" do
+#        user = User.create! valid_attributes
+#        put :update, {:id => user.to_param, :user => invalid_attributes}, valid_session
+#        expect(response).to render_template("edit")
+#      end
+#    end
+#  end
+#
+#  describe "DELETE #destroy" do
+#    it "destroys the requested user" do
+#      user = User.create! valid_attributes
+#      expect {
+#        delete :destroy, {:id => user.to_param}, valid_session
+#      }.to change(User, :count).by(-1)
+#    end
+#
+#    it "redirects to the users list" do
+#      user = User.create! valid_attributes
+#      delete :destroy, {:id => user.to_param}, valid_session
+#      expect(response).to redirect_to(users_url)
+#    end
+#  end
+#
+  it "should create new users without updated_at value, ensure that they exist even after old users are deleted " do
+    post :create, :user => { :name => "ABC", :email => "abc@tamu.edu", :password=> '1234', :password_confirmation=> '1234' }
+   
+    # all the created users exist
+    expect(User.where(:name => "ABC")).to exist
+    
+    #delete old users rspec test
+    expect(User.delete_old_users).to eql(0)
+ 
+    post :create, :user => { :name => "ADMIN", :email => "admin@tamu.edu", :password=> '1234', :password_confirmation=> '1234' }
+   
+    # all the created users exist
+    expect(User.where(:name => "ADMIN")).to exist
+    
+    #delete old users rspec test should not delete any users
+    expect(User.delete_old_users).to eql(0)
   end
 
-  describe "GET #show" do
-    it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :show, {:id => user.to_param}, valid_session
-      expect(assigns(:user)).to eq(user)
-    end
+  it "should check that digest action works properly " do
+    post :create, :user => { :name => "ABC", :email => "abc@tamu.edu", :password=> '1234', :password_confirmation=> '1234' }
+    expect(User.digest("1234")).to_not eql(nil)
   end
-
-  describe "GET #new" do
-    it "assigns a new user as @user" do
-      get :new, {}, valid_session
-      expect(assigns(:user)).to be_a_new(User)
-    end
-  end
-
-  describe "GET #edit" do
-    it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :edit, {:id => user.to_param}, valid_session
-      expect(assigns(:user)).to eq(user)
-    end
-  end
-
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new User" do
-        expect {
-          post :create, {:user => valid_attributes}, valid_session
-        }.to change(User, :count).by(1)
-      end
-
-      it "assigns a newly created user as @user" do
-        post :create, {:user => valid_attributes}, valid_session
-        expect(assigns(:user)).to be_a(User)
-        expect(assigns(:user)).to be_persisted
-      end
-
-      it "redirects to the created user" do
-        post :create, {:user => valid_attributes}, valid_session
-        expect(response).to redirect_to(User.last)
+  
+    describe 'Do not delete users who recently logged in' do
+      let!(:user1) { FactoryBot.create(:user, name: 'abc', email: 'abc@tamu.edu', password: '1234', password_digest: '1234',
+reset_digest: '265599eadb0d4216a4f5a9d4ac77b091', updated_at: DateTime.new(2016,03,26,12,00,00,"-07:00"), is_admin: false)}
+      it 'should check that user exists' do
+        expect(User.where(:name => "abc")).to exist
+        get :edit, {id: user1.id}
+        #update the reset_token --which implies that the user logged in recently
+        user1.create_reset_digest
+        #delete old users rspec test: Should not delete as there has been an update
+        expect(User.delete_old_users).to eql(0)
       end
     end
 
-    context "with invalid params" do
-      it "assigns a newly created but unsaved user as @user" do
-        post :create, {:user => invalid_attributes}, valid_session
-        expect(assigns(:user)).to be_a_new(User)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, {:user => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
-      end
-    end
-  end
-
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested user" do
-        user = User.create! valid_attributes
-        put :update, {:id => user.to_param, :user => new_attributes}, valid_session
-        user.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested user as @user" do
-        user = User.create! valid_attributes
-        put :update, {:id => user.to_param, :user => valid_attributes}, valid_session
-        expect(assigns(:user)).to eq(user)
-      end
-
-      it "redirects to the user" do
-        user = User.create! valid_attributes
-        put :update, {:id => user.to_param, :user => valid_attributes}, valid_session
-        expect(response).to redirect_to(user)
+    describe 'Delete User who has not logged in for more than 2 years' do
+      let!(:user1) { FactoryBot.create(:user, name: 'abc', email: 'abc@tamu.edu', password: '1234', password_digest: '1234',
+reset_digest: '265599eadb0d4216a4f5a9d4ac77b091', updated_at: DateTime.new(2016,03,26,12,00,00,"-07:00"), is_admin: false)}
+      it 'should check that user exists' do
+        expect(User.where(:name => "abc")).to exist
+        get :edit, {id: user1.id}
+        #delete old users rspec test
+        expect(User.delete_old_users).to eql(1)
       end
     end
-
-    context "with invalid params" do
-      it "assigns the user as @user" do
-        user = User.create! valid_attributes
-        put :update, {:id => user.to_param, :user => invalid_attributes}, valid_session
-        expect(assigns(:user)).to eq(user)
-      end
-
-      it "re-renders the 'edit' template" do
-        user = User.create! valid_attributes
-        put :update, {:id => user.to_param, :user => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE #destroy" do
-    it "destroys the requested user" do
-      user = User.create! valid_attributes
-      expect {
-        delete :destroy, {:id => user.to_param}, valid_session
-      }.to change(User, :count).by(-1)
-    end
-
-    it "redirects to the users list" do
-      user = User.create! valid_attributes
-      delete :destroy, {:id => user.to_param}, valid_session
-      expect(response).to redirect_to(users_url)
-    end
-  end
-
 end
