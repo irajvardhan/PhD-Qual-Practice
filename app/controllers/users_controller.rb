@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_admin, only: [:index, :edit, :update, :destroy] #, :show
+  before_action :logged_in_admin, only: [:index, :show, :edit, :destroy] # :update
   
 
   # GET /users
