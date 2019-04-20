@@ -17,7 +17,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'https://enigmatic-wildwood-12647.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => "#{HEROKU_APP_NAME}.herokuapp.com" }
   
   config.action_mailer.smtp_settings = {
   :address              => "smtp.gmail.com",
