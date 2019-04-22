@@ -17,7 +17,7 @@ class PasswordResetsController < ApplicationController
       #flash[:info] = "Email sent with password reset instructions"
       redirect_to login_path
     else
-      session[:flash] = ("Email address not found")
+      flash[:notice] = ("Email address not found")
       redirect_to login_path
     end
   end
@@ -68,7 +68,7 @@ class PasswordResetsController < ApplicationController
   #
    def check_expiration
     if (@user && @user.password_reset_expired?)
-      session[:flash] = "Password reset has expired."
+      flash[:notice] = "Password reset has expired."
       redirect_to new_password_reset_url
     end 
    end

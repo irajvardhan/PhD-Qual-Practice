@@ -1,5 +1,9 @@
-%p#sessionflash= session[:flash]
-
+/%p#sessionflash= session[:flash]
+.container
+- if flash[:notice]
+  .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
+    = flash[:notice]
+    
 - session[:flash] = nil
 .container
   - provide(:title, "Log in")
