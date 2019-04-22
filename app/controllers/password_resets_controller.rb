@@ -9,6 +9,7 @@ class PasswordResetsController < ApplicationController
   end
   
   def create
+    #session[:email] = params[:session][:email]
     @user = User.find_by(email: params[:password_reset][:email].downcase)
     if @user
       @user.create_reset_digest
