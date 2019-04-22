@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     unless User.find_by(id: session[:user_id])
-      redirect_to login_url, notice:"You need to login to see this page"
+      flash[:notice] = "You need to login to see this page"
+      redirect_to login_url
     end
     @user=User.find_by(id: session[:user_id])
   end

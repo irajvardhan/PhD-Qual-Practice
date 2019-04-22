@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
     session[:name] = nil
     session[:user_id] = nil
     session[:password] = nil
-    flash[:notice] = ("Succesfully logged out")
+    flash[:success] = ("Succesfully logged out")
     redirect_to login_url
     return
   end
