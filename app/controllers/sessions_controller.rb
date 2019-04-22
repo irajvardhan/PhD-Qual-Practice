@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
       redirect_to root_url
       return
     else
-      session[:flash] = ("Invalid Username or Password")
+      flash[:notice] = ("Invalid Username or Password")
       redirect_to login_url
       return
     end
@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
     session[:name] = nil
     session[:user_id] = nil
     session[:password] = nil
-    session[:flash] = ("Succesfully logged out")
+    flash[:notice] = ("Succesfully logged out")
     redirect_to login_url
     return
   end
