@@ -1,3 +1,8 @@
+.container
+- if flash[:notice]
+  .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
+    = flash[:notice]
+
 .container.jumbotron
   %h1.row Select a Category
   .row

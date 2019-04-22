@@ -7,6 +7,9 @@ class PracticeController < ApplicationController
     def index
         if params[:categories].present?
             @questions = QuestionBank.where(category: params[:categories].keys)
+        else 
+            flash[:notice] = ("Select at least one category")
+            redirect_to selcat_path
         end
     end
 
