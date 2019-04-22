@@ -3,10 +3,12 @@ class QuizController < ApplicationController
     def index
         if params[:quizlimit].present?
             if params[:quizlimit] == "All"
-             @questions= QuestionBank.where(reviewStatus: "Approved")
+                @questions= QuestionBank.where(reviewStatus: "Approved")
+                @questions =  @questions.shuffle
             
             else
                 @questions= QuestionBank.where(reviewStatus: "Approved").sample(params[:quizlimit].to_i)
+                @questions =  @questions.shuffle
             end
         else 
             flash[:notice] = ("Select at least one option")
