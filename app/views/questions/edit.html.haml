@@ -8,7 +8,7 @@
       = form_tag question_path(@question),:id=>"createQuestionForm", :method=> :put do
         .form-group
           = label :question, :category, 'Question Category',class: "control-label"
-          = select :question,:category, ['Networks', 'Algorithms', 'Operating Systems', 'Software'],{}, class:"form-control"
+          = select :question,:category, CategoryBank.all.collect {|p| [p.category]},{}, class:"form-control"
           
         - if /.(jpeg|jpg|gif|png)$/.match(@question.question)
           .form-group
