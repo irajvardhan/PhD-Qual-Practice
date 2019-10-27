@@ -9,6 +9,7 @@ class QuizController < ApplicationController
             else
                 @questions= QuestionBank.where(reviewStatus: "Approved").sample(params[:quizlimit].to_i)
                 @questions =  @questions.shuffle
+                flash[:notice] = ("{#questions}")
             end
         else 
             flash[:notice] = ("Select at least one option")
