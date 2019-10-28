@@ -1,8 +1,7 @@
 .col-md-1#sideBar
   - @questions.each_with_index do |ques,index|
     = link_to "#{ques.id}", quiz_path
-.col-md-11#quizContainer
-  .row
+.col-md-10#quizContainer
     %article.jumbotron.mx-auto
       - @questions.each_with_index do |ques,index|
         .questionItem{:class=>"#{'hide' if index > 0}","data-answer" => "#{ques.answer}","data-index"=>"#{index}"}
