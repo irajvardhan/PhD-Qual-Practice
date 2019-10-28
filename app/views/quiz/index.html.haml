@@ -2,6 +2,8 @@
   %ul.nav.nav-list
   - @questions.each_with_index do |ques,index|
     = link_to '#{ques.id}', quiz_path
+    %br      
+
 .container
   .row
     .col-md-12#quizContainer
