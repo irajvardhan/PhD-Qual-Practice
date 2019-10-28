@@ -1,3 +1,7 @@
+.sidebar#sidebar-left
+  %ul.nav.nav-list
+  = Category
+  = Category
 .container
   .row
     .col-md-12#quizContainer
@@ -5,7 +9,7 @@
         - @questions.each_with_index do |ques,index|
           .questionItem{:class=>"#{'hide' if index > 0}","data-answer" => "#{ques.answer}","data-index"=>"#{index}"}
             .row
-              %span.h--serif CatSSSegory: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id}
+              %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id}
             .row
               - if /.(jpeg|jpg|gif|png)$/.match(ques.question)
                 = cl_image_tag(ques.question, :class=>"img-thumbnail img-fluid")
