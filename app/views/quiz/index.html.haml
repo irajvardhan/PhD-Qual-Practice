@@ -1,9 +1,9 @@
 
 .container
-  .col
-    - @questions.each_with_index do |ques,index|
-      = link_to "#{ques.id}", quiz_path
   .row
+    .col-sm-1#sideBar
+      - @questions.each_with_index do |ques,index|
+        = link_to "#{ques.id}", quiz_path
     .col-md-12#quizContainer
       %article.jumbotron.mx-auto
         - @questions.each_with_index do |ques,index|
