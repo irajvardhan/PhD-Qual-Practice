@@ -1,12 +1,12 @@
-.sidebar#sidebar-left
-  .large-3.pull-9.columns
-    %ul.side-nav
-    / %ul.nav.nav-list
-    - @questions.each_with_index do |ques,index|
-      = link_to "#{ques.id}", quiz_path
-      %br      
+
 
 .container
+  .large-3.pull-9.columns
+      %ul.side-nav
+      / %ul.nav.nav-list
+      - @questions.each_with_index do |ques,index|
+        = link_to "#{ques.id}", quiz_path
+        %br 
   .row
     .col-md-12#quizContainer
       %article.jumbotron.mx-auto
