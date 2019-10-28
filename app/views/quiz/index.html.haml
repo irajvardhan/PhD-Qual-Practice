@@ -1,6 +1,7 @@
 .sidebar#sidebar-left
   %ul.nav.nav-list
-  = link_to "Back", quiz_path
+  - @questions.each_with_index do |ques,index|
+    = link_to '#{ques.id}', quiz_path
 .container
   .row
     .col-md-12#quizContainer
