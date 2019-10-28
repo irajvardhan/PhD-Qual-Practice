@@ -1,6 +1,6 @@
 .container#sideBar
   - @questions.each_with_index do |ques,index|
-    - if ques.bookmark
+    - if ques.bookmark == true
       = link_to "#{ques.id}", quiz_path
 .container
   .row
