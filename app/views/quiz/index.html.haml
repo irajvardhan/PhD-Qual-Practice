@@ -1,8 +1,9 @@
 .sidebar#sidebar-left
-  %ul.nav.nav-list
-  - @questions.each_with_index do |ques,index|
-    = link_to "#{ques.id}", quiz_path
-    %br      
+  .nav-sidebar-inner-scroll
+    %ul.nav.nav-list
+    - @questions.each_with_index do |ques,index|
+      = link_to "#{ques.id}", quiz_path
+      %br      
 
 .container
   .row
