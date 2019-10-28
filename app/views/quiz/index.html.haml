@@ -1,7 +1,7 @@
 .sidebar#sidebar-left
   %ul.nav.nav-list
   - @questions.each_with_index do |ques,index|
-    = link_to #{ques.id}, quiz_path
+    = link_to "#{index}", quiz_path
     %br      
 
 .container
