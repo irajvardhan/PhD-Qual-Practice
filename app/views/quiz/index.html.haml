@@ -1,6 +1,6 @@
 .container#sideBar
   - @questions.each_with_index do |ques,index|
-    .linkItem{:class=>"#{'hide' if ques.bookmark}","data-index"=>"#{index}"}
+    .linkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
       = link_to "#{ques.id}", quiz_path
 .container
   .row
