@@ -9,6 +9,7 @@
           .questionItem{:class=>"#{'hide' if index > 0}","data-answer" => "#{ques.answer}","data-index"=>"#{index}"}
             .row
               %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id} | BookMark: #{ques.bookmark}
+              = check_box_tag "BookMark[#{ques.id}]", ques.bookmark, ques.bookmark, id: "bookmark_#{ques.id}"
             .row
               - if /.(jpeg|jpg|gif|png)$/.match(ques.question)
                 = cl_image_tag(ques.question, :class=>"img-thumbnail img-fluid")
