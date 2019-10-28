@@ -1,6 +1,8 @@
  
 
-%div#sidebar Filter by Tag: #{@questions.all}
+%div#sidebar
+  - @questions.each_with_index do |ques,index|
+    = link_to "#{ques.id}", quiz_path
 
 
 .container
