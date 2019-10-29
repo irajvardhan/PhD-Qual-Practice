@@ -4,7 +4,7 @@
       - @questions.each_with_index do |ques,index|
         .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
           = link_to "#{ques.id}", quiz_path
-    .col-md-12#quizContainer
+    .col-md-11#quizContainer
       %article.jumbotron.mx-auto
         - @questions.each_with_index do |ques,index|
           .questionItem{:class=>"#{'hide' if index > 0}","data-answer" => "#{ques.answer}","data-index"=>"#{index}"}
