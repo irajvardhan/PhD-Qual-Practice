@@ -3,7 +3,7 @@
     .col-md-1#sideBar
       - @questions.each_with_index do |ques,index|
         .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
-          = link_to "Question #{ques.id}", quiz_path
+          %span "Q. #{index}", :onclick => "toQuestion(#{index})"
     .col-md-11#quizContainer
       %article.jumbotron.mx-auto
         - @questions.each_with_index do |ques,index|
