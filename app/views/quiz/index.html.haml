@@ -12,7 +12,7 @@
               %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id} | BookMark: #{ques.bookmark}
               = check_box_tag "BookMark[#{ques.id}]", ques.bookmark, ques.bookmark, 
               { disabled: false,
-               onclick: "alert('hello world')",
+               onclick: "getNext()",
                id: "bookmark_#{ques.id}"}
               
 
