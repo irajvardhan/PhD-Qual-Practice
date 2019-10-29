@@ -254,7 +254,7 @@ function getNext() {
     }
 }
 function setBookmark() {
-    if( $(".bookMarkItem").eq(currentIndex).hasClass.("show") ){
+    if( $(".bookMarkItem").eq(currentIndex).hasClass("show") ){
         //hide the  element if unchecked
         $(".bookMarkItem").eq(currentIndex).addClass("hide");
         $(".bookMarkItem").eq(currentIndex).removeClass("show");
