@@ -1,6 +1,6 @@
 .container#sideBar
   - @questions.each_with_index do |ques,index|
-    .linkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
+    .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
       = link_to "#{ques.id}", quiz_path
 .container
   .row
@@ -12,7 +12,7 @@
               %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id} | BookMark: #{ques.bookmark}
               = check_box_tag "BookMark[#{ques.id}]", ques.bookmark, ques.bookmark, 
               { disabled: false,
-               onclick: "getNext()",
+               onclick: "setBookmark()",
                id: "bookmark_#{ques.id}"}
               
 

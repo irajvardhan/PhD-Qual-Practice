@@ -253,6 +253,13 @@ function getNext() {
         initializeIndex();
     }
 }
+function setBookmark() {
+    
+    //show the next element with new current index
+    $(".bookMarkItem").eq(currentIndex).addClass("show");
+    $(".bookMarkItem").eq(currentIndex).removeClass("hide");
+
+}
 
 function setActiveNav() {
     var pageName = getPageName().toLocaleLowerCase();
