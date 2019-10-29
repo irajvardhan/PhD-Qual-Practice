@@ -3,7 +3,7 @@
     .col-md-1#sideBar
       - @questions.each_with_index do |ques,index|
         .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
-          %button.btn.marker#{index}{:onclick => "toQuestion(#{index}", :type => "button", :padding => 0, :border => none, :backgroud => none} Q. #{index+1}
+          %button.btn.marker{index}{:onclick => "toQuestion(#{index}", :type => "button", :padding => 0, :border => none, :backgroud => none} Q. #{index+1}
     .col-md-11#quizContainer
       %article.jumbotron.mx-auto
         - @questions.each_with_index do |ques,index|
