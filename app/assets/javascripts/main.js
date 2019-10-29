@@ -254,11 +254,16 @@ function getNext() {
     }
 }
 function setBookmark() {
-    
-    //show the next element with new current index
-    $(".bookMarkItem").eq(currentIndex).addClass("show");
-    $(".bookMarkItem").eq(currentIndex).removeClass("hide");
-
+    if( $(".bookMarkItem").eq(currentIndex).hasClass.("show") ){
+        //hide the  element if unchecked
+        $(".bookMarkItem").eq(currentIndex).addClass("show");
+        $(".bookMarkItem").eq(currentIndex).removeClass("hide");
+    }
+    else{
+        //show the element if checked
+        $(".bookMarkItem").eq(currentIndex).addClass("show");
+        $(".bookMarkItem").eq(currentIndex).removeClass("hide");
+    }
 }
 
 function setActiveNav() {
