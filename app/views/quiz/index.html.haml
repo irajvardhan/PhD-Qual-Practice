@@ -1,9 +1,9 @@
-.container#sideBar
-  - @questions.each_with_index do |ques,index|
-    .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
-      = link_to "#{ques.id}", quiz_path
 .container
   .row
+    .col-md-1#sideBar
+      - @questions.each_with_index do |ques,index|
+        .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
+          = link_to "#{ques.id}", quiz_path
     .col-md-12#quizContainer
       %article.jumbotron.mx-auto
         - @questions.each_with_index do |ques,index|

@@ -256,8 +256,8 @@ function getNext() {
 function setBookmark() {
     if( $(".bookMarkItem").eq(currentIndex).hasClass.("show") ){
         //hide the  element if unchecked
-        $(".bookMarkItem").eq(currentIndex).addClass("show");
-        $(".bookMarkItem").eq(currentIndex).removeClass("hide");
+        $(".bookMarkItem").eq(currentIndex).addClass("hide");
+        $(".bookMarkItem").eq(currentIndex).removeClass("show");
     }
     else{
         //show the element if checked
