@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'cloudinary'
 gem 'katex', '~> 0.6.0'
-
+gem 'mathjax-rails'
 #Browser for detecting smartphone and laptop view
 gem 'browser', '2.0.3'
 
