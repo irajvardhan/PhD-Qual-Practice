@@ -6,7 +6,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     :javascript
       window.MathJax = {
         extensions: ["tex2jax.js"],
@@ -16,13 +16,13 @@
         },
         "HTML-CSS": { fonts: ["TeX"] }
       };
-    %script{async: "", src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_SVG", type: "text/javascript"}
+    %script{:async => "", :src => "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_HTMLorMML", :type => "text/javascript"}
       :cdata
     %title Flash Cards: Home
     
     / jQuery library
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
-    %script{:src =>"https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js", :integrity => "sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI", :crossorigin => "anonymous", :onload => "renderMathInElement(document.body)"}
+    // %script{:src =>"https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js", :integrity => "sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI", :crossorigin => "anonymous", :onload => "renderMathInElement(document.body)"}
 
 
 
