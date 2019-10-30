@@ -6,7 +6,7 @@ ruby "2.4.1"
 gem 'rails', '4.2.8'
 gem 'bcrypt',         '3.1.11'
 gem 'actionview-encoded_mail_to'
-
+# gem 'sqlite3', '~> 1.3.13'
 gem 'pg','0.20'
 # Use haml
 gem 'haml'
@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'cloudinary'
-
+gem 'katex', '~> 0.6.0'
 
 #Browser for detecting smartphone and laptop view
 gem 'browser', '2.0.3'
@@ -46,17 +46,17 @@ gem 'browser', '2.0.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Use sqlite3 as the database for Active Record
-
+  gem 'sqlite3', '~> 1.3.13'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
   gem 'launchy'
   gem 'rspec-rails', '3.4.2'
-  gem 'ZenTest', '4.11.0'
+  gem 'ZenTest', '4.11.2'
 end
 
 group :development do
-   gem 'sqlite3'
+   gem 'sqlite3', '~> 1.3.13'
 end
 
 
