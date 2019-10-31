@@ -16,7 +16,6 @@ class QuestionsController < ApplicationController
     end
     
     def create
-        @question.bookmark = false
         @categories_all = CategoryBank.all
 	@question = QuestionBank.create!(question_params)
         @question.update(creator: session[:email])
