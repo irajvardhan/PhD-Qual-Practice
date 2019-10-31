@@ -6,13 +6,30 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    :javascript
+      window.MathJax = {
+        extensions: ["tex2jax.js"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+        },
+        "HTML-CSS": { fonts: ["TeX"] }
+      };
+    %script{:async => "", :src => "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_HTMLorMML", :type => "text/javascript"}
+      :cdata
     %title Flash Cards: Home
     
     / jQuery library
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
+    // %script{:src =>"https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js", :integrity => "sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI", :crossorigin => "anonymous", :onload => "renderMathInElement(document.body)"}
+
+
 
     / Latest compiled and minified CSS
     %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+    // %link{:href => "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css", :integrity => "sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq", :crossorigin => "anonymous", :rel => "stylesheet"}/
+
    
    
     / Latest compiled JavaScript
@@ -22,6 +39,18 @@
     = csrf_meta_tags
     
   %body
+    :javascript
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+        }
+      });
+    :javascript
+      function mathjax() {
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        MathJax.Hub.Queue(["Reprocess",MathJax.Hub]);
+      }
   
     %nav.navbar.navbar-expand-md.bg-dark.navbar-dark
       %a.navbar-brand{:href => "#"} PhD Flash Cards

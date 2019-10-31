@@ -15,3 +15,4 @@
 //= xxxrequire turbolinks
 //= require_tree .
 //= require cloudinary
+//= require katex

@@ -7,9 +7,12 @@
             .row
               %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id}
             .row
+            
               - if /.(jpeg|jpg|gif|png)$/.match(ques.question)
                 = cl_image_tag(ques.question,:class=>"img-thumbnail img-fluid")
               - else
+                // :javascript
+                //       mathjax()
                 %h3= ques.question
             .row
               .choices
@@ -48,6 +51,7 @@
                     = cl_image_tag(ques.option5,:class=>"img-thumbnail img-fluid")
                   - else
                     %font{:size => "4.5"}= ques.option5
+                
             %br/
         .row
           .col-xs-4
