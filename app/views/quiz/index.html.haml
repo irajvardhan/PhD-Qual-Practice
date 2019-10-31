@@ -1,7 +1,7 @@
 .container
   .row
     .col-md-1#sideBar
-      %span.h--serif Marked Questions : sss
+      %span.h--serif Marked Questions:
       - @questions.each_with_index do |ques,index|
         .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
           %button.btn.marker{:onclick => "toQuestion(#{index})", :type => "button", :padding => 0, :margin => 0, :border => "none", :backgroud => "none"} Q.#{index+1}
