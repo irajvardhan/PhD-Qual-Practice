@@ -253,6 +253,34 @@ function getNext() {
         initializeIndex();
     }
 }
+function toQuestion(idx) {
+    //clear correct or wrong classes
+    $(".correct").removeClass("correct");
+    //hide the current element
+    $(".questionItem").eq(currentIndex).removeClass("show");
+    $(".questionItem").eq(currentIndex).addClass("hide");
+    if (!quizSummaryGenerated)
+        checkForCorrectAnswer($(".questionItem").eq(currentIndex));
+    //update current index
+    currentIndex = idx;
+    //show the target element with new current index
+    $(".questionItem").eq(currentIndex).addClass("show");
+    $(".questionItem").eq(currentIndex).removeClass("hide");
+
+    initializeIndex();
+}
+function setBookmark() {
+    if( $(".bookMarkItem").eq(currentIndex).hasClass("show") ){
+        //hide the  element if unchecked
+        $(".bookMarkItem").eq(currentIndex).addClass("hide");
+        $(".bookMarkItem").eq(currentIndex).removeClass("show");
+    }
+    else{
+        //show the element if checked
+        $(".bookMarkItem").eq(currentIndex).addClass("show");
+        $(".bookMarkItem").eq(currentIndex).removeClass("hide");
+    }
+}
 
 function setActiveNav() {
     var pageName = getPageName().toLocaleLowerCase();

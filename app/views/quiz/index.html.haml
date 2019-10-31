@@ -1,11 +1,22 @@
 .container
   .row
-    .col-md-12#quizContainer
+    .col-md-1#sideBar
+      %span.h--serif Marked Questions:
+      - @questions.each_with_index do |ques,index|
+        .bookMarkItem{:class=>"#{'hide' if !ques.bookmark}","data-index"=>"#{index}"}
+          %button.btn.marker{:onclick => "toQuestion(#{index})", :type => "button", :padding => 0, :margin => 0, :border => "none", :backgroud => "none"} Q.#{index+1}
+    .col-md-11#quizContainer
       %article.jumbotron.mx-auto
         - @questions.each_with_index do |ques,index|
           .questionItem{:class=>"#{'hide' if index > 0}","data-answer" => "#{ques.answer}","data-index"=>"#{index}"}
             .row
-              %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id}
+              %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id} | BookMark: #{ques.bookmark}
+              = check_box_tag "BookMark[#{ques.id}]", ques.bookmark, ques.bookmark, 
+              { disabled: false,
+               onclick: "setBookmark()",
+               id: "bookmark_#{ques.id}"}
+              
+
             .row
               - if /.(jpeg|jpg|gif|png)$/.match(ques.question)
                 = cl_image_tag(ques.question, :class=>"img-thumbnail img-fluid")
