@@ -6,8 +6,8 @@ ruby "2.4.1"
 gem 'rails', '4.2.8'
 gem 'bcrypt',         '3.1.11'
 gem 'actionview-encoded_mail_to'
-# gem 'sqlite3', '~> 1.3.13'
-gem 'pg','0.20'
+gem 'sqlite3', '~> 1.3.13'
+# gem 'pg','0.20'
 # Use haml
 gem 'haml'
 gem 'haml-rails'
