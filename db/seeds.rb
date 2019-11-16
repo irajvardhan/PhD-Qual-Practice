@@ -357,7 +357,7 @@ question_banks = [
 "category"=>"Software", "question"=>"v1573797392/ea4pstskew6krmpmqzmy.png", "option1"=>"I only", "option2"=>"II only", "option3"=>"III only", "option4"=>"I and II", "option5"=>"I and III", "answer"=>5, "reviewStatus"=>"Pending", "creator"=>"admin@gmail.com", "explaination"=>""
 },
 {
-"category"=>"Software", "question"=>"In which of the following representations of numbers by 8-bit words is the addition of the integers 109 and -42 within range?"+"\n"+"I. One's complement ?"+"\n"+" II. Two's complement ?"+"\n"+" III. Sign and magnitude", "option1"=>"I only", "option2"=>"II only", "option3"=>"III only", "option4"=>"I and II only", "option5"=>"I, II, and III", "answer"=>5, "reviewStatus"=>"Pending", "creator"=>"admin@gmail.com", "explaination"=>""
+"category"=>"Software", "question"=>'In which of the following representations of numbers by 8-bit words is the addition of the integers 109 and -42 within range?' + "\n" + 'I. One\'s complement ?'+"\n"+" II. Two's complement ?"+"\n"+" III. Sign and magnitude", "option1"=>"I only", "option2"=>"II only", "option3"=>"III only", "option4"=>"I and II only", "option5"=>"I, II, and III", "answer"=>5, "reviewStatus"=>"Pending", "creator"=>"admin@gmail.com", "explaination"=>""
 },
 ]
 
