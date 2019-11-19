@@ -1,7 +1,7 @@
 ## Setup (4 Steps)
 ### (1/4) Git Ready
 ```
-git clone https://github.com/Adityalocharla/PhD-Qual-Practice.git
+git clone https://github.com/Justin-Teng/PhD-Qual-Practice.git
 git checkout -b <yourFeature>
 ```
 
