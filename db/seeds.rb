@@ -357,13 +357,6 @@ question_banks = [
 "category"=>"Software", "question"=>"In which of the following representations of numbers by 8-bit words is the addition of the integers 109 and -42 within range?   I. One's complement  II. Two's complement   III. Sign and magnitude", "option1"=>"I only", "option2"=>"II only", "option3"=>"III only", "option4"=>"I and II only", "option5"=>"I, II, and III", "answer"=>5, "reviewStatus"=>"Pending", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-"category"=>"Software", "question"=>'In which of the following representations of numbers by 8-bit words is the addition of the integers 109 and -42 within range?' + "\n" + 'I. One\'s complement ?'+"\n"+" II. Two's complement ?"+"\n"+" III. Sign and magnitude", "option1"=>"I only", "option2"=>"II only", "option3"=>"III only", "option4"=>"I and II only", "option5"=>"I, II, and III", "answer"=>5, "reviewStatus"=>"Pending", "creator"=>"admin@gmail.com", "explaination"=>""
-=======
-"category"=>"Software", "question"=>"In which of the following representations of numbers by 8-bit words is the addition of the integers 109 and -42 within range?"+"\n"+"I. One's complement ?"+"\n"+" II. Two's complement ?"+"\n"+" III. Sign and magnitude", "option1"=>"I only", "option2"=>"II only", "option3"=>"III only", "option4"=>"I and II only", "option5"=>"I, II, and III", "answer"=>5, "reviewStatus"=>"Pending", "creator"=>"admin@gmail.com", "explaination"=>""
->>>>>>> 9d5d473... test exported seed
-=======
 "category"=>"Software", "question"=>"v1573799068/ipp6mwowcstycu4ttxc2.png", "option1"=>"locking overhead decreases", "option2"=>"locking overhead increases", "option3"=>"fewer transactions desire to access data", "option4"=>"greater concurrency is possible", "option5"=>"less concurrency is possible", "answer"=>1, "reviewStatus"=>"Pending", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
@@ -823,7 +816,6 @@ In response to an arbitrary query q, what are the minimum and maximum numbers of
 		:option5 => '00111111,00111111',
 		:answer => 4,
 		:reviewStatus => 'Approved'
->>>>>>> 223248f... export questions, categories, and users
 },
 ]
 
