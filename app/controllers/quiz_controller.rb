@@ -11,6 +11,8 @@ class QuizController < ApplicationController
                     params[:quizlimit] = "60"
                 else
                     params[:quizlimit] = "All"
+                end
+            end
             if params[:quizlimit] == "All"
                 @questions= QuestionBank.where(reviewStatus: "Approved")
                 @questions =  @questions.shuffle
