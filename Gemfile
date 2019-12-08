@@ -34,6 +34,8 @@ gem 'katex', '~> 0.6.0'
 #Browser for detecting smartphone and laptop view
 gem 'browser', '2.0.3'
 
+gem "will_paginate", "~> 3.0.4" 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

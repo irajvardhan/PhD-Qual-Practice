@@ -20,7 +20,9 @@ class AdminController < ApplicationController
     if params[:flag_] == "q"
     	@question = QuestionBank.find(params[:id])
     	@question.update(reviewStatus: "Approved")
+
     	redirect_to action: "admin_questions"
+    	
     elsif params[:flag_] == "u"
 	@user = User.find(params[:id])
 	@user.update(reviewStatus: "Approved")
