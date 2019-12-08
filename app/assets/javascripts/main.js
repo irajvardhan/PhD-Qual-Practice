@@ -207,7 +207,7 @@ function getPageName() {
 
 function initializeCloudinary() {
     if ($.fn.cloudinary_fileupload !== undefined) {
-        $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload();
+        $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload({});
     }
 }
 function initializeIndex() {

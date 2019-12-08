@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
     
     def create
         @categories_all = CategoryBank.all
-	@question = QuestionBank.create!(question_params)
+	    @question = QuestionBank.create!(question_params)
         @question.update(creator: session[:email])
         @question.update(reviewStatus: "Pending")
 

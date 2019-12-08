@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190423001536) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20191028212200) do
 
   create_table "category_banks", force: :cascade do |t|
     t.string   "category"
@@ -38,6 +35,7 @@ ActiveRecord::Schema.define(version: 20190423001536) do
     t.datetime "updated_at",   null: false
     t.string   "creator"
     t.string   "explaination"
+    t.boolean  "bookmark"
   end
 
   create_table "users", force: :cascade do |t|

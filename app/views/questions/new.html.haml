@@ -14,32 +14,32 @@
         .form-group
           = label :question, :question, 'Question',class: "control-label"
           = text_field :question, 'question', class:"form-control", autofocus: "true", placeholder: "Please add Question text or Image"
-          = cl_image_upload_tag(:imagequestion,:tags => "directly_uploaded_question",:crop => :limit, :width => 900, :height => 900,:eager => [{ :crop => :fill, :width => 750, :height => 240 }],:html => { :class=>"form-control fuquestion",:style => "margin-top: 8px" }  )
+          = cl_image_upload_tag(:imagequestion,:tags => "directly_uploaded_question", :allowed_formats => ['jpg','png', 'gif', 'jpeg'],:crop => :limit, :width => 900, :height => 900,:eager => [{ :crop => :fill, :width => 750, :height => 240 }],:html => {:class=>"form-control fuquestion",:style => "margin-top: 8px" }  )
           .updatequestion
         .form-group
           = label :question, :option1, 'Option1',class: "control-label"
           = text_field :question, 'option1', class:"form-control", autofocus: "true", placeholder: "Please add option text or Image"
-          = cl_image_upload_tag(:image1,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu1",:style => "margin-top: 8px" }  )
+          = cl_image_upload_tag(:image1,:tags => "directly_uploaded", :allowed_formats => ['jpg','png', 'gif', 'jpeg'], :crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu1",:style => "margin-top: 8px" }  )
           .update1
         .form-group
         = label :question, :option2, 'Option2',class: "control-label"
         = text_field :question, 'option2', class:"form-control", autofocus: "true", placeholder: "Please add option text or Image"
-        = cl_image_upload_tag(:image2,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu2",:style => "margin-top: 8px" }  )
+        = cl_image_upload_tag(:image2,:tags => "directly_uploaded", :allowed_formats => ['jpg','png', 'gif', 'jpeg'], :crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu2",:style => "margin-top: 8px" }  )
         .update2
         .form-group
           = label :question, :option3, 'Option3',class: "control-label"
           = text_field :question, 'option3', class:"form-control", autofocus: "true", placeholder: "Please add option text or Image"
-          = cl_image_upload_tag(:image3,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu3",:style => "margin-top: 8px" }  )
+          = cl_image_upload_tag(:image3,:tags => "directly_uploaded", :allowed_formats => ['jpg','png', 'gif', 'jpeg'], :crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu3",:style => "margin-top: 8px" }  )
           .update3
         .form-group
           = label :question, :option4, 'Option4',class: "control-label"
           = text_field :question, 'option4', class:"form-control", autofocus: "true", placeholder: "Please add option text or Image"
-          = cl_image_upload_tag(:image4,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu4",:style => "margin-top: 8px" }  )
+          = cl_image_upload_tag(:image4,:tags => "directly_uploaded", :allowed_formats => ['jpg','png', 'gif', 'jpeg'], :crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu4",:style => "margin-top: 8px" }  )
           .update4
         .form-group 
           = label :question, :option5, 'Option5',class: "control-label"
           = text_field :question, 'option5', class:"form-control", autofocus: "true", placeholder: "Please add option text or Image"
-          = cl_image_upload_tag(:image5,:tags => "directly_uploaded",:crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu5",:style => "margin-top: 8px" }  )
+          = cl_image_upload_tag(:image5,:tags => "directly_uploaded", :allowed_formats => ['jpg','png', 'gif', 'jpeg'], :crop => :limit, :width => 500, :height => 300,:eager => [{ :crop => :fill, :width => 350, :height => 70 }],:html => { :class=>"form-control fu5",:style => "margin-top: 8px" }  )
           .update5
         .form-group
           = label :question, :answer, 'Correct Answer',class: "control-label"
