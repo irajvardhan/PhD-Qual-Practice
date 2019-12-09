@@ -360,7 +360,7 @@ question_banks = [
 "category"=>"Networks", "question"=>"v1573799208/q8jj3a8zkrichtlwlpch.png", "option1"=>"locking overhead decreases", "option2"=>"locking overhead increases", "option3"=>"fewer transactions desire to access data", "option4"=>"greater concurrency is possible", "option5"=>"less concurrency is possible", "answer"=>5, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
-"category"=>"Math", "question"=>"A product-of-sums expression for the function $B \\barD+ \\barCD$ is", "option1"=>"$(B+ \\barC)( \\barD+D)$", "option2"=>"$(B+ \\barD)(C+D)$", "option3"=>"$(B+D)( \\barC+ \\barD)$", "option4"=>"$(B+ \\barD)( \\barC+D)$", "option5"=>"$(B+D)(C+ \\barD)$", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
+"category"=>"Math", "question"=>"A product-of-sums expression for the function $B \\bar \{D\}+ \\bar \{C\}D$ is", "option1"=>"$(B+ \\bar\{C\})( \\bar\{D\}+D)$", "option2"=>"$(B+ \\bar\{D\})(C+D)$", "option3"=>"$(B+D)( \\bar\{C\}+ \\bar\{D\})$", "option4"=>"$(B+ \\bar\{D\})( \\bar\{C\}+D)$", "option5"=>"$(B+D)(C+ \\bar\{D\})$", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
 "category"=>"Algorithms", "question"=>"v1573799779/oj1mmzjdpm1huchewsxf.png", "option1"=>"$\\a,e\\$", "option2"=>"$\\a,g\\$", "option3"=>"$\\b,e,d\\$", "option4"=>"$\\b,e,g\\$", "option5"=>"$\\c,d,f\\$", "answer"=>2, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
@@ -372,10 +372,10 @@ question_banks = [
 "category"=>"Circuits", "question"=>"v1573800611/nxhaduev8t0kuyo2ugws.png", "option1"=>"I only", "option2"=>"II only", "option3"=>"I and II only", "option4"=>"II and III only", "option5"=>"I, II, and III", "answer"=>2, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
-"category"=>"Algorithms", "question"=>"A simple (undirected or directed) graph is one in which there are no self loop and no multiple edges. An undirected graph is acyclic if it has no cycles. A directed graph is acyclic if it has no directed cycles. What is the maximum possible number of directed edges in an n-nod, simple, acyclic, $\\underlinedirected$ graph?", "option1"=>"$n-1$", "option2"=>"$3n$", "option3"=>"$\\lfloor n / 2\\rfloor *\\lceil n / 2\\rceil$", "option4"=>"$\\log 2$", "option5"=>"$n(n-1)$", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
+"category"=>"Algorithms", "question"=>"A simple (undirected or directed) graph is one in which there are no self loop and no multiple edges. An undirected graph is acyclic if it has no cycles. A directed graph is acyclic if it has no directed cycles. What is the maximum possible number of directed edges in an n-nod, simple, acyclic, $\\underline\{directed\}$ graph?", "option1"=>"$n-1$", "option2"=>"$3n$", "option3"=>"$\\lfloor n / 2\\rfloor *\\lceil n / 2\\rceil$", "option4"=>"$\\log 2$", "option5"=>"$n(n-1)$", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
-"category"=>"Algorithms", "question"=>"A simple (undirected or directed) graph is one in which there are no self loop and no multiple edges. An undirected graph is acyclic if it has no cycles. A directed graph is acyclic if it has no directed cycles. What is the maximum possible number of edges in an n-nod, simple, acyclic, $\\underlineundirected$ graph?", "option1"=>"$n-1$", "option2"=>"$3n$", "option3"=>"$\\lfloor n / 2\\rfloor *\\lceil n / 2\\rceil$", "option4"=>"$\\log 2$", "option5"=>"$n(n-1)$", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
+"category"=>"Algorithms", "question"=>"A simple (undirected or directed) graph is one in which there are no self loop and no multiple edges. An undirected graph is acyclic if it has no cycles. A directed graph is acyclic if it has no directed cycles. What is the maximum possible number of edges in an n-nod, simple, acyclic, $\\underline\{undirected\}$ graph?", "option1"=>"$n-1$", "option2"=>"$3n$", "option3"=>"$\\lfloor n / 2\\rfloor *\\lceil n / 2\\rceil$", "option4"=>"$\\log 2$", "option5"=>"$n(n-1)$", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
 "category"=>"Software", "question"=>"Suppose sharing of files in a multilevel directory structure is achieved with directory entries that are links pointing to a nod containing information about a shared file. Information in this node includes (1) the owner of the file, ( 2) a count of the number of links to the file, and (3) the disk humbers of the file. What is a primary drawback to this approach to sharing?", "option1"=>"If the owner modifies the file, another user who does not share will see the changes.", "option2"=>"If the owner renames the file, other users will not be able to access it.", "option3"=>"If the owner is allowed to delete a file, dangling links may result.", "option4"=>"If any user who shares the file appends to it, others who share it will not be able to access the new disk blocks.", "option5"=>"The system cannot know when blocks of a file can be reclaimed.", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>"admin@gmail.com", "explaination"=>"", "bookmark"=>nil
@@ -767,6 +767,9 @@ users = [
 },
 {
 "name"=>"Justin Teng", "email"=>"justintteng@gmail.com", "password_digest"=>"$2a$10$LxhjRwA2aYTsi/DvlXFj5OOIvML/S3Pzn8/VX43m4PyVspMn.S1Z.", "current_place"=>"0", "is_admin"=>true, "reviewStatus"=>"Approved", "reset_digest"=>nil, "reset_sent_at"=>nil, "last_login_at"=>nil
+},
+{
+"name"=>"adminJerry", "email"=>"adminjerry@gmail.com", "password_digest"=>"$2a$10$0TNyZ6b7LXdu3Brgd.LBaeyHFup9BkNqyvmUQR.R1HE.z5Ekxdb6G", "current_place"=>"0", "is_admin"=>true, "reviewStatus"=>"Pending", "reset_digest"=>nil, "reset_sent_at"=>nil, "last_login_at"=>nil
 },
 ]
 
