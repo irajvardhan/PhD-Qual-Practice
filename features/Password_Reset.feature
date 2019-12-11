@@ -16,4 +16,4 @@ And I should see "Forgot password"
 # Sad Path
 Scenario: I should see the Reset password form 
 Given I am on the reset password page for "Sweta"
-Then I should see "Home PhD Flash Cards"
+Then I should see "PhD Flash Cards"

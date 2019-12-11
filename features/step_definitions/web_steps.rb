@@ -260,7 +260,13 @@ end
 ###########################################################################################################
 
 Given /^the following questions exist:$/ do |questions_table|
+  questions_table.hashes.each do |category|
+    category = category.select { |key, value| key.to_s.match(/^category/) }
+    category.merge! reviewStatus: "Approved"
+    CategoryBank.create! category
+  end
   questions_table.hashes.each do |question|
+    question.merge! reviewStatus: "Approved"
     QuestionBank.create! question
   end
 end
@@ -271,18 +277,30 @@ Given /^the admin exists:$/ do |users_table|
   end
 end
 
-When(/^I check the checkbox "(.*?)"$/) do |cb|
-  #find('label[for="categories_Networks"]').click
+When /^I check the checkbox "([^"]*)"$/ do |cb|
   var="#categories_"+"#{cb}"
   find(:css, var).set(true)
   #find("categories_Networks", :visible => false).click
 end
 
 When("I Submit quiz") do
-  find("Submit", :visible => false).click
+  find(:css, "#submitQuiz").click
+  find("button[class='btn btn-info']").click
 end
 
 When /^(?:|I )choose radio button "([^"]*)"$/ do |field|
   field="#quizlimit_"+"#{field}"
   find(:css, field).set(true)
 end
+
+When /^I choose answer "([^"]*)" on question "([^"]*)"$/ do |ans, ques|
+  ans= ((ans.to_i)-1).to_s
+  ques= "optradio"+((ques.to_i)-1).to_s
+  find("input[type='radio'][name=#{ques}][data-index=#{ans}]").set(true)
+end
+
+When /^(?:|I )click "([^"]*)"$/ do |button|
+  field = "btn " + button.downcase
+  find("button[class='#{field}']").click
+end
+

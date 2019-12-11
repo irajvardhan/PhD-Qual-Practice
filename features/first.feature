@@ -17,12 +17,12 @@ Scenario: Show next/previous flash card
 Then I should see "Welcome"
 When I follow "Start Practice"
 Then I should be on Select Category page
-When I check the checkbox "Networks"
+When I check the checkbox "Software"
 And I check the checkbox "Algorithms"
 And I check the checkbox "Software"
 Then I press "Start Practice"
 
-Then I should see "QueCat1"
+Then I should see "QueCat"
 When I press "Next"
 Then I should see "QueCat2"
 And I press "Next"

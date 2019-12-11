@@ -11,7 +11,7 @@ Given the following questions exist:
 And I am on the home page
 
 Scenario: Select a single Category
-    Then I should see "Welcome to the PhDQual Flash Cards"
+    Then I should see "Welcome to the PhD Qual Flash Cards"
     When I follow "Start Practice"
     Then I should be on Select Category page
     And I should see "Select a Category"
