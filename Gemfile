@@ -36,6 +36,9 @@ gem 'browser', '2.0.3'
 
 gem "will_paginate", "~> 3.0.4" 
 
+# For countdown timer
+gem 'countdown', :git => 'https://github.com/unthunk/jquery-countdown-timer.git'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

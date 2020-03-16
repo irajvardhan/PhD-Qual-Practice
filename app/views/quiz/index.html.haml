@@ -1,5 +1,7 @@
 .container
   .row
+    .col-md-0#cdtimer
+      %span.h3 Timer Placeholder
     .col-md-1#sideBar
       %span.h--serif Marked Questions:
       - @questions.each_with_index do |ques,index|
@@ -11,11 +13,11 @@
           .questionItem{:class=>"#{'hide' if index > 0}","data-answer" => "#{ques.answer}","data-index"=>"#{index}"}
             .row
               %span.h--serif Category: #{ques.category} | Question #{index+1} of #{@questions.count}| Card ID: #{ques.id} | BookMark: #{ques.bookmark}
-              = check_box_tag "BookMark[#{ques.id}]", ques.bookmark, ques.bookmark, 
+              = check_box_tag "BookMark[#{ques.id}]", ques.bookmark, ques.bookmark,
               { disabled: false,
                onclick: "setBookmark()",
                id: "bookmark_#{ques.id}"}
-              
+
 
             .row
               - if /.(jpeg|jpg|gif|png)$/.match(ques.question)
@@ -72,4 +74,3 @@
       .row
         .col-xs-12.mx-auto
           %button.btn.btn-info#submitQuiz{:type => "button",:disabled=>"disabled"} Submit
-
