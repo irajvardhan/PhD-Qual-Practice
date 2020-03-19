@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Modified for password reset functionality
   resources :password_resets,     only: [:new, :create, :edit, :update]
   #get 'password_resets/new'
