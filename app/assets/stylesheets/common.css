@@ -66,3 +66,7 @@
 .size-lg{
     font-size:38px;
 }
+
+span#time{
+  background-color: yellow;
+}

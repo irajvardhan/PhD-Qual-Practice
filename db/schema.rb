@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191028212200) do
+ActiveRecord::Schema.define(version: 20200310164110) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "category_banks", force: :cascade do |t|
     t.string   "category"
@@ -19,6 +22,16 @@ ActiveRecord::Schema.define(version: 20191028212200) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "creator"
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string   "title"
+    t.string   "rating"
+    t.text     "description"
+    t.datetime "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "director"
   end
 
   create_table "question_banks", force: :cascade do |t|
