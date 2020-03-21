@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
     
     def create
 	@all_category = CategoryBank.create!(category_params)
-        @all_category.update(creator: session[:email])
+        @all_category.update(creator: current_user.email)
         @all_category.update(reviewStatus: "Pending")
 	redirect_to categories_path
     end
