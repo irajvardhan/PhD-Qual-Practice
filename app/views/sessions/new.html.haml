@@ -14,11 +14,11 @@
     = form_for(:session, url: login_path) do |f|
       %h2.text-center Log in
       .text-center.social-btn
-        = link_to  user_facebook_omniauth_authorize_path, :class => "btn btn-primary btn-block" do
+        = link_to  user_facebook_omniauth_authorize_path, :class => "btn btn-primary btn-block", :id => "facebook" do
           %i.fa.fa-facebook 
           Log in with
           %b Facebook
-        = link_to  user_google_oauth2_omniauth_authorize_path, :class => "btn btn-danger btn-block" do
+        = link_to  user_google_oauth2_omniauth_authorize_path, :class => "btn btn-danger btn-block", :id => "google" do
           %i.fa.fa-google 
           Log in with
           %b Google
