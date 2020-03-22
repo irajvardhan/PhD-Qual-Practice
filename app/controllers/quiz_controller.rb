@@ -14,14 +14,14 @@ class QuizController < ApplicationController
             else
               if @timervalue <= 0
                 flash[:notice] = ("Invalid timer value. Please set timer value to be at least 1 minute.")
-                redirect_to selquiz_index_path
+                redirect_to selquiz_index_path and return
               else
                 if @timervalue > 1440
                   flash[:notice] = ("Invalid timer value. Timer value is too high.")
                   redirect_to selquiz_index_path
                 else
                   @timervalue_seconds = @timervalue*60
-                end 
+                end
               end
             end
           end
