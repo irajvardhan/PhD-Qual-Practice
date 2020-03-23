@@ -18,13 +18,12 @@ class SessionsController < ApplicationController
       return
     end
     
-
     if @user && @user.authenticate(params[:session][:password])
       session[:email] = @user.email 
       session[:name] = @user.name
       session[:user_id] = @user.id
       #@user.update_attribute(:last_login_at, Time.now)
-      session[:flash] = ("Welcome: " + @user.name)
+      session[:flash] = ("Welcome: " +( @user.name ? @user.name : @user.email) )
       redirect_to root_url
       return
     else
@@ -35,10 +34,13 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:email] = nil
-    session[:name] = nil
-    session[:user_id] = nil
-    session[:password] = nil
+    sign_out current_user
+    # session[:email] = nil
+    # session[:name] = nil
+    # session[:user_id] = nil
+    # session[:password] = nil
+    # session.delete("devise.facebook_data")
+    
     flash[:success] = ("Succesfully logged out")
     redirect_to login_url
     return

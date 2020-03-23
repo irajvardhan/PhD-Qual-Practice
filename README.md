@@ -36,3 +36,16 @@ heroku open
 ```
 heroku run rake db:reset
 ```
+
+## Facebook and Google authentication.
+### Create token
+For these features to work you have to create your own client_id and secret.
+* Follow https://developers.google.com/identity/protocols/oauth2 for google.
+* Follow https://developers.facebook.com/docs/facebook-login/access-tokens/ for facebook
+### Setting up environment variable.
+Set below environement variables using export command( in case of linux),
+export FB_APP_ID=***
+export FB_APP_SECRET=***
+export GOOGLE_APP_ID=***
+export GOOGLE_APP_SECRET=***
+
