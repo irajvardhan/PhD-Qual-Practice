@@ -5,7 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
   has_secure_password
-  # validates_uniqueness_of :email
+  validates_uniqueness_of :email
+  validates :email, presence: true
+  validates :name, presence: true
+  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   
   # Delete old users, who haven't logged in the last 2 years (2 minutes for demo purpose)
   def self.delete_old_users
