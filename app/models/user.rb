@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   validates_uniqueness_of :email
+  validates :email, presence: true
   
   # Delete old users, who haven't logged in the last 2 years (2 minutes for demo purpose)
   def self.delete_old_users
