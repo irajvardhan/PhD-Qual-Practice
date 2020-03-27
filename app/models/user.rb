@@ -1,8 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :registerable,
-         :recoverable, :rememberable, :validatable,
+  devise :recoverable, :rememberable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
   has_secure_password
   validates_uniqueness_of :email
@@ -53,9 +52,12 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     exist_user = where(:provider => auth.provider, :uid => auth.uid).first
+    # check for email also incase the user is signed up in normal
+    exist_user = exist_user ? exist_user : where(:email => auth.info.email).first
     if exist_user
       return exist_user
     end
+    
     user = User.new
     user.email = auth.info.email
     # user.password_digest = Devise.friendly_token[0,20]
