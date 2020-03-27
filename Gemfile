@@ -82,6 +82,7 @@ end
 group :test do
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
+  gem 'rubocop-rspec', require: false
   gem 'cucumber-rails-training-wheels'
   gem 'factory_bot_rails'
 end
