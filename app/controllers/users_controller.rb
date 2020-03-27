@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :logged_in_admin, only: [:index, :show, :edit, :update, :destroy]
   
 
   # GET /users
+  before_action :logged_in_admin, only: [:index, :show, :edit, :update, :destroy]
   # GET /users.json
   def index
     @users = User.all
@@ -55,6 +55,7 @@ class UsersController < ApplicationController
         session[:email] = @user.email
         format.html { redirect_to root_url, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
+        sign_in(:user, @user)
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
