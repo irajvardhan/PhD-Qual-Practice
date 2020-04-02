@@ -24,16 +24,6 @@ ActiveRecord::Schema.define(version: 20200320062105) do
     t.string   "creator"
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.string   "rating"
-    t.text     "description"
-    t.datetime "release_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "director"
-  end
-
   create_table "question_banks", force: :cascade do |t|
     t.string   "category"
     t.text     "question"
