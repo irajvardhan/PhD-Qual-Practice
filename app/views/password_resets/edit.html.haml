@@ -1,5 +1,15 @@
 - provide(:title, 'Reset password')
 %h1 Reset password
+
+.container
+- if flash[:notice]
+  .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
+    = flash[:notice]
+- if flash[:success]
+  .alert.alert-success.alert-dismissible.fade.show{:role=>"alert"}
+    = flash[:success]
+
+
 .row
   .col-md-6.col-md-offset-3
     = form_for(@user, url: password_reset_path(params[:id])) do |f|
@@ -9,4 +19,22 @@
       = f.label :password_confirmation, "Confirmation"
       = f.password_field :password_confirmation, class: 'form-control'
       = f.submit "Update password", class: "btn btn-primary"
+      
+
+.form-gap.centered
+.container
+  .row
+    .login-form
+      = form_for(@user, url: password_reset_path(params[:id])) do |f|
+        %h3.text-center Reset Your Password
+        .text-center
+          %h3
+            .i.fa.fa-lock.fa-2x
+          %p
+            Enter the email address associated with the account and click Reset password button.
+          %br
+        .password-recovery-input-container
+          %i.fa.fa-lock.password-recovery-icon.fa-2x
+          = f.email_field :email, placeholder: 'Email Address',  class: "password-recovery-input-field"        
+        = f.submit "Reset password", class: "password-recovery-btn"
       
