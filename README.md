@@ -56,9 +56,12 @@ Go to the https://myaccount.google.com/lesssecureapps url from the account you w
 
 ### Setting Up environment variable
 Either use 
-    export GMAIL_USERNAME=*** 
+    ```
+    export GMAIL_USERNAME=***
     export GMAIL_PASSWORD=***
-
-Or, create e .env file on the root and set the variable accordingly
+    ```
+Or, create e ```.env``` file on the root and set the  following variables accordingly
+    ```
     GMAIL_USERNAME=*** 
     GMAIL_PASSWORD=***
+    ```
