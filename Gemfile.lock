@@ -354,8 +354,8 @@ DEPENDENCIES
   jquery-rails
   katex (~> 0.6.0)
   launchy
-  omniauth-facebook
-  omniauth-google-oauth2
+  omniauth-facebook (= 6.0.0)
+  omniauth-google-oauth2 (= 0.8.0)
   pg (= 0.20)
   rails (= 4.2.8)
   rails_12factor

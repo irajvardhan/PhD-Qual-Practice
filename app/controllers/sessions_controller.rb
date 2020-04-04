@@ -24,7 +24,8 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       #@user.update_attribute(:last_login_at, Time.now)
       session[:flash] = ("Welcome: " +( @user.name ? @user.name : @user.email) )
-      redirect_to root_url
+      sign_in_and_redirect @user, :event => :authentication
+      # credirect_to root_url
       return
     else
       flash[:notice] = ("Invalid Username or Password")
