@@ -29,9 +29,10 @@
       = f.label :password
       = f.password_field :password, class: 'form-control --marginbottom16'  
       .text-center
-        = f.submit "Log in", class: "btn btn-info text-center"
-      = link_to "Forgot password?", new_password_reset_path, :class => ""
-    %p
-      %br  
-      "Not a user?"
-      =link_to 'Register', register_path, :class =>"text-center", :class => "text-info"
+        = f.submit "Log in", class: "btn btn-info btn-block"
+      .or-seperator 
+      .text-center Forgot your password?
+      = link_to "Reset your password", new_password_reset_path, :class => "btn btn-warning btn-block"
+      .or-seperator 
+      .text-center Not a user?
+      = link_to 'Register', register_path, :class =>"text-center", :class => "btn btn-primary btn-block"
