@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20200320062105) do
     t.datetime "release_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "director"
   end
 
   create_table "question_banks", force: :cascade do |t|
